@@ -5429,5 +5429,10 @@ function closeAboutMe() {
 
     aboutMe.classList.remove("about-me-modal-open");
     document.body.classList.remove("about-me-modal-open");
+
+    const closeButton = aboutMe.querySelector(".about-me-close");
+
+    if (closeButton) {
+        closeButton.remove();
+    }
 }
-</script>
