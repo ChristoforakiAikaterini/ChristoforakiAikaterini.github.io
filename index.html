@@ -743,7 +743,7 @@
                     PROJECTS
                 </a>
 
-                <a href="#about-me">
+                <a href="javascript:openAboutMe()">
                     ABOUT ME
                 </a>
 
@@ -5343,5 +5343,91 @@
         }
 
     }
+        /* =====================================================
+           ABOUT ME MODAL
+        ===================================================== */
 
+        .about-me-section.about-me-modal-open {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+            z-index: 99999;
+            overflow-y: auto;
+            margin: 0;
+            background: #0b0b0b;
+        }
+
+        body.about-me-modal-open {
+            overflow: hidden;
+        }
+
+        .about-me-close {
+            position: fixed;
+            top: 28px;
+            right: 35px;
+            z-index: 100000;
+
+            width: 48px;
+            height: 48px;
+
+            border: 1px solid rgba(184, 134, 32, 0.45);
+            background: rgba(11, 11, 11, 0.9);
+            color: #ffffff;
+
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 1;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .about-me-close:hover {
+            background: rgba(184, 134, 32, 0.15);
+            border-color: rgba(184, 134, 32, 0.8);
+        }
 </style>
+<script>
+function openAboutMe() {
+
+    const aboutMe = document.getElementById("about-me");
+
+    if (!aboutMe) return;
+
+    aboutMe.classList.add("about-me-modal-open");
+    document.body.classList.add("about-me-modal-open");
+
+    if (!aboutMe.querySelector(".about-me-close")) {
+
+        const closeButton = document.createElement("button");
+
+        closeButton.className = "about-me-close";
+        closeButton.innerHTML = "×";
+        closeButton.setAttribute("aria-label", "Close About Me");
+
+        closeButton.onclick = function () {
+            closeAboutMe();
+        };
+
+        aboutMe.appendChild(closeButton);
+    }
+}
+
+
+function closeAboutMe() {
+
+    const aboutMe = document.getElementById("about-me");
+
+    if (!aboutMe) return;
+
+    aboutMe.classList.remove("about-me-modal-open");
+    document.body.classList.remove("about-me-modal-open");
+}
+</script>
