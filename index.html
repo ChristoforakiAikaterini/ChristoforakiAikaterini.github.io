@@ -5421,6 +5421,39 @@ function openAboutMe() {
 }
 
 
+f<script>
+function openAboutMe(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    const aboutMe = document.getElementById("about-me");
+
+    if (!aboutMe) return;
+
+    aboutMe.classList.add("about-me-modal-open");
+    document.body.classList.add("about-me-modal-open");
+
+    if (!aboutMe.querySelector(".about-me-close")) {
+
+        const closeButton = document.createElement("button");
+
+        closeButton.className = "about-me-close";
+        closeButton.innerHTML = "×";
+        closeButton.setAttribute("aria-label", "Close About Me");
+
+        closeButton.addEventListener("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            closeAboutMe();
+        });
+
+        aboutMe.appendChild(closeButton);
+    }
+}
+
+
 function closeAboutMe() {
 
     const aboutMe = document.getElementById("about-me");
@@ -5436,3 +5469,4 @@ function closeAboutMe() {
         closeButton.remove();
     }
 }
+</script>
