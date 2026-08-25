@@ -855,16 +855,13 @@
     <section id="experience"></section>
     <section id="cv"></section>
 
-
-</body>
-</html>
-
 <!-- =========================================================
      PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
-     STRUCTURE ONLY — CONTENT TO BE ADDED LATER
+     TAB-BASED PROJECT SECTION
 ========================================================= -->
 
 <style>
+
 /* =========================================================
    PROJECT 01 — BASE
 ========================================================= */
@@ -878,12 +875,17 @@
     overflow: hidden;
 }
 
-/* Subtle background detail */
+
+/* =========================================================
+   SUBTLE BACKGROUND DETAIL
+========================================================= */
+
 .project-01::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
+
     background:
         radial-gradient(
             circle at 78% 20%,
@@ -897,74 +899,127 @@
         );
 }
 
+
 /* =========================================================
    PROJECT HERO
 ========================================================= */
 
 .project-hero {
     position: relative;
-    min-height: 75vh;
+
+    min-height: 58vh;
+
     display: flex;
     align-items: center;
-    padding: 120px 7vw 90px;
+
+    padding: 100px 7vw 70px;
+
     border-top: 1px solid rgba(190, 150, 55, 0.12);
     border-bottom: 1px solid rgba(190, 150, 55, 0.12);
 }
 
+
 .project-hero-content {
     position: relative;
     z-index: 2;
+
     max-width: 900px;
 }
+
+
+/* =========================================================
+   PROJECT LABEL
+========================================================= */
 
 .project-label {
     display: flex;
     align-items: center;
+
     gap: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
     color: #b58a32;
+
+    font-family: "Inter", Arial, sans-serif;
     font-size: 12px;
+    font-weight: 400;
+
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
+
 .project-label::before {
     content: "";
+
     width: 70px;
     height: 1px;
+
     background: #9d1622;
 }
 
+
+/* =========================================================
+   PROJECT TITLE
+   — SAME FONT AS NAVIGATION
+   — MUCH SMALLER
+   — BOLD
+   — SOFT OFF-WHITE
+========================================================= */
+
 .project-hero h1 {
     margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(64px, 8vw, 125px);
-    line-height: 0.86;
-    letter-spacing: -3px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    /*
+       Much smaller than before.
+       The title is now treated as a project heading,
+       not as a giant hero name.
+    */
+    font-size: clamp(32px, 4vw, 58px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.8px;
+
+    color: rgba(239, 235, 225, 0.82);
 }
+
 
 .project-hero h1 span {
     display: block;
 }
 
-.project-hero h1 .gold {
-    color: #b98b35;
+
+/*
+   Both lines intentionally share the same
+   soft off-white colour.
+*/
+
+.project-hero h1 .gold,
+.project-hero h1 .light {
+    color: rgba(239, 235, 225, 0.82);
 }
 
-.project-hero h1 .light {
-    color: #e9e5dc;
-}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
 
 .project-description-placeholder {
-    margin-top: 42px;
+    margin-top: 36px;
+
     width: min(620px, 100%);
     height: 18px;
 
     border-left: 2px solid #8e1721;
+
     opacity: 0.35;
 }
+
 
 /* =========================================================
    PROJECT NAVIGATION
@@ -973,25 +1028,32 @@
 .project-navigation-wrapper {
     position: sticky;
     top: 0;
+
     z-index: 50;
 
     background: rgba(5, 5, 5, 0.94);
+
     backdrop-filter: blur(12px);
 
     border-top: 1px solid rgba(190, 150, 55, 0.08);
     border-bottom: 1px solid rgba(190, 150, 55, 0.14);
 }
 
+
 .project-navigation {
     width: min(1250px, 86vw);
+
     min-height: 78px;
+
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: clamp(35px, 6vw, 95px);
 }
+
 
 .project-navigation a {
     position: relative;
@@ -999,22 +1061,35 @@
     padding: 27px 0 24px;
 
     color: #aaa69d;
+
     text-decoration: none;
+
+    font-family: "Inter", Arial, sans-serif;
 
     font-size: 11px;
     font-weight: 500;
+
     letter-spacing: 3.5px;
+
     text-transform: uppercase;
+
+    cursor: pointer;
 
     transition:
         color 0.3s ease,
         opacity 0.3s ease;
 }
 
+
+/* =========================================================
+   NAVIGATION UNDERLINE
+========================================================= */
+
 .project-navigation a::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: 16px;
 
@@ -1026,72 +1101,129 @@
     transition: width 0.3s ease;
 }
 
+
 .project-navigation a:hover {
     color: #ded8ca;
 }
+
 
 .project-navigation a:hover::after {
     width: 100%;
 }
 
+
 .project-navigation a.active {
     color: #c29a48;
 }
+
 
 .project-navigation a.active::after {
     width: 100%;
 }
 
+
+/* =========================================================
+   PROJECT CONTENT AREA
+========================================================= */
+
+.project-content {
+    position: relative;
+
+    width: 100%;
+}
+
+
 /* =========================================================
    PROJECT SECTIONS
+   IMPORTANT:
+   Only the active tab is displayed.
+   NO SCROLLING.
 ========================================================= */
 
 .project-section {
     position: relative;
 
     width: min(1350px, 86vw);
-    min-height: 75vh;
+
+    min-height: 65vh;
 
     margin: 0 auto;
-    padding: 130px 0;
+
+    padding: 100px 0 120px;
 
     border-bottom: 1px solid rgba(190, 150, 55, 0.10);
 
-    scroll-margin-top: 78px;
+    /*
+       Hidden by default.
+       JavaScript activates only one tab.
+    */
+    display: none;
 }
+
+
+/*
+   Active section
+*/
+
+.project-section.active-section {
+    display: block;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
 
 .project-section-header {
     display: flex;
     align-items: center;
+
     gap: 22px;
 
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
+
 
 .project-section-number {
     color: #b58a32;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 52px;
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
     line-height: 1;
 }
+
 
 .project-section-line {
     width: 55px;
     height: 1px;
+
     background: #8f1721;
 }
+
 
 .project-section-title {
     color: #c39a4b;
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 13px;
     font-weight: 500;
+
     letter-spacing: 5px;
+
     text-transform: uppercase;
 }
 
-/* Empty future-content area */
+
+/* =========================================================
+   EMPTY FUTURE CONTENT AREA
+========================================================= */
+
 .project-placeholder {
     min-height: 420px;
 
@@ -1110,19 +1242,14 @@
 
     color: rgba(190, 185, 175, 0.18);
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 10px;
     letter-spacing: 4px;
+
     text-transform: uppercase;
 }
 
-/* =========================================================
-   SECTION 04 — VEHICLE PERFORMANCE
-========================================================= */
-
-.project-section:last-child {
-    border-bottom: none;
-    min-height: 65vh;
-}
 
 /* =========================================================
    RESPONSIVE
@@ -1131,62 +1258,96 @@
 @media (max-width: 900px) {
 
     .project-hero {
-        min-height: 65vh;
-        padding: 100px 8vw 70px;
+        min-height: 55vh;
+
+        padding: 90px 8vw 65px;
     }
 
+
     .project-hero h1 {
-        font-size: clamp(54px, 12vw, 90px);
+        font-size: clamp(28px, 7vw, 46px);
+
+        letter-spacing: -1px;
     }
+
 
     .project-navigation {
         width: 92vw;
+
         gap: 25px;
+
         justify-content: flex-start;
+
         overflow-x: auto;
+
         scrollbar-width: none;
     }
+
 
     .project-navigation::-webkit-scrollbar {
         display: none;
     }
 
+
     .project-navigation a {
         white-space: nowrap;
+
         font-size: 9px;
+
         letter-spacing: 2.5px;
     }
 
+
     .project-section {
         width: 84vw;
-        padding: 90px 0;
-        scroll-margin-top: 70px;
+
+        padding: 80px 0 90px;
     }
+
 
     .project-placeholder {
         min-height: 300px;
     }
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
+    .project-hero {
+        padding: 80px 8vw 55px;
+    }
+
+
+    .project-hero h1 {
+        font-size: 27px;
+
+        line-height: 1.12;
+
+        letter-spacing: -0.7px;
+    }
+
 
     .project-navigation {
         gap: 22px;
     }
 
+
     .project-section-header {
         margin-bottom: 45px;
     }
 
-    .project-section-number {
-        font-size: 42px;
-    }
 
     .project-section-title {
         font-size: 10px;
+
         letter-spacing: 3px;
     }
 }
+
 </style>
 
 
@@ -1196,7 +1357,11 @@
 
 <section class="project-01" id="project-01">
 
-    <!-- HERO -->
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
     <div class="project-hero">
 
         <div class="project-hero-content">
@@ -1205,19 +1370,26 @@
                 PROJECT 01 / DIPLOMA THESIS
             </div>
 
+
             <h1>
-                <span class="gold">F1 V6 ENGINE</span>
-                <span class="light">GYROID ENGINE BLOCK DESIGN</span>
+
+                <span class="gold">
+                    F1 V6 ENGINE
+                </span>
+
+                <span class="light">
+                    GYROID ENGINE BLOCK DESIGN
+                </span>
+
             </h1>
 
-            <!--
-                TEXT WILL BE ADDED LATER
-            -->
+
             <div class="project-description-placeholder"></div>
 
         </div>
 
     </div>
+
 
 
     <!-- =====================================================
@@ -1228,19 +1400,38 @@
 
         <nav class="project-navigation">
 
-            <a href="#project-design" class="project-nav-link active">
+            <a
+                href="#"
+                class="project-nav-link active"
+                data-target="project-design"
+            >
                 DESIGN
             </a>
 
-            <a href="#project-analysis" class="project-nav-link">
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-analysis"
+            >
                 ANALYSIS
             </a>
 
-            <a href="#project-comparison" class="project-nav-link">
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-comparison"
+            >
                 COMPARISON
             </a>
 
-            <a href="#project-performance" class="project-nav-link">
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-performance"
+            >
                 VEHICLE PERFORMANCE
             </a>
 
@@ -1249,212 +1440,247 @@
     </div>
 
 
-    <!-- =====================================================
-         01 — DESIGN
-    ====================================================== -->
-
-    <section
-        id="project-design"
-        class="project-section"
-    >
-
-        <div class="project-section-header">
-
-            <div class="project-section-number">
-                01
-            </div>
-
-            <div class="project-section-line"></div>
-
-            <div class="project-section-title">
-                DESIGN
-            </div>
-
-        </div>
-
-        <div class="project-placeholder">
-            DESIGN CONTENT
-        </div>
-
-    </section>
-
 
     <!-- =====================================================
-         02 — ANALYSIS
+         PROJECT CONTENT
     ====================================================== -->
 
-    <section
-        id="project-analysis"
-        class="project-section"
-    >
+    <div class="project-content">
 
-        <div class="project-section-header">
 
-            <div class="project-section-number">
-                02
+        <!-- =================================================
+             01 — DESIGN
+        ================================================== -->
+
+        <section
+            id="project-design"
+            class="project-section active-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    01
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    DESIGN
+                </div>
+
             </div>
 
-            <div class="project-section-line"></div>
 
-            <div class="project-section-title">
-                ANALYSIS
+            <div class="project-placeholder">
+                DESIGN CONTENT
             </div>
 
-        </div>
-
-        <div class="project-placeholder">
-            ANALYSIS CONTENT
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-         03 — COMPARISON
-    ====================================================== -->
 
-    <section
-        id="project-comparison"
-        class="project-section"
-    >
+        <!-- =================================================
+             02 — ANALYSIS
+        ================================================== -->
 
-        <div class="project-section-header">
+        <section
+            id="project-analysis"
+            class="project-section"
+        >
 
-            <div class="project-section-number">
-                03
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    02
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    ANALYSIS
+                </div>
+
             </div>
 
-            <div class="project-section-line"></div>
 
-            <div class="project-section-title">
-                COMPARISON
+            <div class="project-placeholder">
+                ANALYSIS CONTENT
             </div>
 
-        </div>
-
-        <div class="project-placeholder">
-            COMPARISON CONTENT
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =====================================================
-         04 — VEHICLE PERFORMANCE
-    ====================================================== -->
 
-    <section
-        id="project-performance"
-        class="project-section"
-    >
+        <!-- =================================================
+             03 — COMPARISON
+        ================================================== -->
 
-        <div class="project-section-header">
+        <section
+            id="project-comparison"
+            class="project-section"
+        >
 
-            <div class="project-section-number">
-                04
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    03
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    COMPARISON
+                </div>
+
             </div>
 
-            <div class="project-section-line"></div>
 
-            <div class="project-section-title">
-                VEHICLE PERFORMANCE
+            <div class="project-placeholder">
+                COMPARISON CONTENT
             </div>
 
-        </div>
+        </section>
 
-        <div class="project-placeholder">
-            VEHICLE PERFORMANCE CONTENT
-        </div>
 
-    </section>
+
+        <!-- =================================================
+             04 — VEHICLE PERFORMANCE
+        ================================================== -->
+
+        <section
+            id="project-performance"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    04
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    VEHICLE PERFORMANCE
+                </div>
+
+            </div>
+
+
+            <div class="project-placeholder">
+                VEHICLE PERFORMANCE CONTENT
+            </div>
+
+        </section>
+
+    </div>
 
 </section>
 
 
+
 <!-- =========================================================
-     PROJECT NAVIGATION — SMOOTH SCROLL + ACTIVE SECTION
+     PROJECT 01 — TAB SYSTEM
+     NO SCROLL
 ========================================================= -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const navLinks = document.querySelectorAll(
-        ".project-nav-link"
-    );
 
-    const sections = document.querySelectorAll(
-        ".project-section"
-    );
-
-
-    /* ---------------------------------------------------------
-       SMOOTH SCROLL
-    --------------------------------------------------------- */
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", function (event) {
-
-            event.preventDefault();
-
-            const targetId =
-                this.getAttribute("href");
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) return;
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-
-    /* ---------------------------------------------------------
-       ACTIVE SECTION DETECTION
-    --------------------------------------------------------- */
-
-    const observer =
-        new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        navLinks.forEach(link => {
-                            link.classList.remove("active");
-                        });
-
-                        const activeLink =
-                            document.querySelector(
-                                `.project-nav-link[href="#${entry.target.id}"]`
-                            );
-
-                        if (activeLink) {
-                            activeLink.classList.add("active");
-                        }
-
-                    }
-
-                });
-
-            },
-            {
-                rootMargin: "-35% 0px -55% 0px",
-                threshold: 0
-            }
+    const navLinks =
+        document.querySelectorAll(
+            ".project-nav-link"
         );
 
 
-    sections.forEach(section => {
-        observer.observe(section);
+    const sections =
+        document.querySelectorAll(
+            ".project-section"
+        );
+
+
+    navLinks.forEach(function (link) {
+
+
+        link.addEventListener(
+            "click",
+            function (event) {
+
+                /*
+                   IMPORTANT:
+                   Prevents the browser from changing
+                   the URL or scrolling anywhere.
+                */
+
+                event.preventDefault();
+
+
+                const targetId =
+                    this.getAttribute(
+                        "data-target"
+                    );
+
+
+                const target =
+                    document.getElementById(
+                        targetId
+                    );
+
+
+                if (!target) return;
+
+
+                /*
+                   Remove active state
+                   from every navigation item.
+                */
+
+                navLinks.forEach(function (nav) {
+
+                    nav.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                /*
+                   Hide every project section.
+                */
+
+                sections.forEach(function (section) {
+
+                    section.classList.remove(
+                        "active-section"
+                    );
+
+                });
+
+
+                /*
+                   Activate clicked navigation item.
+                */
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                /*
+                   Show ONLY the selected tab.
+                */
+
+                target.classList.add(
+                    "active-section"
+                );
+
+            }
+
+        );
+
     });
 
 });
