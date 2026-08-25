@@ -6,11 +6,12 @@
 
     <title>Aikaterini Christoforaki | Motorsport Engineering</title>
 
-    <!-- Elegant serif + clean modern sans-serif -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 
     <style>
 
@@ -30,31 +31,25 @@
 
         body {
             background: #050505;
-            color: #f3f0ea;
+            color: #f1efeb;
             font-family: "Inter", sans-serif;
-            font-weight: 300;
             overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
         }
 
 
         /* =========================================================
-           COLOUR SYSTEM
+           COLOUR PALETTE
         ========================================================= */
 
         :root {
             --black: #050505;
-            --soft-black: #080808;
-            --ivory: #f3f0ea;
-            --gold: #c99a43;
-            --gold-light: #d8aa58;
-            --red: #7d111c;
-            --red-bright: #a31622;
-            --muted: #8c8984;
+            --off-white: #eeeae3;
+            --gold: #b9944d;
+            --gold-soft: #a8874b;
+            --red: #741019;
+            --red-bright: #9a1621;
+            --line: rgba(185, 148, 77, 0.22);
+            --red-line: rgba(116, 16, 25, 0.55);
         }
 
 
@@ -69,23 +64,23 @@
             overflow: hidden;
             background:
                 radial-gradient(
-                    circle at 78% 50%,
-                    rgba(120, 12, 24, 0.045),
-                    transparent 35%
+                    circle at 72% 48%,
+                    rgba(80, 45, 20, 0.035),
+                    transparent 38%
                 ),
                 #050505;
         }
 
 
         /* =========================================================
-           THIN FRAME
+           THIN BORDER
         ========================================================= */
 
         .hero::before {
             content: "";
             position: absolute;
-            inset: 13px 20px;
-            border: 1px solid rgba(201, 154, 67, 0.13);
+            inset: 13px;
+            border: 1px solid rgba(150, 145, 135, 0.12);
             pointer-events: none;
             z-index: 20;
         }
@@ -95,24 +90,24 @@
            NAVIGATION
         ========================================================= */
 
-        .navbar {
+        .nav {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 110px;
+            height: 115px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            padding: 0 58px;
+            padding: 0 5.2vw;
 
-            z-index: 50;
+            z-index: 10;
         }
 
 
-        /* AC MONOGRAM */
+        /* AC LOGO */
 
         .logo {
             position: relative;
@@ -121,7 +116,7 @@
             align-items: center;
 
             font-family: "Cormorant Garamond", serif;
-            font-size: 48px;
+            font-size: 46px;
             font-weight: 400;
 
             color: var(--gold);
@@ -133,13 +128,13 @@
         .logo::after {
             content: "";
 
-            position: absolute;
-            top: 50%;
-
-            width: 25px;
+            width: 48px;
             height: 1px;
 
             background: var(--red);
+
+            position: absolute;
+            top: 50%;
         }
 
         .logo::before {
@@ -153,147 +148,119 @@
 
         /* NAV LINKS */
 
-        .nav-links {
+        .nav-right {
             display: flex;
             align-items: center;
-            gap: 50px;
-
-            margin-left: auto;
-            margin-right: 34px;
+            gap: 48px;
         }
 
-        .nav-links a {
+        .nav-link {
             position: relative;
 
+            color: #e7e3dd;
+            text-decoration: none;
+
+            font-family: "Inter", sans-serif;
             font-size: 11px;
             font-weight: 400;
 
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-
-            color: #ddd9d2;
 
             transition: color 0.3s ease;
         }
 
-        .nav-links a::after {
-            content: "";
-
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-
-            width: 0;
-            height: 1px;
-
-            background: var(--gold);
-
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold-light);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-link:hover {
+            color: var(--gold);
         }
 
 
-        /* EMAIL */
+        /* NAV DIVIDER */
 
         .nav-divider {
             width: 1px;
             height: 28px;
 
-            background: rgba(201, 154, 67, 0.65);
+            background: var(--gold);
 
-            margin-right: 28px;
+            opacity: 0.65;
+
+            margin-left: 2px;
         }
 
-        .email-icon {
-            width: 25px;
-            height: 18px;
+
+        /* MAIL ICON */
+
+        .mail {
+            width: 22px;
+            height: 16px;
 
             border: 1px solid var(--gold);
 
             position: relative;
 
-            transition: transform 0.3s ease;
+            margin-left: -5px;
         }
 
-        .email-icon::before,
-        .email-icon::after {
+        .mail::after {
             content: "";
 
             position: absolute;
 
-            width: 15px;
-            height: 1px;
+            width: 12px;
+            height: 12px;
 
-            background: var(--gold);
+            border-left: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
 
-            top: 5px;
-        }
+            transform: rotate(-45deg);
 
-        .email-icon::before {
-            left: 0;
-            transform: rotate(32deg);
-            transform-origin: left;
-        }
-
-        .email-icon::after {
-            right: 0;
-            transform: rotate(-32deg);
-            transform-origin: right;
-        }
-
-        .email-icon:hover {
-            transform: translateY(-2px);
+            left: 4px;
+            top: -4px;
         }
 
 
         /* =========================================================
-           HERO CONTENT
+           MAIN HERO CONTENT
         ========================================================= */
 
         .hero-content {
             position: relative;
-            z-index: 10;
+            z-index: 5;
 
-            width: min(1100px, 90%);
-
-            margin-left: 7.2%;
-
+            padding-left: 7.8vw;
             padding-top: 24vh;
+
+            width: 60%;
         }
 
 
-        /* SMALL LABEL */
+        /* SMALL TOP LABEL */
 
         .eyebrow {
             display: flex;
             align-items: center;
+
             gap: 15px;
 
-            margin-bottom: 27px;
+            margin-bottom: 30px;
         }
 
         .eyebrow-line {
             width: 48px;
             height: 1px;
 
-            background: var(--red-bright);
+            background: var(--red);
         }
 
         .eyebrow-text {
-            font-size: 11px;
+            color: var(--gold);
+
+            font-size: 10px;
             font-weight: 400;
 
-            letter-spacing: 5px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-
-            color: var(--gold-light);
         }
 
 
@@ -301,59 +268,61 @@
            NAME
         ========================================================= */
 
-        .hero-title {
+        .name {
             font-family: "Cormorant Garamond", serif;
 
-            font-size: clamp(78px, 8.5vw, 145px);
+            font-size: clamp(82px, 7.2vw, 126px);
 
-            line-height: 0.77;
+            font-weight: 400;
+            line-height: 0.78;
 
-            font-weight: 500;
-
-            letter-spacing: -5px;
+            letter-spacing: -4px;
 
             margin-left: -5px;
 
-            max-width: 800px;
+            white-space: nowrap;
         }
+
 
         .first-name {
             display: block;
-            color: var(--gold-light);
+            color: var(--gold);
         }
 
         .last-name {
             display: block;
-            color: var(--ivory);
+            color: var(--off-white);
 
-            margin-left: 1px;
+            margin-top: 8px;
         }
 
 
         /* =========================================================
-           PROFESSIONAL LINE
+           SPECIALISATION LINE
         ========================================================= */
 
-        .subtitle {
-            margin-top: 45px;
-
+        .specialisation {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
 
-            gap: 14px;
+            margin-top: 42px;
 
-            font-size: 14px;
+            color: var(--gold);
+
+            font-size: 12px;
             font-weight: 400;
 
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
 
-            color: var(--gold-light);
+            white-space: nowrap;
         }
 
-        .subtitle .dot {
+        .specialisation span {
+            margin: 0 14px;
+
             color: var(--red-bright);
+
             font-size: 10px;
         }
 
@@ -362,9 +331,8 @@
            BUTTONS
         ========================================================= */
 
-        .hero-buttons {
+        .buttons {
             display: flex;
-            align-items: center;
             gap: 25px;
 
             margin-top: 42px;
@@ -373,148 +341,81 @@
         .button {
             position: relative;
 
-            min-width: 175px;
-            height: 46px;
-
-            padding: 0 24px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            border: 1px solid rgba(201, 154, 67, 0.72);
+            width: 175px;
+            height: 46px;
 
-            font-size: 11px;
+            padding: 0 20px;
+
+            text-decoration: none;
+
+            color: #e7e3dd;
+
+            border: 1px solid var(--gold-soft);
+
+            font-size: 10px;
             font-weight: 400;
 
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-
-            color: var(--ivory);
 
             transition:
                 background 0.3s ease,
-                border-color 0.3s ease,
-                transform 0.3s ease;
+                color 0.3s ease,
+                border-color 0.3s ease;
         }
+
+
+        /* FIRST BUTTON RED */
 
         .button:first-child {
             border-color: var(--red-bright);
         }
 
+        .button:first-child .arrow {
+            color: var(--red-bright);
+        }
+
+
         .button:hover {
-            background: rgba(201, 154, 67, 0.06);
-
-            border-color: var(--gold-light);
-
-            transform: translateY(-2px);
+            background: rgba(185, 148, 77, 0.06);
+            color: var(--gold);
         }
 
         .button:first-child:hover {
-            border-color: #c3212d;
+            background: rgba(116, 16, 25, 0.08);
+            color: #eeeae3;
         }
 
-        .button-arrow {
-            font-size: 19px;
+
+        .arrow {
+            font-size: 20px;
             font-weight: 300;
 
-            margin-left: 22px;
+            line-height: 1;
 
-            color: var(--gold-light);
-
-            transition: transform 0.3s ease;
-        }
-
-        .button:first-child .button-arrow {
-            color: #c3212d;
-        }
-
-        .button:hover .button-arrow {
-            transform: translateX(5px);
-        }
-
-        .button.cv {
-            min-width: 105px;
+            color: var(--gold);
         }
 
 
         /* =========================================================
-           SCROLL INDICATOR
+           RIGHT SIDE GRAPHICS
         ========================================================= */
 
-        .scroll-indicator {
-            position: absolute;
-
-            bottom: 33px;
-            left: 50%;
-
-            transform: translateX(-50%);
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            z-index: 30;
-        }
-
-        .scroll-text {
-            font-size: 10px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-
-            color: var(--gold-light);
-
-            margin-bottom: 11px;
-        }
-
-        .scroll-line {
-            position: relative;
-
-            width: 1px;
-            height: 48px;
-
-            background: rgba(201, 154, 67, 0.55);
-        }
-
-        .scroll-line::after {
-            content: "";
-
-            position: absolute;
-
-            width: 7px;
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: var(--red-bright);
-
-            left: 50%;
-            bottom: 0;
-
-            transform: translateX(-50%);
-        }
-
-
-        /* =========================================================
-           TECHNICAL GRAPHIC
-        ========================================================= */
-
-        .technical-art {
+        .graphics {
             position: absolute;
 
             width: 58vw;
             height: 58vw;
 
-            max-width: 900px;
-            max-height: 900px;
+            max-width: 850px;
+            max-height: 850px;
 
-            min-width: 520px;
-            min-height: 520px;
-
-            right: -3vw;
-            top: 9vh;
-
-            opacity: 0.65;
+            right: -10vw;
+            top: 8vh;
 
             z-index: 1;
 
@@ -522,58 +423,96 @@
         }
 
 
-        /* MAIN RINGS */
+        /* LARGE CIRCLES */
 
-        .ring {
+        .circle {
             position: absolute;
 
             border-radius: 50%;
 
-            border: 1px solid rgba(125, 17, 28, 0.48);
+            border: 1px solid var(--red-line);
+
+            left: 50%;
+            top: 50%;
 
             transform: translate(-50%, -50%);
         }
 
-        .ring-1 {
-            width: 100%;
-            height: 100%;
-
-            left: 50%;
-            top: 50%;
+        .circle-1 {
+            width: 88%;
+            height: 88%;
         }
 
-        .ring-2 {
-            width: 74%;
-            height: 74%;
+        .circle-2 {
+            width: 67%;
+            height: 67%;
 
-            left: 50%;
-            top: 50%;
-
-            border-color: rgba(125, 17, 28, 0.36);
+            border-color: rgba(116, 16, 25, 0.38);
         }
 
-        .ring-3 {
-            width: 51%;
-            height: 51%;
+        .circle-3 {
+            width: 48%;
+            height: 48%;
 
-            left: 50%;
-            top: 50%;
-
-            border-color: rgba(201, 154, 67, 0.18);
+            border-color: rgba(185, 148, 77, 0.16);
         }
 
-        .ring-4 {
-            width: 34%;
-            height: 34%;
+        .circle-4 {
+            width: 29%;
+            height: 29%;
 
-            left: 50%;
-            top: 50%;
-
-            border-color: rgba(125, 17, 28, 0.3);
+            border-color: rgba(116, 16, 25, 0.32);
         }
 
 
-        /* CENTRAL CROSS */
+        /* =========================================================
+           ORBIT LINES
+        ========================================================= */
+
+        .orbit {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            width: 77%;
+            height: 29%;
+
+            border: 1px solid rgba(185, 148, 77, 0.12);
+
+            border-radius: 50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-25deg);
+        }
+
+        .orbit-2 {
+            transform:
+                translate(-50%, -50%)
+                rotate(28deg);
+
+            width: 86%;
+            height: 25%;
+
+            border-color: rgba(116, 16, 25, 0.16);
+        }
+
+        .orbit-3 {
+            transform:
+                translate(-50%, -50%)
+                rotate(-8deg);
+
+            width: 92%;
+            height: 20%;
+
+            border-color: rgba(185, 148, 77, 0.08);
+        }
+
+
+        /* =========================================================
+           CENTRAL CROSS
+        ========================================================= */
 
         .cross {
             position: absolute;
@@ -581,8 +520,8 @@
             left: 50%;
             top: 50%;
 
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
 
             transform: translate(-50%, -50%);
         }
@@ -593,286 +532,228 @@
 
             position: absolute;
 
-            background: rgba(201, 154, 67, 0.6);
+            background: rgba(185, 148, 77, 0.55);
         }
 
         .cross::before {
-            width: 100%;
+            width: 22px;
             height: 1px;
 
-            top: 50%;
+            top: 10px;
             left: 0;
         }
 
         .cross::after {
             width: 1px;
-            height: 100%;
+            height: 22px;
 
+            left: 10px;
             top: 0;
-            left: 50%;
         }
 
-        .cross-dot {
+
+        /* CENTRAL RED DOT */
+
+        .center-dot {
             position: absolute;
 
             width: 5px;
             height: 5px;
 
-            background: var(--red-bright);
-
             border-radius: 50%;
 
-            left: 50%;
-            top: 50%;
+            background: var(--red-bright);
 
-            transform: translate(-50%, -50%);
-        }
+            left: calc(50% - 2px);
+            top: calc(50% - 2px);
 
-
-        /* CURVED ENGINEERING LINES */
-
-        .technical-lines {
-            position: absolute;
-
-            width: 100%;
-            height: 100%;
-
-            inset: 0;
-        }
-
-        .technical-lines path {
-            fill: none;
-
-            stroke: rgba(201, 154, 67, 0.19);
-
-            stroke-width: 1;
-        }
-
-        .technical-lines .red-line {
-            stroke: rgba(125, 17, 28, 0.34);
+            box-shadow:
+                0 0 12px rgba(154, 22, 33, 0.45);
         }
 
 
         /* =========================================================
-           TECHNICAL DOT GRID
+           SMALL PLUS
+        ========================================================= */
+
+        .plus {
+            position: absolute;
+
+            width: 22px;
+            height: 22px;
+
+            right: 28%;
+            top: 29%;
+        }
+
+        .plus::before,
+        .plus::after {
+            content: "";
+
+            position: absolute;
+
+            background: rgba(185, 148, 77, 0.38);
+        }
+
+        .plus::before {
+            width: 22px;
+            height: 1px;
+
+            top: 10px;
+        }
+
+        .plus::after {
+            width: 1px;
+            height: 22px;
+
+            left: 10px;
+        }
+
+
+        /* =========================================================
+           TOP RIGHT DOT GRID
         ========================================================= */
 
         .dot-grid {
             position: absolute;
 
-            width: 150px;
-            height: 105px;
+            display: grid;
 
-            right: 4%;
-            top: 19%;
+            grid-template-columns: repeat(7, 4px);
+            grid-template-rows: repeat(5, 4px);
 
-            opacity: 0.55;
+            gap: 10px;
 
-            background-image:
-                radial-gradient(
-                    circle,
-                    rgba(201, 154, 67, 0.7) 1px,
-                    transparent 1px
-                );
+            right: 2vw;
+            top: 18vh;
+        }
 
-            background-size: 16px 16px;
+        .dot-grid span {
+            width: 2px;
+            height: 2px;
+
+            background: var(--gold);
+
+            opacity: 0.45;
         }
 
 
         /* =========================================================
-           SMALL TECHNICAL CROSS
+           BOTTOM LEFT DOT GRID
         ========================================================= */
 
-        .small-cross {
+        .dot-grid-bottom {
             position: absolute;
 
-            width: 24px;
-            height: 24px;
+            display: grid;
 
-            right: 28%;
-            top: 30%;
+            grid-template-columns: repeat(7, 4px);
+            grid-template-rows: repeat(5, 4px);
+
+            gap: 10px;
+
+            left: 9vw;
+            bottom: 4vh;
         }
 
-        .small-cross::before,
-        .small-cross::after {
+        .dot-grid-bottom span {
+            width: 2px;
+            height: 2px;
+
+            background: var(--red-bright);
+
+            opacity: 0.65;
+        }
+
+
+        /* =========================================================
+           BOTTOM LEFT CIRCLE
+        ========================================================= */
+
+        .bottom-circle {
+            position: absolute;
+
+            width: 210px;
+            height: 210px;
+
+            left: -120px;
+            bottom: -125px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(116, 16, 25, 0.35);
+
+            pointer-events: none;
+        }
+
+        .bottom-circle::after {
             content: "";
 
             position: absolute;
 
-            background: rgba(201, 154, 67, 0.5);
-        }
+            width: 150px;
+            height: 150px;
 
-        .small-cross::before {
-            width: 100%;
-            height: 1px;
-
-            top: 50%;
-        }
-
-        .small-cross::after {
-            width: 1px;
-            height: 100%;
-
-            left: 50%;
-        }
-
-
-        /* =========================================================
-           LOWER LEFT DOT GRID
-        ========================================================= */
-
-        .lower-grid {
-            position: absolute;
-
-            width: 160px;
-            height: 100px;
-
-            left: 9%;
-            bottom: 5%;
-
-            opacity: 0.45;
-
-            background-image:
-                radial-gradient(
-                    circle,
-                    rgba(163, 22, 34, 0.8) 1px,
-                    transparent 1px
-                );
-
-            background-size: 16px 16px;
-        }
-
-
-        /* =========================================================
-           LOWER LEFT ARC
-        ========================================================= */
-
-        .corner-arc {
-            position: absolute;
-
-            width: 260px;
-            height: 260px;
-
-            left: -160px;
-            bottom: -180px;
+            left: 30px;
+            top: 30px;
 
             border-radius: 50%;
 
-            border: 1px solid rgba(125, 17, 28, 0.42);
+            border: 1px solid rgba(116, 16, 25, 0.18);
         }
 
 
         /* =========================================================
-           CONTENT SECTIONS
+           SCROLL INDICATOR
         ========================================================= */
 
-        .section {
-            min-height: 100vh;
+        .scroll {
+            position: absolute;
 
-            padding: 130px 8%;
+            bottom: 34px;
+            left: 50%;
 
-            background: #070707;
+            transform: translateX(-50%);
 
-            border-top: 1px solid rgba(201, 154, 67, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            z-index: 5;
         }
 
-        .section-title {
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: clamp(55px, 7vw, 100px);
-
-            font-weight: 500;
-
-            color: var(--ivory);
-
-            margin-bottom: 35px;
-        }
-
-        .section-label {
+        .scroll-text {
             color: var(--gold);
 
-            font-size: 11px;
+            font-size: 9px;
+            letter-spacing: 4px;
 
-            letter-spacing: 5px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 18px;
+            margin-bottom: 13px;
         }
 
-        .section-text {
-            max-width: 700px;
+        .scroll-line {
+            width: 1px;
+            height: 32px;
 
-            color: #aaa6a0;
+            background: var(--gold);
 
-            font-size: 16px;
-
-            line-height: 1.9;
+            position: relative;
         }
 
+        .scroll-line::after {
+            content: "";
 
-        /* =========================================================
-           PROJECTS
-        ========================================================= */
+            position: absolute;
 
-        .project-grid {
-            display: grid;
+            width: 6px;
+            height: 6px;
 
-            grid-template-columns: repeat(3, 1fr);
+            border-radius: 50%;
 
-            gap: 22px;
+            background: var(--red-bright);
 
-            margin-top: 55px;
-        }
-
-        .project-card {
-            min-height: 240px;
-
-            padding: 30px;
-
-            border: 1px solid rgba(201, 154, 67, 0.18);
-
-            background: #090909;
-
-            transition:
-                border-color 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            border-color: rgba(201, 154, 67, 0.55);
-
-            transform: translateY(-5px);
-        }
-
-        .project-number {
-            color: var(--red-bright);
-
-            font-size: 11px;
-
-            letter-spacing: 3px;
-
-            margin-bottom: 35px;
-        }
-
-        .project-card h3 {
-            font-family: "Cormorant Garamond", serif;
-
-            font-size: 35px;
-
-            font-weight: 500;
-
-            color: var(--ivory);
-
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #85817c;
-
-            font-size: 13px;
-
-            line-height: 1.7;
+            left: -2.5px;
+            bottom: -3px;
         }
 
 
@@ -882,136 +763,107 @@
 
         @media (max-width: 1000px) {
 
-            .navbar {
-                padding: 0 35px;
+            .nav {
+                padding: 0 7vw;
             }
 
-            .nav-links {
-                gap: 28px;
+            .nav-right {
+                gap: 25px;
             }
 
             .hero-content {
-                margin-left: 6%;
+                width: 70%;
+                padding-left: 7vw;
             }
 
-            .technical-art {
+            .graphics {
                 right: -20vw;
-                opacity: 0.4;
+                opacity: 0.8;
             }
 
-            .project-grid {
-                grid-template-columns: 1fr 1fr;
+            .name {
+                font-size: 8vw;
             }
         }
 
 
-        @media (max-width: 750px) {
+        @media (max-width: 700px) {
 
-            .hero::before {
-                inset: 10px;
-            }
-
-            .navbar {
+            .nav {
                 height: 90px;
-
-                padding: 0 25px;
             }
 
-            .logo {
-                font-size: 40px;
+            .nav-right {
+                gap: 15px;
             }
 
-            .nav-links {
+            .nav-link {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .nav-link:nth-child(3) {
                 display: none;
             }
 
-            .nav-divider {
-                margin-right: 20px;
+            .logo {
+                font-size: 35px;
             }
 
             .hero-content {
-                width: 88%;
-
-                margin-left: 6%;
-
-                padding-top: 23vh;
+                width: 100%;
+                padding-left: 9vw;
+                padding-right: 8vw;
+                padding-top: 22vh;
             }
 
-            .eyebrow-text {
+            .name {
+                font-size: 17vw;
+                line-height: 0.82;
+                letter-spacing: -2px;
+                white-space: normal;
+            }
+
+            .specialisation {
                 font-size: 9px;
-                letter-spacing: 3px;
-            }
-
-            .hero-title {
-                font-size: clamp(64px, 17vw, 100px);
-
-                line-height: 0.8;
-
-                letter-spacing: -3px;
-            }
-
-            .subtitle {
-                margin-top: 32px;
-
-                font-size: 10px;
-
-                letter-spacing: 2.5px;
-
-                gap: 8px;
-            }
-
-            .hero-buttons {
+                letter-spacing: 1.5px;
                 flex-wrap: wrap;
+            }
 
-                gap: 12px;
+            .specialisation span {
+                margin: 0 7px;
+            }
 
-                margin-top: 35px;
+            .buttons {
+                gap: 10px;
             }
 
             .button {
-                min-width: 155px;
-
-                height: 44px;
-
-                padding: 0 17px;
-
-                font-size: 9px;
-
-                letter-spacing: 2px;
+                width: 130px;
+                height: 42px;
+                padding: 0 12px;
+                font-size: 8px;
+                letter-spacing: 1px;
             }
 
-            .button.cv {
-                min-width: 100px;
-            }
-
-            .technical-art {
-                width: 120vw;
-                height: 120vw;
-
-                right: -50vw;
-                top: 25vh;
-
-                opacity: 0.22;
+            .graphics {
+                width: 110vw;
+                height: 110vw;
+                right: -45vw;
+                top: 28vh;
+                opacity: 0.45;
             }
 
             .dot-grid {
                 display: none;
             }
 
-            .lower-grid {
-                left: 5%;
+            .dot-grid-bottom {
+                left: 8vw;
             }
 
-            .scroll-indicator {
+            .scroll {
                 display: none;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 100px 7%;
             }
         }
 
@@ -1023,120 +875,70 @@
 
 
     <!-- =========================================================
-         HERO
-    ========================================================= -->
+         HERO SECTION
+    ========================================================== -->
 
     <section class="hero" id="home">
 
 
-        <!-- NAVIGATION -->
+        <!-- ================= NAVIGATION ================= -->
 
-        <nav class="navbar">
+        <nav class="nav">
 
             <a href="#home" class="logo">
                 AC
             </a>
 
+            <div class="nav-right">
 
-            <div class="nav-links">
-
-                <a href="#projects">
+                <a href="#projects" class="nav-link">
                     Projects
                 </a>
 
-                <a href="#about">
+                <a href="#about" class="nav-link">
                     About Me
                 </a>
 
-                <a href="#experience">
+                <a href="#experience" class="nav-link">
                     Experience
                 </a>
 
-                <a href="#cv">
+                <a href="#cv" class="nav-link">
                     CV
                 </a>
 
+                <div class="nav-divider"></div>
+
+                <a href="mailto:" class="mail" aria-label="Email"></a>
+
             </div>
-
-
-            <div class="nav-divider"></div>
-
-            <a href="mailto:your-email@example.com" class="email-icon" aria-label="Email"></a>
 
         </nav>
 
 
 
-        <!-- TECHNICAL BACKGROUND -->
-
-        <div class="technical-art">
-
-            <div class="ring ring-1"></div>
-            <div class="ring ring-2"></div>
-            <div class="ring ring-3"></div>
-            <div class="ring ring-4"></div>
-
-            <div class="cross">
-                <div class="cross-dot"></div>
-            </div>
-
-            <svg class="technical-lines"
-                 viewBox="0 0 800 800"
-                 preserveAspectRatio="none">
-
-                <path d="
-                    M 50 520
-                    C 180 470, 210 400, 340 390
-                    C 470 380, 520 280, 740 220
-                " />
-
-                <path class="red-line" d="
-                    M 80 600
-                    C 210 530, 260 430, 370 430
-                    C 490 430, 570 300, 760 260
-                " />
-
-                <path d="
-                    M 120 660
-                    C 240 550, 330 520, 420 500
-                    C 560 470, 610 340, 770 300
-                " />
-
-                <path d="
-                    M 210 670
-                    C 320 590, 380 560, 460 520
-                    C 570 465, 650 360, 760 330
-                " />
-
-            </svg>
-
-
-            <div class="dot-grid"></div>
-
-            <div class="small-cross"></div>
-
-        </div>
-
-
-
-        <!-- HERO CONTENT -->
+        <!-- ================= MAIN CONTENT ================= -->
 
         <div class="hero-content">
 
 
+            <!-- TOP LABEL -->
+
             <div class="eyebrow">
 
-                <span class="eyebrow-line"></span>
+                <div class="eyebrow-line"></div>
 
-                <span class="eyebrow-text">
+                <div class="eyebrow-text">
                     Motorsport Engineering Portfolio
-                </span>
+                </div>
 
             </div>
 
 
 
-            <h1 class="hero-title">
+            <!-- NAME -->
+
+            <h1 class="name">
 
                 <span class="first-name">
                     Aikaterini
@@ -1150,29 +952,27 @@
 
 
 
-            <div class="subtitle">
+            <!-- SPECIALISATION -->
 
-                <span>
-                    Mechanical Engineering
-                </span>
+            <div class="specialisation">
 
-                <span class="dot">·</span>
+                Mechanical Engineering
 
-                <span>
-                    Motorsport
-                </span>
+                <span>·</span>
 
-                <span class="dot">·</span>
+                Motorsport
 
-                <span>
-                    Performance
-                </span>
+                <span>·</span>
+
+                Performance
 
             </div>
 
 
 
-            <div class="hero-buttons">
+            <!-- BUTTONS -->
+
+            <div class="buttons">
 
                 <a href="#projects" class="button">
 
@@ -1180,7 +980,7 @@
                         View Projects
                     </span>
 
-                    <span class="button-arrow">
+                    <span class="arrow">
                         →
                     </span>
 
@@ -1193,20 +993,20 @@
                         About Me
                     </span>
 
-                    <span class="button-arrow">
+                    <span class="arrow">
                         →
                     </span>
 
                 </a>
 
 
-                <a href="#cv" class="button cv">
+                <a href="#cv" class="button">
 
                     <span>
                         CV
                     </span>
 
-                    <span class="button-arrow">
+                    <span class="arrow">
                         →
                     </span>
 
@@ -1218,180 +1018,129 @@
 
 
 
-        <!-- LOWER LEFT GRAPHICS -->
+        <!-- =====================================================
+             RIGHT GRAPHICS
+        ====================================================== -->
 
-        <div class="lower-grid"></div>
+        <div class="graphics">
 
-        <div class="corner-arc"></div>
+            <div class="circle circle-1"></div>
+
+            <div class="circle circle-2"></div>
+
+            <div class="circle circle-3"></div>
+
+            <div class="circle circle-4"></div>
+
+
+            <div class="orbit"></div>
+
+            <div class="orbit orbit-2"></div>
+
+            <div class="orbit orbit-3"></div>
+
+
+            <div class="cross"></div>
+
+            <div class="center-dot"></div>
+
+            <div class="plus"></div>
+
+        </div>
+
+
+
+        <!-- TOP RIGHT DOTS -->
+
+        <div class="dot-grid">
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+        </div>
+
+
+
+        <!-- BOTTOM LEFT DOTS -->
+
+        <div class="dot-grid-bottom">
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span>
+
+        </div>
+
+
+
+        <!-- BOTTOM LEFT CIRCLE -->
+
+        <div class="bottom-circle"></div>
 
 
 
         <!-- SCROLL -->
 
-        <div class="scroll-indicator">
+        <div class="scroll">
 
-            <span class="scroll-text">
-                Scroll
-            </span>
-
-            <span class="scroll-line"></span>
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================================
-         PROJECTS
-    ========================================================= -->
-
-    <section class="section" id="projects">
-
-        <div class="section-label">
-            Selected Work
-        </div>
-
-        <h2 class="section-title">
-            Projects
-        </h2>
-
-        <p class="section-text">
-            Engineering projects focused on motorsport,
-            powertrain development, vehicle performance,
-            simulation and data-driven analysis.
-        </p>
-
-
-        <div class="project-grid">
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <h3>
-                    Powertrain
-                </h3>
-
-                <p>
-                    Powertrain development, engine modelling,
-                    tuning and performance analysis.
-                </p>
-
+            <div class="scroll-text">
+                SCROLL
             </div>
 
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <h3>
-                    Vehicle Dynamics
-                </h3>
-
-                <p>
-                    Vehicle performance analysis, lap-time
-                    optimisation and driver collaboration.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <h3>
-                    F1 V6 Engine
-                </h3>
-
-                <p>
-                    Computational analysis of an F1-inspired
-                    V6 engine with advanced piston geometry.
-                </p>
-
-            </div>
+            <div class="scroll-line"></div>
 
         </div>
+
 
     </section>
 
 
 
     <!-- =========================================================
-         ABOUT
-    ========================================================= -->
+         PLACEHOLDER SECTIONS
+         Θα τα φτιάξουμε μετά.
+    ========================================================== -->
 
-    <section class="section" id="about">
+    <section id="projects"></section>
 
-        <div class="section-label">
-            Profile
-        </div>
+    <section id="about"></section>
 
-        <h2 class="section-title">
-            About Me
-        </h2>
+    <section id="experience"></section>
 
-        <p class="section-text">
-            Mechanical Engineering student focused on motorsport
-            engineering, powertrain development, vehicle
-            performance and race engineering.
-        </p>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         EXPERIENCE
-    ========================================================= -->
-
-    <section class="section" id="experience">
-
-        <div class="section-label">
-            Background
-        </div>
-
-        <h2 class="section-title">
-            Experience
-        </h2>
-
-        <p class="section-text">
-            Motorsport experience, engineering projects,
-            technical training and practical development.
-        </p>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         CV
-    ========================================================= -->
-
-    <section class="section" id="cv">
-
-        <div class="section-label">
-            Curriculum Vitae
-        </div>
-
-        <h2 class="section-title">
-            CV
-        </h2>
-
-        <p class="section-text">
-            My academic background, engineering experience,
-            motorsport activities and technical skills.
-        </p>
-
-    </section>
+    <section id="cv"></section>
 
 
 </body>
