@@ -50,9 +50,9 @@
             /* very dark red */
             --red: #7b1018;
 
-            /* almost invisible gold/red */
-            --gold-fade: rgba(197, 154, 59, 0.15);
-            --red-fade: rgba(123, 16, 24, 0.22);
+            /* subtle background tones */
+            --gold-fade: rgba(197, 154, 59, 0.12);
+            --red-fade: rgba(123, 16, 24, 0.18);
         }
 
 
@@ -64,8 +64,11 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
+
             overflow: hidden;
+
             background: #050505;
+
             border: 1px solid rgba(255,255,255,0.07);
         }
 
@@ -76,10 +79,14 @@
 
         .hero::before {
             content: "";
+
             position: absolute;
             inset: 8px;
+
             border: 1px solid rgba(255,255,255,0.055);
+
             pointer-events: none;
+
             z-index: 10;
         }
 
@@ -90,6 +97,7 @@
 
         .background-graphic {
             position: absolute;
+
             width: 820px;
             height: 820px;
 
@@ -98,7 +106,7 @@
 
             border-radius: 50%;
 
-            opacity: 0.75;
+            opacity: 0.68;
 
             pointer-events: none;
         }
@@ -106,9 +114,12 @@
 
         .circle {
             position: absolute;
+
             border-radius: 50%;
+
             border: 1px solid;
         }
+
 
         .circle-1 {
             width: 720px;
@@ -117,8 +128,9 @@
             top: 0;
             left: 50px;
 
-            border-color: rgba(123, 16, 24, 0.48);
+            border-color: rgba(123, 16, 24, 0.42);
         }
+
 
         .circle-2 {
             width: 570px;
@@ -127,8 +139,9 @@
             top: 75px;
             left: 125px;
 
-            border-color: rgba(123, 16, 24, 0.34);
+            border-color: rgba(123, 16, 24, 0.30);
         }
+
 
         .circle-3 {
             width: 400px;
@@ -137,8 +150,9 @@
             top: 160px;
             left: 210px;
 
-            border-color: rgba(197, 154, 59, 0.20);
+            border-color: rgba(197, 154, 59, 0.16);
         }
+
 
         .circle-4 {
             width: 295px;
@@ -147,7 +161,7 @@
             top: 210px;
             left: 265px;
 
-            border-color: rgba(123, 16, 24, 0.28);
+            border-color: rgba(123, 16, 24, 0.24);
         }
 
 
@@ -161,7 +175,7 @@
             width: 700px;
             height: 170px;
 
-            border-top: 1px solid rgba(197,154,59,0.13);
+            border-top: 1px solid rgba(197,154,59,0.10);
 
             border-radius: 50%;
 
@@ -171,15 +185,21 @@
             top: 315px;
         }
 
+
         .flow-line.red {
-            border-color: rgba(123,16,24,0.25);
+            border-color: rgba(123,16,24,0.20);
+
             transform: rotate(17deg);
+
             top: 365px;
         }
 
+
         .flow-line.thin {
-            border-color: rgba(197,154,59,0.08);
+            border-color: rgba(197,154,59,0.055);
+
             transform: rotate(-4deg);
+
             top: 455px;
         }
 
@@ -198,8 +218,10 @@
             left: 490px;
         }
 
+
         .cross::before {
             content: "";
+
             position: absolute;
 
             width: 25px;
@@ -208,11 +230,13 @@
             top: 12px;
             left: 0;
 
-            background: rgba(197,154,59,0.38);
+            background: rgba(197,154,59,0.30);
         }
+
 
         .cross::after {
             content: "";
+
             position: absolute;
 
             width: 1px;
@@ -221,8 +245,9 @@
             left: 12px;
             top: 0;
 
-            background: rgba(197,154,59,0.38);
+            background: rgba(197,154,59,0.30);
         }
+
 
         .cross-dot {
             position: absolute;
@@ -236,6 +261,8 @@
 
             left: 10px;
             top: 10px;
+
+            opacity: 0.8;
         }
 
 
@@ -247,6 +274,7 @@
             position: absolute;
 
             display: grid;
+
             grid-template-columns: repeat(6, 4px);
             grid-template-rows: repeat(6, 4px);
 
@@ -254,6 +282,7 @@
 
             pointer-events: none;
         }
+
 
         .dot-grid span {
             width: 3px;
@@ -263,20 +292,21 @@
 
             background: #8a171d;
 
-            opacity: 0.32;
-
-            transition: opacity 0.3s ease;
+            opacity: 0.18;
         }
 
-        /* fade the dots into the background */
+
+        /* fade progressively into background */
+
         .dot-grid span:nth-child(1),
         .dot-grid span:nth-child(2),
         .dot-grid span:nth-child(3),
         .dot-grid span:nth-child(4),
         .dot-grid span:nth-child(5),
         .dot-grid span:nth-child(6) {
-            opacity: 0.08;
+            opacity: 0.035;
         }
+
 
         .dot-grid span:nth-child(7),
         .dot-grid span:nth-child(8),
@@ -284,8 +314,9 @@
         .dot-grid span:nth-child(10),
         .dot-grid span:nth-child(11),
         .dot-grid span:nth-child(12) {
-            opacity: 0.14;
+            opacity: 0.055;
         }
+
 
         .dot-grid span:nth-child(13),
         .dot-grid span:nth-child(14),
@@ -293,8 +324,9 @@
         .dot-grid span:nth-child(16),
         .dot-grid span:nth-child(17),
         .dot-grid span:nth-child(18) {
-            opacity: 0.20;
+            opacity: 0.08;
         }
+
 
         .dot-grid span:nth-child(19),
         .dot-grid span:nth-child(20),
@@ -302,11 +334,12 @@
         .dot-grid span:nth-child(22),
         .dot-grid span:nth-child(23),
         .dot-grid span:nth-child(24) {
-            opacity: 0.14;
+            opacity: 0.055;
         }
 
+
         .dot-grid span:nth-child(n+25) {
-            opacity: 0.07;
+            opacity: 0.025;
         }
 
 
@@ -315,10 +348,12 @@
             bottom: 70px;
         }
 
+
         .dots-top {
             right: 30px;
             top: 145px;
         }
+
 
         .dots-top span {
             background: #a88735;
@@ -344,7 +379,9 @@
         }
 
 
-        /* AC LOGO */
+        /* =========================================================
+           AC LOGO
+        ========================================================= */
 
         .logo {
             position: relative;
@@ -357,12 +394,14 @@
             font-family: 'Cormorant Garamond', serif;
 
             font-size: 48px;
+
             font-weight: 500;
 
             letter-spacing: -3px;
 
             line-height: 1;
         }
+
 
         .logo::before,
         .logo::after {
@@ -374,26 +413,35 @@
             background: rgba(123,16,24,0.8);
 
             position: absolute;
+
             top: 50%;
         }
+
 
         .logo::before {
             right: calc(100% + 18px);
         }
+
 
         .logo::after {
             left: calc(100% + 18px);
         }
 
 
+        /* =========================================================
+           NAV LINKS
+        ========================================================= */
+
         .nav-links {
             display: flex;
+
             align-items: center;
 
             gap: 48px;
 
             margin-left: auto;
         }
+
 
         .nav-links a {
             text-decoration: none;
@@ -403,12 +451,14 @@
             font-family: 'Inter', sans-serif;
 
             font-size: 12px;
+
             font-weight: 400;
 
             letter-spacing: 4px;
 
             transition: color 0.3s ease;
         }
+
 
         .nav-links a:hover {
             color: var(--gold);
@@ -425,7 +475,9 @@
         }
 
 
-        /* MAIL ICON */
+        /* =========================================================
+           MAIL ICON
+        ========================================================= */
 
         .mail {
             width: 22px;
@@ -437,6 +489,7 @@
 
             margin-left: 18px;
         }
+
 
         .mail::after {
             content: "";
@@ -466,16 +519,29 @@
             z-index: 15;
 
             margin-left: 7.7%;
-            margin-top: 95px;
 
-            max-width: 760px;
+            /*
+               IMPORTANT:
+               Αυτό επαναφέρει το vertical position
+               της desired εικόνας.
+            */
+            margin-top: 72px;
+
+            /*
+               Μεγαλύτερο πλάτος ώστε το subtitle
+               να μένει σε ΜΙΑ γραμμή.
+            */
+            max-width: 1000px;
         }
 
 
-        /* small red line + title */
+        /* =========================================================
+           EYEBROW
+        ========================================================= */
 
         .eyebrow {
             display: flex;
+
             align-items: center;
 
             gap: 16px;
@@ -485,12 +551,14 @@
             font-family: 'Inter', sans-serif;
 
             font-size: 12px;
+
             font-weight: 400;
 
             letter-spacing: 5px;
 
-            margin-bottom: 36px;
+            margin-bottom: 34px;
         }
+
 
         .eyebrow::before {
             content: "";
@@ -511,7 +579,7 @@
 
             font-size: clamp(90px, 7vw, 124px);
 
-            line-height: 0.78;
+            line-height: 0.80;
 
             font-weight: 500;
 
@@ -519,16 +587,20 @@
 
             margin-left: -5px;
 
-            margin-bottom: 46px;
+            margin-bottom: 45px;
         }
+
 
         .name .first {
             display: block;
+
             color: var(--gold);
         }
 
+
         .name .last {
             display: block;
+
             color: var(--white);
 
             margin-left: -2px;
@@ -541,7 +613,10 @@
 
         .subtitle {
             display: flex;
+
             align-items: center;
+
+            flex-wrap: nowrap;
 
             gap: 17px;
 
@@ -555,8 +630,11 @@
 
             letter-spacing: 4px;
 
-            margin-bottom: 43px;
+            white-space: nowrap;
+
+            margin-bottom: 47px;
         }
+
 
         .subtitle .separator {
             color: #8a1720;
@@ -577,6 +655,7 @@
             gap: 35px;
         }
 
+
         .button {
             position: relative;
 
@@ -584,7 +663,9 @@
             height: 64px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             padding: 0 27px;
@@ -609,19 +690,25 @@
                 border-color 0.3s ease;
         }
 
+
         .button.projects {
             border-color: #9b1018;
         }
 
+
         .button:hover {
             background: rgba(197,154,59,0.06);
+
             color: var(--gold);
         }
 
+
         .button.projects:hover {
             background: rgba(123,16,24,0.08);
+
             color: #d9a6a8;
         }
+
 
         .arrow {
             font-size: 24px;
@@ -632,6 +719,7 @@
 
             color: var(--gold);
         }
+
 
         .projects .arrow {
             color: #a9161e;
@@ -648,12 +736,15 @@
             z-index: 20;
 
             bottom: 28px;
+
             left: 50%;
 
             transform: translateX(-50%);
 
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
 
             color: var(--gold);
@@ -663,16 +754,19 @@
             letter-spacing: 5px;
         }
 
+
         .scroll-line {
             position: relative;
 
             width: 1px;
+
             height: 45px;
 
             background: rgba(197,154,59,0.65);
 
             margin-top: 14px;
         }
+
 
         .scroll-line::after {
             content: "";
@@ -687,6 +781,7 @@
             background: #9b1018;
 
             bottom: -3px;
+
             left: -3.5px;
         }
 
@@ -695,33 +790,74 @@
            RESPONSIVE
         ========================================================= */
 
+        @media (max-width: 1200px) {
+
+            .hero-content {
+                margin-left: 7%;
+                max-width: 900px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                letter-spacing: 3px;
+            }
+
+            .button {
+                width: 225px;
+            }
+
+            .buttons {
+                gap: 28px;
+            }
+        }
+
+
         @media (max-width: 1000px) {
 
             .navbar {
                 padding: 30px 35px;
             }
 
+
             .nav-links {
                 gap: 25px;
             }
 
+
             .hero-content {
                 margin-left: 7%;
-                margin-top: 80px;
+
+                margin-top: 65px;
+
+                max-width: 850px;
             }
+
 
             .name {
                 font-size: 85px;
             }
 
+
+            .subtitle {
+                font-size: 12px;
+
+                letter-spacing: 2.5px;
+
+                gap: 12px;
+            }
+
+
             .background-graphic {
                 right: -300px;
+
                 opacity: 0.45;
             }
+
 
             .buttons {
                 gap: 20px;
             }
+
 
             .button {
                 width: 210px;
@@ -735,63 +871,102 @@
                 min-height: 100vh;
             }
 
+
             .navbar {
                 padding: 25px;
             }
+
 
             .logo {
                 font-size: 40px;
             }
 
+
             .nav-links {
                 display: none;
             }
 
+
             .hero-content {
                 margin-left: 8%;
                 margin-right: 8%;
-                margin-top: 80px;
+
+                margin-top: 70px;
+
+                max-width: none;
             }
+
 
             .eyebrow {
                 font-size: 9px;
+
                 letter-spacing: 3px;
+
+                margin-bottom: 28px;
             }
+
 
             .name {
                 font-size: 64px;
+
                 line-height: 0.82;
+
                 letter-spacing: -3px;
+
+                margin-bottom: 38px;
             }
+
 
             .subtitle {
                 flex-wrap: wrap;
+
+                white-space: normal;
+
                 font-size: 10px;
+
                 letter-spacing: 2px;
+
                 gap: 8px;
+
+                margin-bottom: 35px;
             }
+
 
             .buttons {
                 flex-direction: column;
+
                 align-items: flex-start;
+
+                gap: 16px;
             }
+
 
             .button {
                 width: 220px;
+
                 height: 58px;
             }
 
+
             .background-graphic {
                 right: -500px;
+
                 top: 120px;
             }
+
 
             .dots-top {
                 right: 15px;
             }
 
+
             .dots-bottom {
                 left: 60px;
+            }
+
+
+            .scroll-indicator {
+                bottom: 20px;
             }
         }
 
@@ -803,6 +978,7 @@
 
     <section class="hero">
 
+
         <!-- =====================================================
              BACKGROUND GRAPHICS
         ====================================================== -->
@@ -810,19 +986,29 @@
         <div class="background-graphic">
 
             <div class="circle circle-1"></div>
+
             <div class="circle circle-2"></div>
+
             <div class="circle circle-3"></div>
+
             <div class="circle circle-4"></div>
 
+
             <div class="flow-line"></div>
+
             <div class="flow-line red"></div>
+
             <div class="flow-line thin"></div>
 
+
             <div class="cross">
+
                 <div class="cross-dot"></div>
+
             </div>
 
         </div>
+
 
 
         <!-- =====================================================
@@ -852,6 +1038,7 @@
         </div>
 
 
+
         <!-- =====================================================
              BOTTOM DOT GRID
         ====================================================== -->
@@ -879,6 +1066,7 @@
         </div>
 
 
+
         <!-- =====================================================
              NAVIGATION
         ====================================================== -->
@@ -889,25 +1077,39 @@
                 AC
             </div>
 
+
             <div class="nav-links">
 
-                <a href="#projects">PROJECTS</a>
+                <a href="#projects">
+                    PROJECTS
+                </a>
 
-                <a href="#about">ABOUT ME</a>
+                <a href="#about">
+                    ABOUT ME
+                </a>
 
-                <a href="#experience">EXPERIENCE</a>
+                <a href="#experience">
+                    EXPERIENCE
+                </a>
 
-                <a href="#cv">CV</a>
+                <a href="#cv">
+                    CV
+                </a>
+
 
                 <div class="nav-divider"></div>
 
+
                 <a href="mailto:your-email@example.com">
+
                     <div class="mail"></div>
+
                 </a>
 
             </div>
 
         </nav>
+
 
 
         <!-- =====================================================
@@ -916,9 +1118,11 @@
 
         <main class="hero-content">
 
+
             <div class="eyebrow">
                 MOTORSPORT ENGINEERING PORTFOLIO
             </div>
+
 
 
             <h1 class="name">
@@ -934,41 +1138,77 @@
             </h1>
 
 
+
             <div class="subtitle">
 
-                <span>MECHANICAL ENGINEERING</span>
+                <span>
+                    MECHANICAL ENGINEERING
+                </span>
 
-                <span class="separator">·</span>
+                <span class="separator">
+                    ·
+                </span>
 
-                <span>MOTORSPORT</span>
+                <span>
+                    MOTORSPORT
+                </span>
 
-                <span class="separator">·</span>
+                <span class="separator">
+                    ·
+                </span>
 
-                <span>PERFORMANCE</span>
+                <span>
+                    PERFORMANCE
+                </span>
 
             </div>
+
 
 
             <div class="buttons">
 
                 <a href="#projects" class="button projects">
-                    <span>VIEW PROJECTS</span>
-                    <span class="arrow">→</span>
+
+                    <span>
+                        VIEW PROJECTS
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
                 </a>
+
 
                 <a href="#about" class="button">
-                    <span>ABOUT ME</span>
-                    <span class="arrow">→</span>
+
+                    <span>
+                        ABOUT ME
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
                 </a>
 
+
                 <a href="#cv" class="button">
-                    <span>CV</span>
-                    <span class="arrow">→</span>
+
+                    <span>
+                        CV
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
                 </a>
 
             </div>
 
         </main>
+
 
 
         <!-- =====================================================
@@ -977,23 +1217,29 @@
 
         <div class="scroll-indicator">
 
-            <span>SCROLL</span>
+            <span>
+                SCROLL
+            </span>
 
             <div class="scroll-line"></div>
 
         </div>
 
+
     </section>
+
 
 
     <!-- =========================================================
          PLACEHOLDER SECTIONS
-         (θα τα φτιάξουμε μετά)
     ========================================================== -->
 
     <section id="projects"></section>
+
     <section id="about"></section>
+
     <section id="experience"></section>
+
     <section id="cv"></section>
 
 
