@@ -4,103 +4,537 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Katerina Christoforaki | Motorsport Engineering</title>
+    <title>Aikaterini Christoforaki | Motorsport Engineering</title>
+
+    <!-- Elegant serif + modern sans-serif fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
-        body {
+
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b0d10;
-            color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #070809;
+            color: #f3f0eb;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* -------------------------
+           MAIN HERO
+        ------------------------- */
+
+        .hero {
+            position: relative;
             min-height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid #151515;
         }
 
-        .container {
-            max-width: 900px;
-            padding: 60px 30px;
+        /* -------------------------
+           NAVIGATION
+        ------------------------- */
+
+        nav {
+            position: absolute;
+            top: 38px;
+            left: 0;
+            width: 100%;
+            padding: 0 4.5vw;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            z-index: 10;
         }
 
-        .tag {
-            color: #888;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 14px;
-            margin-bottom: 20px;
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 500;
+            color: #d5a85c;
+            letter-spacing: -2px;
+
+            position: relative;
+        }
+
+        .logo::before,
+        .logo::after {
+            content: "";
+            position: absolute;
+            top: 55%;
+            width: 35px;
+            height: 1px;
+            background: #56151b;
+        }
+
+        .logo::before {
+            right: 105%;
+        }
+
+        .logo::after {
+            left: 105%;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .nav-links a {
+            color: #eeeae4;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 3px;
+
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d5a85c;
+        }
+
+        /* -------------------------
+           HERO CONTENT
+        ------------------------- */
+
+        .hero-content {
+            position: absolute;
+            left: 7.8%;
+            top: 25%;
+
+            z-index: 5;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            color: #d5a85c;
+            font-size: 11px;
+            letter-spacing: 4px;
+            font-weight: 400;
+
+            margin-bottom: 30px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 47px;
+            height: 1px;
+            background: #7d111b;
         }
 
         h1 {
-            font-size: 64px;
-            line-height: 1.05;
-            margin: 0 0 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: clamp(80px, 8.3vw, 145px);
+            line-height: 0.82;
+            letter-spacing: -4px;
+
+            color: #f4f1ed;
         }
 
-        h2 {
-            font-weight: normal;
-            color: #aaa;
-            font-size: 24px;
-            margin-bottom: 35px;
+        h1 span {
+            color: #d5a85c;
         }
 
-        p {
-            color: #b8b8b8;
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 700px;
+        .subtitle {
+            margin-top: 38px;
+
+            font-size: 15px;
+            letter-spacing: 4px;
+            font-weight: 400;
+
+            color: #d5a85c;
         }
+
+        .subtitle .dot {
+            color: #74141b;
+            padding: 0 10px;
+        }
+
+        /* -------------------------
+           BUTTONS
+        ------------------------- */
 
         .buttons {
-            margin-top: 40px;
+            display: flex;
+            gap: 25px;
+            margin-top: 45px;
         }
 
         .button {
-            display: inline-block;
-            padding: 14px 24px;
-            margin-right: 10px;
-            border: 1px solid #555;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-width: 175px;
+            padding: 15px 25px;
+
+            border: 1px solid #8b171f;
+
+            color: #eeeae4;
             text-decoration: none;
-            transition: 0.2s;
+
+            font-size: 11px;
+            letter-spacing: 2px;
+
+            transition: all 0.3s ease;
+        }
+
+        .button.gold {
+            border-color: #80612d;
         }
 
         .button:hover {
-            background: white;
-            color: #0b0d10;
+            background: #180b0d;
+            border-color: #d5a85c;
+            color: #d5a85c;
         }
+
+        .arrow {
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        /* -------------------------
+           TECHNICAL GRAPHIC
+        ------------------------- */
+
+        .graphic {
+            position: absolute;
+            right: -2%;
+            top: 11%;
+            width: 50vw;
+            height: 75vh;
+
+            opacity: 0.7;
+        }
+
+        .circle {
+            position: absolute;
+
+            border: 1px solid rgba(112, 20, 27, 0.55);
+            border-radius: 50%;
+        }
+
+        .circle.one {
+            width: 650px;
+            height: 650px;
+
+            right: 0;
+            top: 0;
+        }
+
+        .circle.two {
+            width: 500px;
+            height: 500px;
+
+            right: 75px;
+            top: 75px;
+        }
+
+        .circle.three {
+            width: 350px;
+            height: 350px;
+
+            right: 150px;
+            top: 150px;
+        }
+
+        .track {
+            position: absolute;
+
+            width: 500px;
+            height: 180px;
+
+            right: 110px;
+            top: 250px;
+
+            border: 1px solid rgba(170, 125, 50, 0.45);
+
+            transform: rotate(-20deg);
+
+            border-radius: 45% 55% 40% 60%;
+        }
+
+        .track::before {
+            content: "";
+
+            position: absolute;
+            width: 360px;
+            height: 90px;
+
+            left: 65px;
+            top: 40px;
+
+            border: 1px solid rgba(130, 25, 30, 0.55);
+
+            border-radius: 50%;
+        }
+
+        /* technical grid */
+
+        .grid {
+            position: absolute;
+            right: 0;
+            top: 50px;
+
+            width: 130px;
+            height: 100px;
+
+            background-image:
+                radial-gradient(#b88736 1px, transparent 1px);
+
+            background-size: 15px 15px;
+
+            opacity: 0.45;
+        }
+
+        /* -------------------------
+           BOTTOM DETAILS
+        ------------------------- */
+
+        .bottom-grid {
+            position: absolute;
+
+            left: 13%;
+            bottom: 35px;
+
+            width: 150px;
+            height: 80px;
+
+            background-image:
+                radial-gradient(#8a151c 1px, transparent 1px);
+
+            background-size: 15px 15px;
+
+            opacity: 0.6;
+        }
+
+        .scroll {
+            position: absolute;
+
+            bottom: 30px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            color: #d5a85c;
+
+            font-size: 10px;
+            letter-spacing: 4px;
+        }
+
+        .scroll-line {
+            margin-top: 10px;
+
+            width: 1px;
+            height: 30px;
+
+            background: #d5a85c;
+
+            position: relative;
+        }
+
+        .scroll-line::after {
+            content: "";
+
+            position: absolute;
+
+            bottom: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #b30f1b;
+        }
+
+        /* -------------------------
+           RESPONSIVE
+        ------------------------- */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+                letter-spacing: 2px;
+            }
+
+            .hero-content {
+                left: 8%;
+                top: 25%;
+            }
+
+            h1 {
+                font-size: 75px;
+            }
+
+            .graphic {
+                opacity: 0.25;
+                right: -30%;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 0 7vw;
+            }
+
+            .nav-links a:nth-child(3) {
+                display: none;
+            }
+
+            .hero-content {
+                left: 8%;
+                top: 25%;
+            }
+
+            h1 {
+                font-size: 60px;
+                letter-spacing: -2px;
+            }
+
+            .subtitle {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                width: 180px;
+            }
+
+            .graphic {
+                right: -60%;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+<section class="hero">
 
-        <div class="tag">
-            Motorsport Engineering Portfolio
+    <!-- NAVIGATION -->
+    <nav>
+
+        <div class="logo">
+            AC
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#projects">PROJECTS</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#cv">CV</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO TEXT -->
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            MOTORSPORT ENGINEERING PORTFOLIO
         </div>
 
         <h1>
-            Katerina<br>
+            <span>Aikaterini</span><br>
             Christoforaki
         </h1>
 
-        <h2>
-            Mechanical Engineering · Motorsport · Performance & Data
-        </h2>
-
-        <p>
-            Mechanical Engineering student focused on motorsport engineering,
-            powertrain development, vehicle performance and race engineering.
-        </p>
+        <div class="subtitle">
+            MECHANICAL ENGINEERING
+            <span class="dot">·</span>
+            MOTORSPORT
+            <span class="dot">·</span>
+            PERFORMANCE
+        </div>
 
         <div class="buttons">
-            <a href="#" class="button">View Projects</a>
-            <a href="#" class="button">About Me</a>
-            <a href="#" class="button">CV</a>
+
+            <a href="#projects" class="button">
+                VIEW PROJECTS
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="#about" class="button gold">
+                ABOUT ME
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="#cv" class="button gold">
+                CV
+                <span class="arrow">→</span>
+            </a>
+
         </div>
 
     </div>
+
+
+    <!-- ABSTRACT TECHNICAL GRAPHIC -->
+    <div class="graphic">
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+
+        <div class="track"></div>
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <!-- BOTTOM DETAILS -->
+    <div class="bottom-grid"></div>
+
+    <div class="scroll">
+
+        SCROLL
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
