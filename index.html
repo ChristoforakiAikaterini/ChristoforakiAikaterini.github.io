@@ -1584,522 +1584,565 @@
     </script>
 
 
+<!-- =========================================================
+     PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
+========================================================= -->
 
-    <!-- =========================================================
-         PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
-    ========================================================= -->
+<section
+    class="project-02"
+    id="drivetrain-project"
+>
 
-    <section
-        class="project-02"
-        id="drivetrain-project"
+
+    <!-- PROJECT HEADER -->
+
+    <div class="project-header">
+
+        <div class="project-label">
+
+            <span></span>
+
+            PROJECT 02 / FORMULA STUDENT
+
+        </div>
+
+
+        <h2>
+
+            DRIVETRAIN ANALYSIS -<br>
+            MINAUTOR FORMULA STUDENT TEAM
+
+        </h2>
+
+
+        <div class="project-accent"></div>
+
+    </div>
+
+
+    <!-- PROJECT TABS -->
+
+    <div
+        class="project-tabs"
+        role="tablist"
     >
 
-
-        <!-- PROJECT HEADER -->
-
-        <div class="project-header">
-
-            <div class="project-label">
-
-                <span></span>
-
-                PROJECT 02 / FORMULA STUDENT
-
-            </div>
-
-
-            <h2>
-
-                DRIVETRAIN ANALYSIS -<br>
-                MINAUTOR FORMULA STUDENT TEAM
-
-            </h2>
-
-
-            <div class="project-accent"></div>
-
-        </div>
-
-
-        <!-- PROJECT TABS -->
-
-        <div
-            class="project-tabs"
-            role="tablist"
+        <button
+            class="project-tab active"
+            onclick="openProjectTab(event, 'driveline-analysis')"
         >
-
-            <button
-                class="project-tab active"
-                onclick="openProjectTab(event, 'driveline-analysis')"
-            >
-                DRIVELINE ANALYSIS
-            </button>
+            DRIVELINE ANALYSIS
+        </button>
 
 
-            <button
-                class="project-tab"
-                onclick="openProjectTab(event, 'kinematics')"
-            >
-                KINEMATICS
-            </button>
-
-
-            <button
-                class="project-tab"
-                onclick="openProjectTab(event, 'force-speed')"
-            >
-                FORCE VS SPEED
-            </button>
-
-        </div>
-
-
-        <!-- TAB 1 -->
-
-        <div
-            id="driveline-analysis"
-            class="project-tab-content active"
+        <button
+            class="project-tab"
+            onclick="openProjectTab(event, 'kinematics')"
         >
-
-            <div class="tab-placeholder">
-                DRIVELINE ANALYSIS
-            </div>
-
-        </div>
+            KINEMATICS
+        </button>
 
 
-        <!-- TAB 2 -->
-
-        <div
-            id="kinematics"
-            class="project-tab-content"
+        <button
+            class="project-tab"
+            onclick="openProjectTab(event, 'force-speed')"
         >
+            FORCE VS SPEED
+        </button>
 
-            <div class="tab-placeholder">
-                KINEMATICS
-            </div>
+    </div>
 
+
+    <!-- TAB 1 -->
+
+    <div
+        id="driveline-analysis"
+        class="project-tab-content active"
+    >
+
+        <div class="tab-placeholder">
+            DRIVELINE ANALYSIS
         </div>
 
+    </div>
 
-        <!-- TAB 3 -->
 
-        <div
-            id="force-speed"
-            class="project-tab-content"
-        >
+    <!-- TAB 2 -->
 
-            <div class="tab-placeholder">
-                FORCE VS SPEED
-            </div>
+    <div
+        id="kinematics"
+        class="project-tab-content"
+    >
 
+        <div class="tab-placeholder">
+            KINEMATICS
         </div>
 
-    </section>
+    </div>
+
+
+    <!-- TAB 3 -->
+
+    <div
+        id="force-speed"
+        class="project-tab-content"
+    >
+
+        <div class="tab-placeholder">
+            FORCE VS SPEED
+        </div>
+
+    </div>
+
+</section>
 
 
 
-    <!-- =========================================================
-         PROJECT 02 STYLE
-    ========================================================= -->
+<!-- =========================================================
+     PROJECT 02 STYLE
+========================================================= -->
 
-    <style>
+<style>
+
+    .project-02 {
+
+        position: relative;
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        background: #030303;
+
+        color: rgba(238, 237, 231, 0.82);
+
+        padding: 150px 7% 100px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .project-02 .project-header {
+
+        max-width: 1500px;
+
+        margin: 0 auto;
+
+    }
+
+
+    /* PROJECT LABEL */
+
+    .project-02 .project-label {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 22px;
+
+        font-family: Arial, Helvetica, sans-serif !important;
+
+        font-size: 15px !important;
+
+        font-weight: 500 !important;
+
+        letter-spacing: 0.42em !important;
+
+        color: #b88620;
+
+        margin-bottom: 42px;
+
+    }
+
+
+    .project-02 .project-label span {
+
+        width: 72px;
+
+        height: 1px;
+
+        background: #8d1018;
+
+        display: block;
+
+        flex-shrink: 0;
+
+    }
+
+
+    /* =====================================================
+       MAIN PROJECT TITLE
+       Smaller + same clean geometric language
+    ===================================================== */
+
+    .project-02 h2 {
+
+        margin: 0;
+
+        font-family: Arial, Helvetica, sans-serif !important;
+
+        font-size: clamp(30px, 2.7vw, 50px) !important;
+
+        line-height: 1.10;
+
+        font-weight: 700 !important;
+
+        letter-spacing: 0.015em;
+
+        color: rgba(238, 237, 231, 0.82);
+
+    }
+
+
+    /* =====================================================
+       SMALL RED ACCENT
+    ===================================================== */
+
+    .project-02 .project-accent {
+
+        width: 2px;
+
+        height: 32px;
+
+        background: rgba(141, 16, 24, 0.65);
+
+        margin-top: 45px;
+
+    }
+
+
+    /* =====================================================
+       PROJECT TABS
+       SAME TYPOGRAPHY AS THE MAIN PROJECT NAVIGATION
+    ===================================================== */
+
+    .project-02 .project-tabs {
+
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 80px auto 0;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        border-top: 1px solid rgba(184, 134, 32, 0.16);
+
+        border-bottom: 1px solid rgba(184, 134, 32, 0.16);
+
+        padding: 27px 0;
+
+    }
+
+
+    /* =====================================================
+       TAB BUTTON
+    ===================================================== */
+
+    .project-02 .project-tab {
+
+        position: relative;
+
+        background: none;
+
+        border: none;
+
+        outline: none;
+
+        cursor: pointer;
+
+        font-family: Arial, Helvetica, sans-serif !important;
+
+        font-size: 13px !important;
+
+        font-weight: 500 !important;
+
+        line-height: 1 !important;
+
+        letter-spacing: 0.30em !important;
+
+        text-transform: uppercase !important;
+
+        color: rgba(238, 237, 231, 0.62) !important;
+
+        padding: 8px 5px !important;
+
+        margin: 0 !important;
+
+        transition:
+            color 0.25s ease,
+            opacity 0.25s ease;
+
+    }
+
+
+    /* HOVER */
+
+    .project-02 .project-tab:hover {
+
+        color: rgba(238, 237, 231, 0.88) !important;
+
+    }
+
+
+    /* ACTIVE */
+
+    .project-02 .project-tab.active {
+
+        color: #b88620 !important;
+
+    }
+
+
+    /* ACTIVE UNDERLINE */
+
+    .project-02 .project-tab.active::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+
+        right: 0;
+
+        bottom: -28px;
+
+        height: 2px;
+
+        background: #b88620;
+
+    }
+
+
+    /* =====================================================
+       TAB CONTENT
+    ===================================================== */
+
+    .project-02 .project-tab-content {
+
+        display: none;
+
+        width: 100%;
+
+        max-width: 1200px;
+
+        margin: 0 auto;
+
+        padding-top: 70px;
+
+        min-height: 400px;
+
+    }
+
+
+    .project-02 .project-tab-content.active {
+
+        display: block;
+
+    }
+
+
+    /* =====================================================
+       TEMPORARY TEXT
+    ===================================================== */
+
+    .project-02 .tab-placeholder {
+
+        font-family: Arial, Helvetica, sans-serif !important;
+
+        font-size: 12px !important;
+
+        font-weight: 500 !important;
+
+        letter-spacing: 0.35em !important;
+
+        color: rgba(238, 237, 231, 0.38);
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
 
         .project-02 {
 
-            position: relative;
-
-            width: 100%;
-
-            min-height: 100vh;
-
-            background: #030303;
-
-            color: rgba(238, 237, 231, 0.82);
-
-            padding: 150px 7% 100px;
-
-            box-sizing: border-box;
+            padding: 110px 6% 80px;
 
         }
 
 
-        /* HEADER */
+        .project-02 h2 {
 
-        .project-02 .project-header {
+            font-size: clamp(28px, 5vw, 44px) !important;
 
-            max-width: 1500px;
+        }
 
-            margin: 0 auto;
+
+        .project-02 .project-tabs {
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-start;
+
+        }
+
+
+        .project-02 .project-tab {
+
+            font-size: 12px !important;
+
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .project-02 {
+
+            padding: 90px 7% 60px;
 
         }
 
 
         .project-02 .project-label {
 
-            display: flex;
+            font-size: 11px !important;
 
-            align-items: center;
-
-            gap: 22px;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 15px;
-
-            font-weight: 500;
-
-            letter-spacing: 0.42em;
-
-            color: #b88620;
-
-            margin-bottom: 48px;
+            letter-spacing: 0.28em !important;
 
         }
 
 
         .project-02 .project-label span {
 
-            width: 72px;
-
-            height: 1px;
-
-            background: #8d1018;
-
-            display: block;
+            width: 40px;
 
         }
 
-
-        /* MAIN TITLE */
 
         .project-02 h2 {
 
-            margin: 0;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: clamp(42px, 4.2vw, 72px);
-
-            line-height: 1.08;
-
-            font-weight: 700;
-
-            letter-spacing: 0.015em;
-
-            color: rgba(238, 237, 231, 0.82);
+            font-size: 30px !important;
 
         }
 
-
-        /* SMALL RED ACCENT */
-
-        .project-02 .project-accent {
-
-            width: 2px;
-
-            height: 32px;
-
-            background: rgba(141, 16, 24, 0.65);
-
-            margin-top: 55px;
-
-        }
-
-
-        /* TABS */
 
         .project-02 .project-tabs {
 
-            width: 100%;
+            flex-direction: column;
 
-            max-width: 1200px;
+            align-items: flex-start;
 
-            margin: 80px auto 0;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            border-top: 1px solid rgba(184, 134, 32, 0.16);
-
-            border-bottom: 1px solid rgba(184, 134, 32, 0.16);
-
-            padding: 27px 0;
+            gap: 18px;
 
         }
 
-
-        /* TAB BUTTON */
 
         .project-02 .project-tab {
 
-            position: relative;
-
-            background: none;
-
-            border: none;
-
-            outline: none;
-
-            cursor: pointer;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 14px;
-
-            font-weight: 500;
-
-            letter-spacing: 0.30em;
-
-            color: rgba(238, 237, 231, 0.62);
-
-            padding: 8px 5px;
-
-            transition:
-                color 0.25s ease,
-                opacity 0.25s ease;
-
-        }
-
-
-        .project-02 .project-tab:hover {
-
-            color: rgba(238, 237, 231, 0.88);
-
-        }
-
-
-        .project-02 .project-tab.active {
-
-            color: #b88620;
+            font-size: 11px !important;
 
         }
 
 
         .project-02 .project-tab.active::after {
 
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-
-            right: 0;
-
-            bottom: -28px;
-
-            height: 2px;
-
-            background: #b88620;
+            bottom: -7px;
 
         }
 
+    }
 
-        /* TAB CONTENT */
+</style>
 
-        .project-02 .project-tab-content {
 
-            display: none;
 
-            width: 100%;
+<!-- =========================================================
+     PROJECT 02 TAB SWITCHING
+========================================================= -->
 
-            max-width: 1200px;
+<script>
 
-            margin: 0 auto;
+    function openProjectTab(event, tabId) {
 
-            padding-top: 70px;
+        const project =
+            event.currentTarget.closest(
+                ".project-02"
+            );
 
-            min-height: 400px;
 
-        }
+        const contents =
+            project.querySelectorAll(
+                ".project-tab-content"
+            );
 
 
-        .project-02 .project-tab-content.active {
+        const tabs =
+            project.querySelectorAll(
+                ".project-tab"
+            );
 
-            display: block;
 
-        }
+        /* Hide all content */
 
+        contents.forEach(content => {
 
-        /* TEMPORARY TEXT */
+            content.classList.remove(
+                "active"
+            );
 
-        .project-02 .tab-placeholder {
+        });
 
-            font-family: Arial, Helvetica, sans-serif;
 
-            font-size: 13px;
+        /* Remove active state */
 
-            font-weight: 500;
+        tabs.forEach(tab => {
 
-            letter-spacing: 0.35em;
+            tab.classList.remove(
+                "active"
+            );
 
-            color: rgba(238, 237, 231, 0.38);
+        });
 
-        }
 
+        /* Show selected tab */
 
-        /* RESPONSIVE */
-
-        @media (max-width: 900px) {
-
-            .project-02 {
-
-                padding: 110px 6% 80px;
-
-            }
-
-            .project-02 h2 {
-
-                font-size: clamp(34px, 7vw, 58px);
-
-            }
-
-            .project-02 .project-tabs {
-
-                gap: 25px;
-
-                flex-wrap: wrap;
-
-                justify-content: flex-start;
-
-            }
-
-            .project-02 .project-tab {
-
-                font-size: 12px;
-
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .project-02 {
-
-                padding: 90px 7% 60px;
-
-            }
-
-            .project-02 .project-label {
-
-                font-size: 11px;
-
-                letter-spacing: 0.28em;
-
-            }
-
-            .project-02 .project-label span {
-
-                width: 40px;
-
-            }
-
-            .project-02 h2 {
-
-                font-size: 32px;
-
-            }
-
-            .project-02 .project-tabs {
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 18px;
-
-            }
-
-            .project-02 .project-tab.active::after {
-
-                bottom: -7px;
-
-            }
-
-        }
-
-    </style>
-
-
-
-    <!-- =========================================================
-         PROJECT 02 TAB SWITCHING
-    ========================================================= -->
-
-    <script>
-
-        function openProjectTab(event, tabId) {
-
-            const project =
-                event.currentTarget.closest(
-                    ".project-02"
-                );
-
-
-            const contents =
-                project.querySelectorAll(
-                    ".project-tab-content"
-                );
-
-
-            const tabs =
-                project.querySelectorAll(
-                    ".project-tab"
-                );
-
-
-            /* Hide all content */
-
-            contents.forEach(content => {
-
-                content.classList.remove(
-                    "active"
-                );
-
-            });
-
-
-            /* Remove active state */
-
-            tabs.forEach(tab => {
-
-                tab.classList.remove(
-                    "active"
-                );
-
-            });
-
-
-            /* Show selected tab */
-
-            project
-                .querySelector("#" + tabId)
-                .classList.add(
-                    "active"
-                );
-
-
-            event.currentTarget.classList.add(
+        project
+            .querySelector("#" + tabId)
+            .classList.add(
                 "active"
             );
 
 
-            /*
-                IMPORTANT:
-                No scrollIntoView().
-                No window.scrollTo().
-                The user stays exactly where they are.
-            */
-
-        }
-
-    </script>
+        event.currentTarget.classList.add(
+            "active"
+        );
 
 
-</body>
+        /*
+            IMPORTANT:
+            No scrollIntoView().
+            No window.scrollTo().
+            The user stays exactly where they are.
+        */
 
-</html>
+    }
+
+</script>
