@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
@@ -39,9 +44,10 @@
             --red-fade: rgba(123, 16, 24, 0.22);
         }
 
-        /* =========================
+
+        /* =========================================================
            HERO
-        ========================== */
+        ========================================================= */
 
         .hero {
             position: relative;
@@ -61,9 +67,10 @@
             z-index: 10;
         }
 
-        /* =========================
+
+        /* =========================================================
            BACKGROUND GRAPHIC
-        ========================== */
+        ========================================================= */
 
         .background-graphic {
             position: absolute;
@@ -114,9 +121,10 @@
             border-color: rgba(123, 16, 24, 0.28);
         }
 
-        /* =========================
+
+        /* =========================================================
            FLOWING LINES
-        ========================== */
+        ========================================================= */
 
         .flow-line {
             position: absolute;
@@ -141,9 +149,10 @@
             top: 455px;
         }
 
-        /* =========================
+
+        /* =========================================================
            CENTRAL CROSS
-        ========================== */
+        ========================================================= */
 
         .cross {
             position: absolute;
@@ -183,9 +192,10 @@
             top: 10px;
         }
 
-        /* =========================
+
+        /* =========================================================
            DOT GRID
-        ========================== */
+        ========================================================= */
 
         .dot-grid {
             position: absolute;
@@ -259,9 +269,10 @@
             background: #a88735;
         }
 
-        /* =========================
+
+        /* =========================================================
            NAVIGATION
-        ========================== */
+        ========================================================= */
 
         .navbar {
             position: relative;
@@ -351,18 +362,16 @@
             top: -5px;
         }
 
-        /* =========================
+
+        /* =========================================================
            MAIN CONTENT
-        ========================== */
+        ========================================================= */
 
         .hero-content {
             position: relative;
             z-index: 15;
             margin-left: 7.7%;
-
-            /* ΜΟΝΗ ΑΛΛΑΓΗ: λίγο πιο ψηλά */
             margin-top: 40px;
-
             max-width: 760px;
         }
 
@@ -385,9 +394,10 @@
             background: #8a1720;
         }
 
-        /* =========================
+
+        /* =========================================================
            NAME
-        ========================== */
+        ========================================================= */
 
         .name {
             font-family: 'Cormorant Garamond', serif;
@@ -410,9 +420,10 @@
             margin-left: -2px;
         }
 
-        /* =========================
+
+        /* =========================================================
            SUBTITLE
-        ========================== */
+        ========================================================= */
 
         .subtitle {
             display: flex;
@@ -431,9 +442,10 @@
             font-size: 14px;
         }
 
-        /* =========================
+
+        /* =========================================================
            BUTTONS
-        ========================== */
+        ========================================================= */
 
         .buttons {
             display: flex;
@@ -487,9 +499,10 @@
             color: #a9161e;
         }
 
-        /* =========================
+
+        /* =========================================================
            SCROLL INDICATOR
-        ========================== */
+        ========================================================= */
 
         .scroll-indicator {
             position: absolute;
@@ -524,9 +537,10 @@
             left: -3.5px;
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
+
+        /* =========================================================
+           HERO RESPONSIVE
+        ========================================================= */
 
         @media (max-width: 1000px) {
 
@@ -559,7 +573,9 @@
             .button {
                 width: 190px;
             }
+
         }
+
 
         @media (max-width: 700px) {
 
@@ -625,14 +641,23 @@
             .dots-bottom {
                 left: 60px;
             }
+
         }
 
     </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================================================
+         MAIN HERO
+    ========================================================= -->
+
     <section class="hero">
+
 
         <!-- BACKGROUND GRAPHICS -->
 
@@ -848,1222 +873,1233 @@
     </section>
 
 
-    <!-- PLACEHOLDER SECTIONS -->
+    <!-- =========================================================
+         PLACEHOLDER SECTIONS
+    ========================================================= -->
 
     <section id="projects"></section>
     <section id="about"></section>
     <section id="experience"></section>
     <section id="cv"></section>
 
-<!-- =========================================================
-     PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
-     TAB-BASED PROJECT SECTION
-========================================================= -->
 
-<style>
 
-/* =========================================================
-   PROJECT 01 — BASE
-========================================================= */
+    <!-- =========================================================
+         PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
+    ========================================================= -->
 
-.project-01 {
-    position: relative;
-    width: 100%;
-    background: #050505;
-    color: #e9e5dc;
-    font-family: "Inter", Arial, sans-serif;
-    overflow: hidden;
-}
+    <style>
 
+        .project-01 {
+            position: relative;
+            width: 100%;
+            background: #050505;
+            color: #e9e5dc;
+            font-family: "Inter", Arial, sans-serif;
+            overflow: hidden;
+        }
 
-/* =========================================================
-   SUBTLE BACKGROUND DETAIL
-========================================================= */
 
-.project-01::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+        .project-01::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
 
-    background:
-        radial-gradient(
-            circle at 78% 20%,
-            rgba(150, 115, 35, 0.035),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 20% 70%,
-            rgba(150, 15, 25, 0.025),
-            transparent 30%
-        );
-}
+            background:
+                radial-gradient(
+                    circle at 78% 20%,
+                    rgba(150, 115, 35, 0.035),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 20% 70%,
+                    rgba(150, 15, 25, 0.025),
+                    transparent 30%
+                );
+        }
 
 
-/* =========================================================
-   PROJECT HERO
-========================================================= */
+        /* PROJECT HERO */
 
-.project-hero {
-    position: relative;
+        .project-hero {
+            position: relative;
+            min-height: 58vh;
 
-    min-height: 58vh;
+            display: flex;
+            align-items: center;
 
-    display: flex;
-    align-items: center;
+            padding: 100px 7vw 70px;
 
-    padding: 100px 7vw 70px;
+            border-top: 1px solid rgba(190, 150, 55, 0.12);
+            border-bottom: 1px solid rgba(190, 150, 55, 0.12);
+        }
 
-    border-top: 1px solid rgba(190, 150, 55, 0.12);
-    border-bottom: 1px solid rgba(190, 150, 55, 0.12);
-}
 
+        .project-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
 
-.project-hero-content {
-    position: relative;
-    z-index: 2;
 
-    max-width: 900px;
-}
+        /* PROJECT LABEL */
 
+        .project-label {
+            display: flex;
+            align-items: center;
 
-/* =========================================================
-   PROJECT LABEL
-========================================================= */
+            gap: 18px;
+            margin-bottom: 28px;
 
-.project-label {
-    display: flex;
-    align-items: center;
+            color: #b58a32;
 
-    gap: 18px;
-    margin-bottom: 28px;
+            font-family: "Inter", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 400;
 
-    color: #b58a32;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
 
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
 
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
+        .project-label::before {
+            content: "";
 
+            width: 70px;
+            height: 1px;
 
-.project-label::before {
-    content: "";
+            background: #9d1622;
+        }
 
-    width: 70px;
-    height: 1px;
 
-    background: #9d1622;
-}
+        /* PROJECT TITLE */
 
+        .project-hero h1 {
+            margin: 0;
 
-/* =========================================================
-   PROJECT TITLE
-   — SAME FONT AS NAVIGATION
-   — MUCH SMALLER
-   — BOLD
-   — SOFT OFF-WHITE
-========================================================= */
+            font-family: "Inter", Arial, sans-serif;
 
-.project-hero h1 {
-    margin: 0;
+            font-size: clamp(32px, 4vw, 58px);
 
-    font-family: "Inter", Arial, sans-serif;
+            line-height: 1.08;
 
-    /*
-       Much smaller than before.
-       The title is now treated as a project heading,
-       not as a giant hero name.
-    */
-    font-size: clamp(32px, 4vw, 58px);
+            font-weight: 700;
 
-    line-height: 1.08;
+            letter-spacing: -1.8px;
 
-    font-weight: 700;
+            color: rgba(239, 235, 225, 0.82);
+        }
 
-    letter-spacing: -1.8px;
 
-    color: rgba(239, 235, 225, 0.82);
-}
+        .project-hero h1 span {
+            display: block;
+        }
 
 
-.project-hero h1 span {
-    display: block;
-}
+        .project-hero h1 .gold,
+        .project-hero h1 .light {
+            color: rgba(239, 235, 225, 0.82);
+        }
 
 
-/*
-   Both lines intentionally share the same
-   soft off-white colour.
-*/
+        /* PLACEHOLDER */
 
-.project-hero h1 .gold,
-.project-hero h1 .light {
-    color: rgba(239, 235, 225, 0.82);
-}
+        .project-description-placeholder {
+            margin-top: 36px;
 
+            width: min(620px, 100%);
+            height: 18px;
 
-/* =========================================================
-   PLACEHOLDER
-========================================================= */
+            border-left: 2px solid #8e1721;
 
-.project-description-placeholder {
-    margin-top: 36px;
+            opacity: 0.35;
+        }
 
-    width: min(620px, 100%);
-    height: 18px;
 
-    border-left: 2px solid #8e1721;
+        /* PROJECT NAVIGATION */
 
-    opacity: 0.35;
-}
+        .project-navigation-wrapper {
+            position: sticky;
+            top: 0;
 
+            z-index: 50;
 
-/* =========================================================
-   PROJECT NAVIGATION
-========================================================= */
+            background: rgba(5, 5, 5, 0.94);
 
-.project-navigation-wrapper {
-    position: sticky;
-    top: 0;
+            backdrop-filter: blur(12px);
 
-    z-index: 50;
+            border-top: 1px solid rgba(190, 150, 55, 0.08);
+            border-bottom: 1px solid rgba(190, 150, 55, 0.14);
+        }
 
-    background: rgba(5, 5, 5, 0.94);
 
-    backdrop-filter: blur(12px);
+        .project-navigation {
+            width: min(1250px, 86vw);
 
-    border-top: 1px solid rgba(190, 150, 55, 0.08);
-    border-bottom: 1px solid rgba(190, 150, 55, 0.14);
-}
+            min-height: 78px;
 
+            margin: 0 auto;
 
-.project-navigation {
-    width: min(1250px, 86vw);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    min-height: 78px;
+            gap: clamp(35px, 6vw, 95px);
+        }
 
-    margin: 0 auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        .project-navigation a {
+            position: relative;
 
-    gap: clamp(35px, 6vw, 95px);
-}
+            padding: 27px 0 24px;
 
+            color: #aaa69d;
 
-.project-navigation a {
-    position: relative;
+            text-decoration: none;
 
-    padding: 27px 0 24px;
+            font-family: "Inter", Arial, sans-serif;
 
-    color: #aaa69d;
+            font-size: 11px;
+            font-weight: 500;
 
-    text-decoration: none;
+            letter-spacing: 3.5px;
 
-    font-family: "Inter", Arial, sans-serif;
+            text-transform: uppercase;
 
-    font-size: 11px;
-    font-weight: 500;
+            cursor: pointer;
 
-    letter-spacing: 3.5px;
+            transition:
+                color 0.3s ease,
+                opacity 0.3s ease;
+        }
 
-    text-transform: uppercase;
 
-    cursor: pointer;
+        .project-navigation a::after {
+            content: "";
 
-    transition:
-        color 0.3s ease,
-        opacity 0.3s ease;
-}
+            position: absolute;
 
+            left: 0;
+            bottom: 16px;
 
-/* =========================================================
-   NAVIGATION UNDERLINE
-========================================================= */
+            width: 0;
+            height: 1px;
 
-.project-navigation a::after {
-    content: "";
+            background: #b58a32;
 
-    position: absolute;
+            transition: width 0.3s ease;
+        }
 
-    left: 0;
-    bottom: 16px;
 
-    width: 0;
-    height: 1px;
+        .project-navigation a:hover {
+            color: #ded8ca;
+        }
 
-    background: #b58a32;
 
-    transition: width 0.3s ease;
-}
+        .project-navigation a:hover::after {
+            width: 100%;
+        }
 
 
-.project-navigation a:hover {
-    color: #ded8ca;
-}
+        .project-navigation a.active {
+            color: #c29a48;
+        }
 
 
-.project-navigation a:hover::after {
-    width: 100%;
-}
+        .project-navigation a.active::after {
+            width: 100%;
+        }
 
 
-.project-navigation a.active {
-    color: #c29a48;
-}
+        /* PROJECT CONTENT */
 
+        .project-content {
+            position: relative;
+            width: 100%;
+        }
 
-.project-navigation a.active::after {
-    width: 100%;
-}
 
+        /* PROJECT SECTIONS */
 
-/* =========================================================
-   PROJECT CONTENT AREA
-========================================================= */
+        .project-section {
+            position: relative;
 
-.project-content {
-    position: relative;
+            width: min(1350px, 86vw);
 
-    width: 100%;
-}
+            min-height: 65vh;
 
+            margin: 0 auto;
 
-/* =========================================================
-   PROJECT SECTIONS
-   IMPORTANT:
-   Only the active tab is displayed.
-   NO SCROLLING.
-========================================================= */
+            padding: 100px 0 120px;
 
-.project-section {
-    position: relative;
+            border-bottom: 1px solid rgba(190, 150, 55, 0.10);
 
-    width: min(1350px, 86vw);
+            display: none;
+        }
 
-    min-height: 65vh;
 
-    margin: 0 auto;
+        .project-section.active-section {
+            display: block;
+        }
 
-    padding: 100px 0 120px;
 
-    border-bottom: 1px solid rgba(190, 150, 55, 0.10);
+        /* SECTION HEADER */
 
-    /*
-       Hidden by default.
-       JavaScript activates only one tab.
-    */
-    display: none;
-}
+        .project-section-header {
+            display: flex;
+            align-items: center;
 
+            gap: 22px;
 
-/*
-   Active section
-*/
+            margin-bottom: 60px;
+        }
 
-.project-section.active-section {
-    display: block;
-}
 
+        .project-section-number {
+            color: #b58a32;
 
-/* =========================================================
-   SECTION HEADER
-========================================================= */
+            font-family: "Inter", Arial, sans-serif;
 
-.project-section-header {
-    display: flex;
-    align-items: center;
+            font-size: 14px;
+            font-weight: 500;
 
-    gap: 22px;
+            letter-spacing: 3px;
 
-    margin-bottom: 60px;
-}
+            line-height: 1;
+        }
 
 
-.project-section-number {
-    color: #b58a32;
+        .project-section-line {
+            width: 55px;
+            height: 1px;
 
-    font-family: "Inter", Arial, sans-serif;
+            background: #8f1721;
+        }
 
-    font-size: 14px;
-    font-weight: 500;
 
-    letter-spacing: 3px;
+        .project-section-title {
+            color: #c39a4b;
 
-    line-height: 1;
-}
+            font-family: "Inter", Arial, sans-serif;
 
+            font-size: 13px;
+            font-weight: 500;
 
-.project-section-line {
-    width: 55px;
-    height: 1px;
+            letter-spacing: 5px;
 
-    background: #8f1721;
-}
+            text-transform: uppercase;
+        }
 
 
-.project-section-title {
-    color: #c39a4b;
+        /* PLACEHOLDER */
 
-    font-family: "Inter", Arial, sans-serif;
+        .project-placeholder {
+            min-height: 420px;
 
-    font-size: 13px;
-    font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    letter-spacing: 5px;
+            border: 1px solid rgba(190, 150, 55, 0.08);
 
-    text-transform: uppercase;
-}
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(190, 150, 55, 0.015),
+                    transparent 50%
+                );
 
+            color: rgba(190, 185, 175, 0.18);
 
-/* =========================================================
-   EMPTY FUTURE CONTENT AREA
-========================================================= */
+            font-family: "Inter", Arial, sans-serif;
 
-.project-placeholder {
-    min-height: 420px;
+            font-size: 10px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            letter-spacing: 4px;
 
-    border: 1px solid rgba(190, 150, 55, 0.08);
+            text-transform: uppercase;
+        }
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(190, 150, 55, 0.015),
-            transparent 50%
-        );
 
-    color: rgba(190, 185, 175, 0.18);
+        /* RESPONSIVE */
 
-    font-family: "Inter", Arial, sans-serif;
+        @media (max-width: 900px) {
 
-    font-size: 10px;
-    letter-spacing: 4px;
+            .project-hero {
+                min-height: 55vh;
+                padding: 90px 8vw 65px;
+            }
 
-    text-transform: uppercase;
-}
+            .project-hero h1 {
+                font-size: clamp(28px, 7vw, 46px);
+                letter-spacing: -1px;
+            }
 
+            .project-navigation {
+                width: 92vw;
+                gap: 25px;
+                justify-content: flex-start;
+                overflow-x: auto;
+                scrollbar-width: none;
+            }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+            .project-navigation::-webkit-scrollbar {
+                display: none;
+            }
 
-@media (max-width: 900px) {
+            .project-navigation a {
+                white-space: nowrap;
+                font-size: 9px;
+                letter-spacing: 2.5px;
+            }
 
-    .project-hero {
-        min-height: 55vh;
+            .project-section {
+                width: 84vw;
+                padding: 80px 0 90px;
+            }
 
-        padding: 90px 8vw 65px;
-    }
+            .project-placeholder {
+                min-height: 300px;
+            }
 
+        }
 
-    .project-hero h1 {
-        font-size: clamp(28px, 7vw, 46px);
 
-        letter-spacing: -1px;
-    }
+        @media (max-width: 600px) {
 
+            .project-hero {
+                padding: 80px 8vw 55px;
+            }
 
-    .project-navigation {
-        width: 92vw;
+            .project-hero h1 {
+                font-size: 27px;
+                line-height: 1.12;
+                letter-spacing: -0.7px;
+            }
 
-        gap: 25px;
+            .project-navigation {
+                gap: 22px;
+            }
 
-        justify-content: flex-start;
+            .project-section-header {
+                margin-bottom: 45px;
+            }
 
-        overflow-x: auto;
+            .project-section-title {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
 
-        scrollbar-width: none;
-    }
+        }
 
+    </style>
 
-    .project-navigation::-webkit-scrollbar {
-        display: none;
-    }
 
+    <section class="project-01" id="project-01">
 
-    .project-navigation a {
-        white-space: nowrap;
 
-        font-size: 9px;
+        <!-- PROJECT HERO -->
 
-        letter-spacing: 2.5px;
-    }
+        <div class="project-hero">
 
+            <div class="project-hero-content">
 
-    .project-section {
-        width: 84vw;
+                <div class="project-label">
+                    PROJECT 01 / DIPLOMA THESIS
+                </div>
 
-        padding: 80px 0 90px;
-    }
 
+                <h1>
 
-    .project-placeholder {
-        min-height: 300px;
-    }
-}
+                    <span class="gold">
+                        F1 V6 ENGINE
+                    </span>
 
+                    <span class="light">
+                        - GYROID ENGINE BLOCK DESIGN
+                    </span>
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+                </h1>
 
-@media (max-width: 600px) {
 
-    .project-hero {
-        padding: 80px 8vw 55px;
-    }
+                <div class="project-description-placeholder"></div>
 
-
-    .project-hero h1 {
-        font-size: 27px;
-
-        line-height: 1.12;
-
-        letter-spacing: -0.7px;
-    }
-
-
-    .project-navigation {
-        gap: 22px;
-    }
-
-
-    .project-section-header {
-        margin-bottom: 45px;
-    }
-
-
-    .project-section-title {
-        font-size: 10px;
-
-        letter-spacing: 3px;
-    }
-}
-
-</style>
-
-
-<!-- =========================================================
-     PROJECT 01
-========================================================= -->
-
-<section class="project-01" id="project-01">
-
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
-
-    <div class="project-hero">
-
-        <div class="project-hero-content">
-
-            <div class="project-label">
-                PROJECT 01 / DIPLOMA THESIS
             </div>
-
-
-            <h1>
-
-                <span class="gold">
-                    F1 V6 ENGINE
-                </span>
-
-                <span class="light">
-                    - GYROID ENGINE BLOCK DESIGN
-                </span>
-
-            </h1>
-
-
-            <div class="project-description-placeholder"></div>
 
         </div>
 
-    </div>
 
+        <!-- PROJECT NAVIGATION -->
 
+        <div class="project-navigation-wrapper">
 
-    <!-- =====================================================
-         PROJECT NAVIGATION
-    ====================================================== -->
+            <nav class="project-navigation">
 
-    <div class="project-navigation-wrapper">
-
-        <nav class="project-navigation">
-
-            <a
-                href="#"
-                class="project-nav-link active"
-                data-target="project-design"
-            >
-                DESIGN
-            </a>
-
-
-            <a
-                href="#"
-                class="project-nav-link"
-                data-target="project-analysis"
-            >
-                ANALYSIS
-            </a>
-
-
-            <a
-                href="#"
-                class="project-nav-link"
-                data-target="project-comparison"
-            >
-                COMPARISON
-            </a>
-
-
-            <a
-                href="#"
-                class="project-nav-link"
-                data-target="project-performance"
-            >
-                VEHICLE PERFORMANCE
-            </a>
-
-        </nav>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         PROJECT CONTENT
-    ====================================================== -->
-
-    <div class="project-content">
-
-
-        <!-- =================================================
-             01 — DESIGN
-        ================================================== -->
-
-        <section
-            id="project-design"
-            class="project-section active-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    01
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
+                <a
+                    href="#"
+                    class="project-nav-link active"
+                    data-target="project-design"
+                >
                     DESIGN
-                </div>
-
-            </div>
+                </a>
 
 
-            <div class="project-placeholder">
-                DESIGN CONTENT
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             02 — ANALYSIS
-        ================================================== -->
-
-        <section
-            id="project-analysis"
-            class="project-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    02
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
+                <a
+                    href="#"
+                    class="project-nav-link"
+                    data-target="project-analysis"
+                >
                     ANALYSIS
-                </div>
-
-            </div>
+                </a>
 
 
-            <div class="project-placeholder">
-                ANALYSIS CONTENT
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             03 — COMPARISON
-        ================================================== -->
-
-        <section
-            id="project-comparison"
-            class="project-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    03
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
+                <a
+                    href="#"
+                    class="project-nav-link"
+                    data-target="project-comparison"
+                >
                     COMPARISON
+                </a>
+
+
+                <a
+                    href="#"
+                    class="project-nav-link"
+                    data-target="project-performance"
+                >
+                    VEHICLE PERFORMANCE
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- PROJECT CONTENT -->
+
+        <div class="project-content">
+
+
+            <!-- DESIGN -->
+
+            <section
+                id="project-design"
+                class="project-section active-section"
+            >
+
+                <div class="project-section-header">
+
+                    <div class="project-section-number">
+                        01
+                    </div>
+
+                    <div class="project-section-line"></div>
+
+                    <div class="project-section-title">
+                        DESIGN
+                    </div>
+
                 </div>
 
+
+                <div class="project-placeholder">
+                    DESIGN CONTENT
+                </div>
+
+            </section>
+
+
+            <!-- ANALYSIS -->
+
+            <section
+                id="project-analysis"
+                class="project-section"
+            >
+
+                <div class="project-section-header">
+
+                    <div class="project-section-number">
+                        02
+                    </div>
+
+                    <div class="project-section-line"></div>
+
+                    <div class="project-section-title">
+                        ANALYSIS
+                    </div>
+
+                </div>
+
+
+                <div class="project-placeholder">
+                    ANALYSIS CONTENT
+                </div>
+
+            </section>
+
+
+            <!-- COMPARISON -->
+
+            <section
+                id="project-comparison"
+                class="project-section"
+            >
+
+                <div class="project-section-header">
+
+                    <div class="project-section-number">
+                        03
+                    </div>
+
+                    <div class="project-section-line"></div>
+
+                    <div class="project-section-title">
+                        COMPARISON
+                    </div>
+
+                </div>
+
+
+                <div class="project-placeholder">
+                    COMPARISON CONTENT
+                </div>
+
+            </section>
+
+
+            <!-- VEHICLE PERFORMANCE -->
+
+            <section
+                id="project-performance"
+                class="project-section"
+            >
+
+                <div class="project-section-header">
+
+                    <div class="project-section-number">
+                        04
+                    </div>
+
+                    <div class="project-section-line"></div>
+
+                    <div class="project-section-title">
+                        VEHICLE PERFORMANCE
+                    </div>
+
+                </div>
+
+
+                <div class="project-placeholder">
+                    VEHICLE PERFORMANCE CONTENT
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PROJECT 01 TAB SYSTEM
+         NO SCROLL
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const navLinks =
+                document.querySelectorAll(
+                    ".project-01 .project-nav-link"
+                );
+
+
+            const sections =
+                document.querySelectorAll(
+                    ".project-01 .project-section"
+                );
+
+
+            navLinks.forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        const targetId =
+                            this.getAttribute(
+                                "data-target"
+                            );
+
+
+                        const target =
+                            document.getElementById(
+                                targetId
+                            );
+
+
+                        if (!target) return;
+
+
+                        navLinks.forEach(function (nav) {
+
+                            nav.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                        sections.forEach(function (section) {
+
+                            section.classList.remove(
+                                "active-section"
+                            );
+
+                        });
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        target.classList.add(
+                            "active-section"
+                        );
+
+                    }
+                );
+
+            });
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================================================
+         PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
+    ========================================================= -->
+
+    <section
+        class="project-02"
+        id="drivetrain-project"
+    >
+
+
+        <!-- PROJECT HEADER -->
+
+        <div class="project-header">
+
+            <div class="project-label">
+
+                <span></span>
+
+                PROJECT 02 / FORMULA STUDENT
+
             </div>
 
 
-            <div class="project-placeholder">
-                COMPARISON CONTENT
-            </div>
+            <h2>
 
-        </section>
+                DRIVETRAIN ANALYSIS -<br>
+                MINAUTOR FORMULA STUDENT TEAM
+
+            </h2>
 
 
+            <div class="project-accent"></div>
 
-        <!-- =================================================
-             04 — VEHICLE PERFORMANCE
-        ================================================== -->
+        </div>
 
-        <section
-            id="project-performance"
-            class="project-section"
+
+        <!-- PROJECT TABS -->
+
+        <div
+            class="project-tabs"
+            role="tablist"
         >
 
-            <div class="project-section-header">
+            <button
+                class="project-tab active"
+                onclick="openProjectTab(event, 'driveline-analysis')"
+            >
+                DRIVELINE ANALYSIS
+            </button>
 
-                <div class="project-section-number">
-                    04
-                </div>
 
-                <div class="project-section-line"></div>
+            <button
+                class="project-tab"
+                onclick="openProjectTab(event, 'kinematics')"
+            >
+                KINEMATICS
+            </button>
 
-                <div class="project-section-title">
-                    VEHICLE PERFORMANCE
-                </div>
 
+            <button
+                class="project-tab"
+                onclick="openProjectTab(event, 'force-speed')"
+            >
+                FORCE VS SPEED
+            </button>
+
+        </div>
+
+
+        <!-- TAB 1 -->
+
+        <div
+            id="driveline-analysis"
+            class="project-tab-content active"
+        >
+
+            <div class="tab-placeholder">
+                DRIVELINE ANALYSIS
             </div>
 
+        </div>
 
-            <div class="project-placeholder">
-                VEHICLE PERFORMANCE CONTENT
+
+        <!-- TAB 2 -->
+
+        <div
+            id="kinematics"
+            class="project-tab-content"
+        >
+
+            <div class="tab-placeholder">
+                KINEMATICS
             </div>
 
-        </section>
-
-    </div>
-
-</section>
+        </div>
 
 
+        <!-- TAB 3 -->
 
-<!-- =========================================================
-     PROJECT 01 — TAB SYSTEM
-     NO SCROLL
-========================================================= -->
+        <div
+            id="force-speed"
+            class="project-tab-content"
+        >
 
-<script>
+            <div class="tab-placeholder">
+                FORCE VS SPEED
+            </div>
 
-document.addEventListener("DOMContentLoaded", function () {
+        </div>
 
-
-    const navLinks =
-        document.querySelectorAll(
-            ".project-nav-link"
-        );
-
-
-    const sections =
-        document.querySelectorAll(
-            ".project-section"
-        );
+    </section>
 
 
-    navLinks.forEach(function (link) {
+
+    <!-- =========================================================
+         PROJECT 02 STYLE
+    ========================================================= -->
+
+    <style>
+
+        .project-02 {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            background: #030303;
+
+            color: rgba(238, 237, 231, 0.82);
+
+            padding: 150px 7% 100px;
+
+            box-sizing: border-box;
+
+        }
 
 
-        link.addEventListener(
-            "click",
-            function (event) {
+        /* HEADER */
 
-                /*
-                   IMPORTANT:
-                   Prevents the browser from changing
-                   the URL or scrolling anywhere.
-                */
+        .project-02 .project-header {
 
-                event.preventDefault();
+            max-width: 1500px;
+
+            margin: 0 auto;
+
+        }
 
 
-                const targetId =
-                    this.getAttribute(
-                        "data-target"
-                    );
+        .project-02 .project-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.42em;
+
+            color: #b88620;
+
+            margin-bottom: 48px;
+
+        }
 
 
-                const target =
-                    document.getElementById(
-                        targetId
-                    );
+        .project-02 .project-label span {
+
+            width: 72px;
+
+            height: 1px;
+
+            background: #8d1018;
+
+            display: block;
+
+        }
 
 
-                if (!target) return;
+        /* MAIN TITLE */
+
+        .project-02 h2 {
+
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: clamp(42px, 4.2vw, 72px);
+
+            line-height: 1.08;
+
+            font-weight: 700;
+
+            letter-spacing: 0.015em;
+
+            color: rgba(238, 237, 231, 0.82);
+
+        }
 
 
-                /*
-                   Remove active state
-                   from every navigation item.
-                */
+        /* SMALL RED ACCENT */
 
-                navLinks.forEach(function (nav) {
+        .project-02 .project-accent {
 
-                    nav.classList.remove(
-                        "active"
-                    );
+            width: 2px;
 
-                });
+            height: 32px;
 
+            background: rgba(141, 16, 24, 0.65);
 
-                /*
-                   Hide every project section.
-                */
+            margin-top: 55px;
 
-                sections.forEach(function (section) {
-
-                    section.classList.remove(
-                        "active-section"
-                    );
-
-                });
+        }
 
 
-                /*
-                   Activate clicked navigation item.
-                */
+        /* TABS */
 
-                this.classList.add(
+        .project-02 .project-tabs {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 80px auto 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-top: 1px solid rgba(184, 134, 32, 0.16);
+
+            border-bottom: 1px solid rgba(184, 134, 32, 0.16);
+
+            padding: 27px 0;
+
+        }
+
+
+        /* TAB BUTTON */
+
+        .project-02 .project-tab {
+
+            position: relative;
+
+            background: none;
+
+            border: none;
+
+            outline: none;
+
+            cursor: pointer;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.30em;
+
+            color: rgba(238, 237, 231, 0.62);
+
+            padding: 8px 5px;
+
+            transition:
+                color 0.25s ease,
+                opacity 0.25s ease;
+
+        }
+
+
+        .project-02 .project-tab:hover {
+
+            color: rgba(238, 237, 231, 0.88);
+
+        }
+
+
+        .project-02 .project-tab.active {
+
+            color: #b88620;
+
+        }
+
+
+        .project-02 .project-tab.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: -28px;
+
+            height: 2px;
+
+            background: #b88620;
+
+        }
+
+
+        /* TAB CONTENT */
+
+        .project-02 .project-tab-content {
+
+            display: none;
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding-top: 70px;
+
+            min-height: 400px;
+
+        }
+
+
+        .project-02 .project-tab-content.active {
+
+            display: block;
+
+        }
+
+
+        /* TEMPORARY TEXT */
+
+        .project-02 .tab-placeholder {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.35em;
+
+            color: rgba(238, 237, 231, 0.38);
+
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .project-02 {
+
+                padding: 110px 6% 80px;
+
+            }
+
+            .project-02 h2 {
+
+                font-size: clamp(34px, 7vw, 58px);
+
+            }
+
+            .project-02 .project-tabs {
+
+                gap: 25px;
+
+                flex-wrap: wrap;
+
+                justify-content: flex-start;
+
+            }
+
+            .project-02 .project-tab {
+
+                font-size: 12px;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .project-02 {
+
+                padding: 90px 7% 60px;
+
+            }
+
+            .project-02 .project-label {
+
+                font-size: 11px;
+
+                letter-spacing: 0.28em;
+
+            }
+
+            .project-02 .project-label span {
+
+                width: 40px;
+
+            }
+
+            .project-02 h2 {
+
+                font-size: 32px;
+
+            }
+
+            .project-02 .project-tabs {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+
+            }
+
+            .project-02 .project-tab.active::after {
+
+                bottom: -7px;
+
+            }
+
+        }
+
+    </style>
+
+
+
+    <!-- =========================================================
+         PROJECT 02 TAB SWITCHING
+    ========================================================= -->
+
+    <script>
+
+        function openProjectTab(event, tabId) {
+
+            const project =
+                event.currentTarget.closest(
+                    ".project-02"
+                );
+
+
+            const contents =
+                project.querySelectorAll(
+                    ".project-tab-content"
+                );
+
+
+            const tabs =
+                project.querySelectorAll(
+                    ".project-tab"
+                );
+
+
+            /* Hide all content */
+
+            contents.forEach(content => {
+
+                content.classList.remove(
+                    "active"
+                );
+
+            });
+
+
+            /* Remove active state */
+
+            tabs.forEach(tab => {
+
+                tab.classList.remove(
+                    "active"
+                );
+
+            });
+
+
+            /* Show selected tab */
+
+            project
+                .querySelector("#" + tabId)
+                .classList.add(
                     "active"
                 );
 
 
-                /*
-                   Show ONLY the selected tab.
-                */
+            event.currentTarget.classList.add(
+                "active"
+            );
 
-                target.classList.add(
-                    "active-section"
-                );
 
-            }
+            /*
+                IMPORTANT:
+                No scrollIntoView().
+                No window.scrollTo().
+                The user stays exactly where they are.
+            */
 
-        );
+        }
 
-    });
+    </script>
 
-});
 
-</script>
+</body>
 
-    <!-- =========================================================
-     PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
-     ========================================================= -->
-
-<section class="project-section project-02" id="drivetrain-project">
-
-    <!-- PROJECT HEADER -->
-    <div class="project-header">
-
-        <div class="project-label">
-            <span></span>
-            PROJECT 02 / FORMULA STUDENT
-        </div>
-
-        <h2>
-            DRIVETRAIN ANALYSIS -<br>
-            MINAUTOR FORMULA STUDENT TEAM
-        </h2>
-
-        <div class="project-accent"></div>
-
-    </div>
-
-
-    <!-- PROJECT TABS -->
-    <div class="project-tabs" role="tablist">
-
-        <button
-            class="project-tab active"
-            onclick="openProjectTab(event, 'driveline-analysis')">
-            DRIVELINE ANALYSIS
-        </button>
-
-        <button
-            class="project-tab"
-            onclick="openProjectTab(event, 'kinematics')">
-            KINEMATICS
-        </button>
-
-        <button
-            class="project-tab"
-            onclick="openProjectTab(event, 'force-speed')">
-            FORCE VS SPEED
-        </button>
-
-    </div>
-
-
-    <!-- TAB 1 -->
-    <div
-        id="driveline-analysis"
-        class="project-tab-content active">
-
-        <div class="tab-placeholder">
-            DRIVELINE ANALYSIS
-        </div>
-
-    </div>
-
-
-    <!-- TAB 2 -->
-    <div
-        id="kinematics"
-        class="project-tab-content">
-
-        <div class="tab-placeholder">
-            KINEMATICS
-        </div>
-
-    </div>
-
-
-    <!-- TAB 3 -->
-    <div
-        id="force-speed"
-        class="project-tab-content">
-
-        <div class="tab-placeholder">
-            FORCE VS SPEED
-        </div>
-
-    </div>
-
-</section>
-
-
-<style>
-
-/* =========================================================
-   PROJECT 02
-   ========================================================= */
-
-.project-02 {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: #030303;
-    color: rgba(238, 237, 231, 0.82);
-    padding: 150px 7% 100px;
-    box-sizing: border-box;
-}
-
-
-/* ---------------------------------------------------------
-   HEADER
-   --------------------------------------------------------- */
-
-.project-02 .project-header {
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.project-02 .project-label {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.42em;
-
-    color: #b88620;
-    margin-bottom: 48px;
-}
-
-.project-02 .project-label span {
-    width: 72px;
-    height: 1px;
-    background: #8d1018;
-    display: block;
-}
-
-
-/* MAIN TITLE */
-
-.project-02 h2 {
-    margin: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(42px, 4.2vw, 72px);
-    line-height: 1.08;
-    font-weight: 700;
-    letter-spacing: 0.015em;
-
-    color: rgba(238, 237, 231, 0.82);
-}
-
-
-/* SMALL RED ACCENT */
-
-.project-02 .project-accent {
-    width: 2px;
-    height: 32px;
-    background: rgba(141, 16, 24, 0.65);
-    margin-top: 55px;
-}
-
-
-/* ---------------------------------------------------------
-   TABS
-   --------------------------------------------------------- */
-
-.project-02 .project-tabs {
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 80px auto 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-top: 1px solid rgba(184, 134, 32, 0.16);
-    border-bottom: 1px solid rgba(184, 134, 32, 0.16);
-
-    padding: 27px 0;
-}
-
-
-/* TAB BUTTON */
-
-.project-02 .project-tab {
-    position: relative;
-
-    background: none;
-    border: none;
-    outline: none;
-
-    cursor: pointer;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.30em;
-
-    color: rgba(238, 237, 231, 0.62);
-
-    padding: 8px 5px;
-
-    transition:
-        color 0.25s ease,
-        opacity 0.25s ease;
-}
-
-
-/* HOVER */
-
-.project-02 .project-tab:hover {
-    color: rgba(238, 237, 231, 0.88);
-}
-
-
-/* ACTIVE TAB */
-
-.project-02 .project-tab.active {
-    color: #b88620;
-}
-
-
-/* ACTIVE UNDERLINE */
-
-.project-02 .project-tab.active::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -28px;
-
-    height: 2px;
-
-    background: #b88620;
-}
-
-
-/* ---------------------------------------------------------
-   TAB CONTENT
-   --------------------------------------------------------- */
-
-.project-02 .project-tab-content {
-    display: none;
-
-    width: 100%;
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding-top: 70px;
-
-    min-height: 400px;
-}
-
-
-/* ONLY ACTIVE TAB */
-
-.project-02 .project-tab-content.active {
-    display: block;
-}
-
-
-/* Temporary text */
-
-.project-02 .tab-placeholder {
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.35em;
-
-    color: rgba(238, 237, 231, 0.38);
-}
-
-
-/* ---------------------------------------------------------
-   RESPONSIVE
-   --------------------------------------------------------- */
-
-@media (max-width: 900px) {
-
-    .project-02 {
-        padding: 110px 6% 80px;
-    }
-
-    .project-02 h2 {
-        font-size: clamp(34px, 7vw, 58px);
-    }
-
-    .project-02 .project-tabs {
-        gap: 25px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .project-02 .project-tab {
-        font-size: 12px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .project-02 {
-        padding: 90px 7% 60px;
-    }
-
-    .project-02 .project-label {
-        font-size: 11px;
-        letter-spacing: 0.28em;
-    }
-
-    .project-02 .project-label span {
-        width: 40px;
-    }
-
-    .project-02 h2 {
-        font-size: 32px;
-    }
-
-    .project-02 .project-tabs {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-    }
-
-    .project-02 .project-tab.active::after {
-        bottom: -7px;
-    }
-
-}
-
-
-/* =========================================================
-   TAB SWITCHING
-   ========================================================= */
-
-function openProjectTab(event, tabId) {
-
-    const project = event.currentTarget.closest(".project-02");
-
-    const contents =
-        project.querySelectorAll(".project-tab-content");
-
-    const tabs =
-        project.querySelectorAll(".project-tab");
-
-
-    /* Hide all content */
-
-    contents.forEach(content => {
-        content.classList.remove("active");
-    });
-
-
-    /* Remove active state */
-
-    tabs.forEach(tab => {
-        tab.classList.remove("active");
-    });
-
-
-    /* Show selected tab */
-
-    project
-        .querySelector("#" + tabId)
-        .classList.add("active");
-
-    event.currentTarget.classList.add("active");
-
-
-    /*
-       IMPORTANT:
-       No scrollIntoView().
-       No window.scrollTo().
-       The user stays exactly where they are.
-    */
-}
-
-</style>
+</html>
