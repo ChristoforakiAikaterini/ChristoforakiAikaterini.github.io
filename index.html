@@ -6,17 +6,12 @@
 
     <title>Aikaterini Christoforaki | Motorsport Engineering</title>
 
-    <!-- Elegant serif + clean modern sans-serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
-
-        /* =========================================================
-           BASE
-        ========================================================= */
 
         * {
             margin: 0;
@@ -35,32 +30,18 @@
             overflow-x: hidden;
         }
 
-
-        /* =========================================================
-           COLOUR PALETTE
-        ========================================================= */
-
         :root {
             --black: #050505;
-
-            /* slightly warmer / darker white */
             --white: #e9e6df;
-
-            /* slightly darker muted champagne gold */
             --gold: #b98f36;
-
-            /* very dark red */
             --red: #7b1018;
-
-            /* almost invisible gold/red */
             --gold-fade: rgba(185, 143, 54, 0.15);
             --red-fade: rgba(123, 16, 24, 0.22);
         }
 
-
-        /* =========================================================
+        /* =========================
            HERO
-        ========================================================= */
+        ========================== */
 
         .hero {
             position: relative;
@@ -71,11 +52,6 @@
             border: 1px solid rgba(255,255,255,0.07);
         }
 
-
-        /* =========================================================
-           SUBTLE BORDER
-        ========================================================= */
-
         .hero::before {
             content: "";
             position: absolute;
@@ -85,26 +61,20 @@
             z-index: 10;
         }
 
-
-        /* =========================================================
+        /* =========================
            BACKGROUND GRAPHIC
-        ========================================================= */
+        ========================== */
 
         .background-graphic {
             position: absolute;
             width: 820px;
             height: 820px;
-
             right: -90px;
             top: 55px;
-
             border-radius: 50%;
-
             opacity: 0.75;
-
             pointer-events: none;
         }
-
 
         .circle {
             position: absolute;
@@ -112,71 +82,52 @@
             border: 1px solid;
         }
 
-
         .circle-1 {
             width: 720px;
             height: 720px;
-
             top: 0;
             left: 50px;
-
             border-color: rgba(123, 16, 24, 0.48);
         }
-
 
         .circle-2 {
             width: 570px;
             height: 570px;
-
             top: 75px;
             left: 125px;
-
             border-color: rgba(123, 16, 24, 0.34);
         }
-
 
         .circle-3 {
             width: 400px;
             height: 400px;
-
             top: 160px;
             left: 210px;
-
             border-color: rgba(185, 143, 54, 0.20);
         }
-
 
         .circle-4 {
             width: 295px;
             height: 295px;
-
             top: 210px;
             left: 265px;
-
             border-color: rgba(123, 16, 24, 0.28);
         }
 
-
-        /* =========================================================
+        /* =========================
            FLOWING LINES
-        ========================================================= */
+        ========================== */
 
         .flow-line {
             position: absolute;
-
             width: 700px;
             height: 170px;
-
             border-top: 1px solid rgba(185,154,59,0.13);
-
             border-radius: 50%;
-
             transform: rotate(-16deg);
-
             left: 50px;
             top: 315px;
         }
-
 
         .flow-line.red {
             border-color: rgba(123,16,24,0.25);
@@ -184,105 +135,75 @@
             top: 365px;
         }
 
-
         .flow-line.thin {
             border-color: rgba(185,154,59,0.08);
             transform: rotate(-4deg);
             top: 455px;
         }
 
-
-        /* =========================================================
+        /* =========================
            CENTRAL CROSS
-        ========================================================= */
+        ========================== */
 
         .cross {
             position: absolute;
-
             width: 25px;
             height: 25px;
-
             top: 370px;
             left: 490px;
         }
 
-
         .cross::before {
             content: "";
             position: absolute;
-
             width: 25px;
             height: 1px;
-
             top: 12px;
             left: 0;
-
             background: rgba(185,154,59,0.38);
         }
-
 
         .cross::after {
             content: "";
             position: absolute;
-
             width: 1px;
             height: 25px;
-
             left: 12px;
             top: 0;
-
             background: rgba(185,154,59,0.38);
         }
 
-
         .cross-dot {
             position: absolute;
-
             width: 6px;
             height: 6px;
-
             border-radius: 50%;
-
             background: #8b1720;
-
             left: 10px;
             top: 10px;
         }
 
-
-        /* =========================================================
+        /* =========================
            DOT GRID
-        ========================================================= */
+        ========================== */
 
         .dot-grid {
             position: absolute;
-
             display: grid;
-
             grid-template-columns: repeat(6, 4px);
             grid-template-rows: repeat(6, 4px);
-
             gap: 13px;
-
             pointer-events: none;
         }
-
 
         .dot-grid span {
             width: 3px;
             height: 3px;
-
             border-radius: 50%;
-
             background: #8a171d;
-
             opacity: 0.32;
-
             transition: opacity 0.3s ease;
         }
-
-
-        /* fade the dots into the background */
 
         .dot-grid span:nth-child(1),
         .dot-grid span:nth-child(2),
@@ -293,7 +214,6 @@
             opacity: 0.08;
         }
 
-
         .dot-grid span:nth-child(7),
         .dot-grid span:nth-child(8),
         .dot-grid span:nth-child(9),
@@ -302,7 +222,6 @@
         .dot-grid span:nth-child(12) {
             opacity: 0.14;
         }
-
 
         .dot-grid span:nth-child(13),
         .dot-grid span:nth-child(14),
@@ -313,7 +232,6 @@
             opacity: 0.20;
         }
 
-
         .dot-grid span:nth-child(19),
         .dot-grid span:nth-child(20),
         .dot-grid span:nth-child(21),
@@ -323,413 +241,292 @@
             opacity: 0.14;
         }
 
-
         .dot-grid span:nth-child(n+25) {
             opacity: 0.07;
         }
-
 
         .dots-bottom {
             left: 145px;
             bottom: 70px;
         }
 
-
         .dots-top {
             right: 30px;
             top: 145px;
         }
 
-
         .dots-top span {
             background: #a88735;
         }
 
-
-        /* =========================================================
+        /* =========================
            NAVIGATION
-        ========================================================= */
+        ========================== */
 
         .navbar {
             position: relative;
-
             width: 100%;
-
             padding: 36px 58px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             z-index: 20;
         }
 
-
-        /* AC LOGO */
-
         .logo {
             position: relative;
-
             display: flex;
             align-items: center;
-
             color: var(--gold);
-
             font-family: 'Cormorant Garamond', serif;
-
             font-size: 48px;
             font-weight: 500;
-
             letter-spacing: -3px;
-
             line-height: 1;
         }
-
 
         .logo::before,
         .logo::after {
             content: "";
-
             width: 45px;
             height: 1px;
-
             background: rgba(123,16,24,0.8);
-
             position: absolute;
             top: 50%;
         }
-
 
         .logo::before {
             right: calc(100% + 18px);
         }
 
-
         .logo::after {
             left: calc(100% + 18px);
         }
 
-
         .nav-links {
             display: flex;
             align-items: center;
-
             gap: 48px;
-
             margin-left: auto;
         }
 
-
         .nav-links a {
             text-decoration: none;
-
             color: rgba(233,230,223,0.92);
-
             font-family: 'Inter', sans-serif;
-
             font-size: 12px;
             font-weight: 400;
-
             letter-spacing: 4px;
-
             transition: color 0.3s ease;
         }
-
 
         .nav-links a:hover {
             color: var(--gold);
         }
 
-
         .nav-divider {
             width: 1px;
             height: 28px;
-
             margin-left: 4px;
-
             background: rgba(185,143,54,0.65);
         }
-
-
-        /* MAIL ICON */
 
         .mail {
             width: 22px;
             height: 16px;
-
             border: 1px solid var(--gold);
-
             position: relative;
-
             margin-left: 18px;
         }
-
 
         .mail::after {
             content: "";
             position: absolute;
-
             width: 12px;
             height: 12px;
-
             border-left: 1px solid var(--gold);
             border-bottom: 1px solid var(--gold);
-
             transform: rotate(-45deg);
-
             left: 4px;
             top: -5px;
         }
 
-
-        /* =========================================================
+        /* =========================
            MAIN CONTENT
-        ========================================================= */
+        ========================== */
 
         .hero-content {
             position: relative;
-
             z-index: 15;
-
             margin-left: 7.7%;
-            margin-top: 95px;
+
+            /* ΜΟΝΗ ΑΛΛΑΓΗ: λίγο πιο ψηλά */
+            margin-top: 70px;
 
             max-width: 760px;
         }
 
-
-        /* small red line + title */
-
         .eyebrow {
             display: flex;
             align-items: center;
-
             gap: 16px;
-
             color: var(--gold);
-
             font-family: 'Inter', sans-serif;
-
             font-size: 12px;
             font-weight: 400;
-
             letter-spacing: 5px;
-
             margin-bottom: 36px;
         }
 
-
         .eyebrow::before {
             content: "";
-
             width: 52px;
             height: 1px;
-
             background: #8a1720;
         }
 
-
-        /* =========================================================
+        /* =========================
            NAME
-        ========================================================= */
+        ========================== */
 
         .name {
             font-family: 'Cormorant Garamond', serif;
-
             font-size: clamp(90px, 7vw, 124px);
-
             line-height: 0.78;
-
             font-weight: 500;
-
             letter-spacing: -5px;
-
             margin-left: -5px;
-
             margin-bottom: 46px;
         }
-
 
         .name .first {
             display: block;
             color: var(--gold);
         }
 
-
         .name .last {
             display: block;
             color: var(--white);
-
             margin-left: -2px;
         }
 
-
-        /* =========================================================
+        /* =========================
            SUBTITLE
-        ========================================================= */
+        ========================== */
 
         .subtitle {
             display: flex;
             align-items: center;
-
             gap: 17px;
-
             color: var(--gold);
-
             font-family: 'Inter', sans-serif;
-
             font-size: 15px;
             font-weight: 400;
-
             letter-spacing: 4px;
-
             margin-bottom: 43px;
         }
 
-
         .subtitle .separator {
             color: #8a1720;
-
             font-size: 14px;
         }
 
-
-        /* =========================================================
+        /* =========================
            BUTTONS
-        ========================================================= */
+        ========================== */
 
         .buttons {
             display: flex;
             align-items: center;
-
             gap: 28px;
         }
 
-
         .button {
             position: relative;
-
-            /* smaller buttons */
             width: 205px;
             height: 58px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             padding: 0 24px;
-
             border: 1px solid rgba(185,143,54,0.8);
-
             color: var(--white);
-
             text-decoration: none;
-
             font-family: 'Inter', sans-serif;
-
             font-size: 12px;
             font-weight: 400;
-
             letter-spacing: 3px;
-
             transition:
                 background 0.3s ease,
                 color 0.3s ease,
                 border-color 0.3s ease;
         }
 
-
         .button.projects {
             border-color: #9b1018;
         }
-
 
         .button:hover {
             background: rgba(185,143,54,0.06);
             color: var(--gold);
         }
 
-
         .button.projects:hover {
             background: rgba(123,16,24,0.08);
             color: #d9a6a8;
         }
 
-
         .arrow {
             font-size: 22px;
-
             font-weight: 300;
-
             line-height: 1;
-
             color: var(--gold);
         }
-
 
         .projects .arrow {
             color: #a9161e;
         }
 
-
-        /* =========================================================
+        /* =========================
            SCROLL INDICATOR
-        ========================================================= */
+        ========================== */
 
         .scroll-indicator {
             position: absolute;
-
             z-index: 20;
-
             bottom: 28px;
             left: 50%;
-
             transform: translateX(-50%);
-
             display: flex;
             flex-direction: column;
             align-items: center;
-
             color: var(--gold);
-
             font-size: 11px;
-
             letter-spacing: 5px;
         }
 
-
         .scroll-line {
             position: relative;
-
             width: 1px;
             height: 45px;
-
             background: rgba(185,143,54,0.65);
-
             margin-top: 14px;
         }
 
-
         .scroll-line::after {
             content: "";
-
             position: absolute;
-
             width: 8px;
             height: 8px;
-
             border-radius: 50%;
-
             background: #9b1018;
-
             bottom: -3px;
             left: -3.5px;
         }
 
-
-        /* =========================================================
+        /* =========================
            RESPONSIVE
-        ========================================================= */
+        ========================== */
 
         @media (max-width: 1000px) {
 
@@ -737,39 +534,32 @@
                 padding: 30px 35px;
             }
 
-
             .nav-links {
                 gap: 25px;
             }
 
-
             .hero-content {
                 margin-left: 7%;
-                margin-top: 80px;
+                margin-top: 55px;
             }
-
 
             .name {
                 font-size: 85px;
             }
-
 
             .background-graphic {
                 right: -300px;
                 opacity: 0.45;
             }
 
-
             .buttons {
                 gap: 20px;
             }
-
 
             .button {
                 width: 190px;
             }
         }
-
 
         @media (max-width: 700px) {
 
@@ -777,41 +567,34 @@
                 min-height: 100vh;
             }
 
-
             .navbar {
                 padding: 25px;
             }
-
 
             .logo {
                 font-size: 40px;
             }
 
-
             .nav-links {
                 display: none;
             }
 
-
             .hero-content {
                 margin-left: 8%;
                 margin-right: 8%;
-                margin-top: 80px;
+                margin-top: 60px;
             }
-
 
             .eyebrow {
                 font-size: 9px;
                 letter-spacing: 3px;
             }
 
-
             .name {
                 font-size: 64px;
                 line-height: 0.82;
                 letter-spacing: -3px;
             }
-
 
             .subtitle {
                 flex-wrap: wrap;
@@ -820,29 +603,24 @@
                 gap: 8px;
             }
 
-
             .buttons {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
 
             .button {
                 width: 220px;
                 height: 58px;
             }
 
-
             .background-graphic {
                 right: -500px;
                 top: 120px;
             }
 
-
             .dots-top {
                 right: 15px;
             }
-
 
             .dots-bottom {
                 left: 60px;
@@ -852,14 +630,11 @@
     </style>
 </head>
 
-
 <body>
 
     <section class="hero">
 
-        <!-- =====================================================
-             BACKGROUND GRAPHICS
-        ====================================================== -->
+        <!-- BACKGROUND GRAPHICS -->
 
         <div class="background-graphic">
 
@@ -879,9 +654,7 @@
         </div>
 
 
-        <!-- =====================================================
-             TOP DOT GRID
-        ====================================================== -->
+        <!-- TOP DOT GRID -->
 
         <div class="dot-grid dots-top">
 
@@ -906,9 +679,7 @@
         </div>
 
 
-        <!-- =====================================================
-             BOTTOM DOT GRID
-        ====================================================== -->
+        <!-- BOTTOM DOT GRID -->
 
         <div class="dot-grid dots-bottom">
 
@@ -933,16 +704,13 @@
         </div>
 
 
-        <!-- =====================================================
-             NAVIGATION
-        ====================================================== -->
+        <!-- NAVIGATION -->
 
         <nav class="navbar">
 
             <div class="logo">
                 AC
             </div>
-
 
             <div class="nav-links">
 
@@ -962,9 +730,7 @@
                     CV
                 </a>
 
-
                 <div class="nav-divider"></div>
-
 
                 <a href="mailto:your-email@example.com">
                     <div class="mail"></div>
@@ -975,9 +741,7 @@
         </nav>
 
 
-        <!-- =====================================================
-             HERO CONTENT
-        ====================================================== -->
+        <!-- HERO CONTENT -->
 
         <main class="hero-content">
 
@@ -1069,9 +833,7 @@
         </main>
 
 
-        <!-- =====================================================
-             SCROLL
-        ====================================================== -->
+        <!-- SCROLL -->
 
         <div class="scroll-indicator">
 
@@ -1086,10 +848,7 @@
     </section>
 
 
-    <!-- =========================================================
-         PLACEHOLDER SECTIONS
-         (θα τα φτιάξουμε μετά)
-    ========================================================== -->
+    <!-- PLACEHOLDER SECTIONS -->
 
     <section id="projects"></section>
     <section id="about"></section>
