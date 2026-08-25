@@ -1588,121 +1588,12 @@
      PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
 ========================================================= -->
 
-<section
-    class="project-02"
-    id="drivetrain-project"
->
-
-
-    <!-- PROJECT HEADER -->
-
-    <div class="project-header">
-
-        <div class="project-label">
-
-            <span></span>
-
-            PROJECT 02 / FORMULA STUDENT
-
-        </div>
-
-
-        <h2>
-
-            DRIVETRAIN ANALYSIS -<br>
-            MINAUTOR FORMULA STUDENT TEAM
-
-        </h2>
-
-
-        <div class="project-accent"></div>
-
-    </div>
-
-
-    <!-- PROJECT TABS -->
-
-    <div
-        class="project-tabs"
-        role="tablist"
-    >
-
-        <button
-            class="project-tab active"
-            onclick="openProjectTab(event, 'driveline-analysis')"
-        >
-            DRIVELINE ANALYSIS
-        </button>
-
-
-        <button
-            class="project-tab"
-            onclick="openProjectTab(event, 'kinematics')"
-        >
-            KINEMATICS
-        </button>
-
-
-        <button
-            class="project-tab"
-            onclick="openProjectTab(event, 'force-speed')"
-        >
-            FORCE VS SPEED
-        </button>
-
-    </div>
-
-
-    <!-- TAB 1 -->
-
-    <div
-        id="driveline-analysis"
-        class="project-tab-content active"
-    >
-
-        <div class="tab-placeholder">
-            DRIVELINE ANALYSIS
-        </div>
-
-    </div>
-
-
-    <!-- TAB 2 -->
-
-    <div
-        id="kinematics"
-        class="project-tab-content"
-    >
-
-        <div class="tab-placeholder">
-            KINEMATICS
-        </div>
-
-    </div>
-
-
-    <!-- TAB 3 -->
-
-    <div
-        id="force-speed"
-        class="project-tab-content"
-    >
-
-        <div class="tab-placeholder">
-            FORCE VS SPEED
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PROJECT 02 STYLE
-========================================================= -->
-
 <style>
+
+    /* =====================================================
+       PROJECT 02
+       SAME VISUAL SYSTEM AS PROJECT 01
+    ===================================================== */
 
     .project-02 {
 
@@ -1710,33 +1601,83 @@
 
         width: 100%;
 
-        min-height: 100vh;
+        background: #050505;
 
-        background: #030303;
+        color: #e9e5dc;
 
-        color: rgba(238, 237, 231, 0.82);
+        font-family: "Inter", Arial, sans-serif;
 
-        padding: 150px 7% 100px;
-
-        box-sizing: border-box;
+        overflow: hidden;
 
     }
 
 
     /* =====================================================
-       HEADER
+       SUBTLE BACKGROUND
     ===================================================== */
 
-    .project-02 .project-header {
+    .project-02::before {
 
-        max-width: 1500px;
+        content: "";
 
-        margin: 0 auto;
+        position: absolute;
+
+        inset: 0;
+
+        pointer-events: none;
+
+        background:
+            radial-gradient(
+                circle at 78% 20%,
+                rgba(150, 115, 35, 0.035),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at 20% 70%,
+                rgba(150, 15, 25, 0.025),
+                transparent 30%
+            );
 
     }
 
 
-    /* PROJECT LABEL */
+    /* =====================================================
+       PROJECT HERO
+    ===================================================== */
+
+    .project-02 .project-hero {
+
+        position: relative;
+
+        min-height: 58vh;
+
+        display: flex;
+
+        align-items: center;
+
+        padding: 100px 7vw 70px;
+
+        border-top: 1px solid rgba(190, 150, 55, 0.12);
+
+        border-bottom: 1px solid rgba(190, 150, 55, 0.12);
+
+    }
+
+
+    .project-02 .project-hero-content {
+
+        position: relative;
+
+        z-index: 2;
+
+        max-width: 1000px;
+
+    }
+
+
+    /* =====================================================
+       PROJECT LABEL
+    ===================================================== */
 
     .project-02 .project-label {
 
@@ -1744,32 +1685,34 @@
 
         align-items: center;
 
-        gap: 22px;
+        gap: 18px;
 
-        font-family: Arial, Helvetica, sans-serif !important;
+        margin-bottom: 28px;
 
-        font-size: 15px !important;
+        color: #b58a32;
 
-        font-weight: 500 !important;
+        font-family: "Inter", Arial, sans-serif;
 
-        letter-spacing: 0.42em !important;
+        font-size: 12px;
 
-        color: #b88620;
+        font-weight: 400;
 
-        margin-bottom: 42px;
+        letter-spacing: 5px;
+
+        text-transform: uppercase;
 
     }
 
 
-    .project-02 .project-label span {
+    .project-02 .project-label::before {
 
-        width: 72px;
+        content: "";
+
+        width: 70px;
 
         height: 1px;
 
-        background: #8d1018;
-
-        display: block;
+        background: #9d1622;
 
         flex-shrink: 0;
 
@@ -1778,135 +1721,140 @@
 
     /* =====================================================
        MAIN PROJECT TITLE
-       Smaller + same clean geometric language
+       SLIGHTLY SMALLER THAN PROJECT 01
     ===================================================== */
 
-    .project-02 h2 {
+    .project-02 .project-hero h1 {
 
         margin: 0;
 
-        font-family: Arial, Helvetica, sans-serif !important;
+        font-family: "Inter", Arial, sans-serif;
 
-        font-size: clamp(30px, 2.7vw, 50px) !important;
+        font-size: clamp(29px, 3.5vw, 52px);
 
-        line-height: 1.10;
+        line-height: 1.08;
 
-        font-weight: 700 !important;
+        font-weight: 700;
 
-        letter-spacing: 0.015em;
+        letter-spacing: -1.5px;
 
-        color: rgba(238, 237, 231, 0.82);
+        color: rgba(239, 235, 225, 0.82);
+
+    }
+
+
+    .project-02 .project-hero h1 span {
+
+        display: block;
+
+    }
+
+
+    .project-02 .project-hero h1 .gold,
+
+    .project-02 .project-hero h1 .light {
+
+        color: rgba(239, 235, 225, 0.82);
 
     }
 
 
     /* =====================================================
-       SMALL RED ACCENT
+       RED ACCENT
     ===================================================== */
 
-    .project-02 .project-accent {
+    .project-02 .project-description-placeholder {
 
-        width: 2px;
+        margin-top: 36px;
 
-        height: 32px;
+        width: min(620px, 100%);
 
-        background: rgba(141, 16, 24, 0.65);
+        height: 18px;
 
-        margin-top: 45px;
+        border-left: 2px solid #8e1721;
+
+        opacity: 0.35;
 
     }
 
 
     /* =====================================================
-       PROJECT TABS
-       SAME TYPOGRAPHY AS THE MAIN PROJECT NAVIGATION
+       PROJECT NAVIGATION
+       SAME AS PROJECT 01
     ===================================================== */
 
-    .project-02 .project-tabs {
+    .project-02 .project-navigation-wrapper {
 
-        width: 100%;
+        position: sticky;
 
-        max-width: 1200px;
+        top: 0;
 
-        margin: 80px auto 0;
+        z-index: 50;
+
+        background: rgba(5, 5, 5, 0.94);
+
+        backdrop-filter: blur(12px);
+
+        border-top: 1px solid rgba(190, 150, 55, 0.08);
+
+        border-bottom: 1px solid rgba(190, 150, 55, 0.14);
+
+    }
+
+
+    .project-02 .project-navigation {
+
+        width: min(1250px, 86vw);
+
+        min-height: 78px;
+
+        margin: 0 auto;
 
         display: flex;
 
-        justify-content: space-between;
-
         align-items: center;
 
-        border-top: 1px solid rgba(184, 134, 32, 0.16);
+        justify-content: center;
 
-        border-bottom: 1px solid rgba(184, 134, 32, 0.16);
-
-        padding: 27px 0;
+        gap: clamp(35px, 6vw, 95px);
 
     }
 
 
     /* =====================================================
-       TAB BUTTON
+       NAVIGATION LINKS
     ===================================================== */
 
-    .project-02 .project-tab {
+    .project-02 .project-navigation a {
 
         position: relative;
 
-        background: none;
+        padding: 27px 0 24px;
 
-        border: none;
+        color: #aaa69d;
 
-        outline: none;
+        text-decoration: none;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 11px;
+
+        font-weight: 500;
+
+        letter-spacing: 3.5px;
+
+        text-transform: uppercase;
 
         cursor: pointer;
 
-        font-family: Arial, Helvetica, sans-serif !important;
-
-        font-size: 13px !important;
-
-        font-weight: 500 !important;
-
-        line-height: 1 !important;
-
-        letter-spacing: 0.30em !important;
-
-        text-transform: uppercase !important;
-
-        color: rgba(238, 237, 231, 0.62) !important;
-
-        padding: 8px 5px !important;
-
-        margin: 0 !important;
-
         transition:
-            color 0.25s ease,
-            opacity 0.25s ease;
+            color 0.3s ease,
+            opacity 0.3s ease;
 
     }
 
 
-    /* HOVER */
-
-    .project-02 .project-tab:hover {
-
-        color: rgba(238, 237, 231, 0.88) !important;
-
-    }
-
-
-    /* ACTIVE */
-
-    .project-02 .project-tab.active {
-
-        color: #b88620 !important;
-
-    }
-
-
-    /* ACTIVE UNDERLINE */
-
-    .project-02 .project-tab.active::after {
+    .project-02 .project-navigation a::after {
 
         content: "";
 
@@ -1914,39 +1862,84 @@
 
         left: 0;
 
-        right: 0;
+        bottom: 16px;
 
-        bottom: -28px;
+        width: 0;
 
-        height: 2px;
+        height: 1px;
 
-        background: #b88620;
+        background: #b58a32;
+
+        transition: width 0.3s ease;
+
+    }
+
+
+    .project-02 .project-navigation a:hover {
+
+        color: #ded8ca;
+
+    }
+
+
+    .project-02 .project-navigation a:hover::after {
+
+        width: 100%;
+
+    }
+
+
+    .project-02 .project-navigation a.active {
+
+        color: #c29a48;
+
+    }
+
+
+    .project-02 .project-navigation a.active::after {
+
+        width: 100%;
 
     }
 
 
     /* =====================================================
-       TAB CONTENT
+       PROJECT CONTENT
     ===================================================== */
 
-    .project-02 .project-tab-content {
+    .project-02 .project-content {
 
-        display: none;
+        position: relative;
 
         width: 100%;
-
-        max-width: 1200px;
-
-        margin: 0 auto;
-
-        padding-top: 70px;
-
-        min-height: 400px;
 
     }
 
 
-    .project-02 .project-tab-content.active {
+    /* =====================================================
+       PROJECT SECTIONS
+    ===================================================== */
+
+    .project-02 .project-section {
+
+        position: relative;
+
+        width: min(1350px, 86vw);
+
+        min-height: 65vh;
+
+        margin: 0 auto;
+
+        padding: 100px 0 120px;
+
+        border-bottom: 1px solid rgba(190, 150, 55, 0.10);
+
+        display: none;
+
+    }
+
+
+    .project-02 .project-section.active-section {
 
         display: block;
 
@@ -1954,20 +1947,99 @@
 
 
     /* =====================================================
-       TEMPORARY TEXT
+       SECTION HEADER
     ===================================================== */
 
-    .project-02 .tab-placeholder {
+    .project-02 .project-section-header {
 
-        font-family: Arial, Helvetica, sans-serif !important;
+        display: flex;
 
-        font-size: 12px !important;
+        align-items: center;
 
-        font-weight: 500 !important;
+        gap: 22px;
 
-        letter-spacing: 0.35em !important;
+        margin-bottom: 60px;
 
-        color: rgba(238, 237, 231, 0.38);
+    }
+
+
+    .project-02 .project-section-number {
+
+        color: #b58a32;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 500;
+
+        letter-spacing: 3px;
+
+        line-height: 1;
+
+    }
+
+
+    .project-02 .project-section-line {
+
+        width: 55px;
+
+        height: 1px;
+
+        background: #8f1721;
+
+    }
+
+
+    .project-02 .project-section-title {
+
+        color: #c39a4b;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 13px;
+
+        font-weight: 500;
+
+        letter-spacing: 5px;
+
+        text-transform: uppercase;
+
+    }
+
+
+    /* =====================================================
+       PLACEHOLDER
+    ===================================================== */
+
+    .project-02 .project-placeholder {
+
+        min-height: 420px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border: 1px solid rgba(190, 150, 55, 0.08);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(190, 150, 55, 0.015),
+                transparent 50%
+            );
+
+        color: rgba(190, 185, 175, 0.18);
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
 
     }
 
@@ -1978,34 +2050,69 @@
 
     @media (max-width: 900px) {
 
-        .project-02 {
+        .project-02 .project-hero {
 
-            padding: 110px 6% 80px;
+            min-height: 55vh;
 
-        }
-
-
-        .project-02 h2 {
-
-            font-size: clamp(28px, 5vw, 44px) !important;
+            padding: 90px 8vw 65px;
 
         }
 
 
-        .project-02 .project-tabs {
+        .project-02 .project-hero h1 {
+
+            font-size: clamp(27px, 6vw, 44px);
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .project-02 .project-navigation {
+
+            width: 92vw;
 
             gap: 25px;
 
-            flex-wrap: wrap;
-
             justify-content: flex-start;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
 
         }
 
 
-        .project-02 .project-tab {
+        .project-02 .project-navigation::-webkit-scrollbar {
 
-            font-size: 12px !important;
+            display: none;
+
+        }
+
+
+        .project-02 .project-navigation a {
+
+            white-space: nowrap;
+
+            font-size: 9px;
+
+            letter-spacing: 2.5px;
+
+        }
+
+
+        .project-02 .project-section {
+
+            width: 84vw;
+
+            padding: 80px 0 90px;
+
+        }
+
+
+        .project-02 .project-placeholder {
+
+            min-height: 300px;
 
         }
 
@@ -2014,57 +2121,43 @@
 
     @media (max-width: 600px) {
 
-        .project-02 {
+        .project-02 .project-hero {
 
-            padding: 90px 7% 60px;
-
-        }
-
-
-        .project-02 .project-label {
-
-            font-size: 11px !important;
-
-            letter-spacing: 0.28em !important;
+            padding: 80px 8vw 55px;
 
         }
 
 
-        .project-02 .project-label span {
+        .project-02 .project-hero h1 {
 
-            width: 40px;
+            font-size: 26px;
 
-        }
+            line-height: 1.12;
 
-
-        .project-02 h2 {
-
-            font-size: 30px !important;
+            letter-spacing: -0.7px;
 
         }
 
 
-        .project-02 .project-tabs {
+        .project-02 .project-navigation {
 
-            flex-direction: column;
-
-            align-items: flex-start;
-
-            gap: 18px;
+            gap: 22px;
 
         }
 
 
-        .project-02 .project-tab {
+        .project-02 .project-section-header {
 
-            font-size: 11px !important;
+            margin-bottom: 45px;
 
         }
 
 
-        .project-02 .project-tab.active::after {
+        .project-02 .project-section-title {
 
-            bottom: -7px;
+            font-size: 10px;
+
+            letter-spacing: 3px;
 
         }
 
@@ -2075,74 +2168,342 @@
 
 
 <!-- =========================================================
-     PROJECT 02 TAB SWITCHING
+     PROJECT 02
+========================================================= -->
+
+<section
+    class="project-02"
+    id="project-02"
+>
+
+
+    <!-- =====================================================
+         PROJECT HERO
+    ===================================================== -->
+
+    <div class="project-hero">
+
+        <div class="project-hero-content">
+
+
+            <!-- PROJECT LABEL -->
+
+            <div class="project-label">
+
+                PROJECT 02 / FORMULA STUDENT
+
+            </div>
+
+
+            <!-- PROJECT TITLE -->
+
+            <h1>
+
+                <span class="gold">
+                    DRIVETRAIN ANALYSIS -
+                </span>
+
+                <span class="light">
+                    MINAUTOR FORMULA STUDENT TEAM
+                </span>
+
+            </h1>
+
+
+            <!-- RED ACCENT -->
+
+            <div class="project-description-placeholder"></div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PROJECT NAVIGATION
+    ===================================================== -->
+
+    <div class="project-navigation-wrapper">
+
+        <nav class="project-navigation">
+
+
+            <a
+                href="#"
+                class="project-nav-link active"
+                data-target="project-driveline"
+            >
+                DRIVELINE ANALYSIS
+            </a>
+
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-kinematics"
+            >
+                KINEMATICS
+            </a>
+
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-force-speed"
+            >
+                FORCE VS SPEED
+            </a>
+
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PROJECT CONTENT
+    ===================================================== -->
+
+    <div class="project-content">
+
+
+        <!-- =================================================
+             DRIVELINE ANALYSIS
+        ================================================= -->
+
+        <section
+            id="project-driveline"
+            class="project-section active-section"
+        >
+
+            <div class="project-section-header">
+
+
+                <div class="project-section-number">
+                    01
+                </div>
+
+
+                <div class="project-section-line"></div>
+
+
+                <div class="project-section-title">
+                    DRIVELINE ANALYSIS
+                </div>
+
+
+            </div>
+
+
+            <div class="project-placeholder">
+
+                DRIVELINE ANALYSIS CONTENT
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KINEMATICS
+        ================================================= -->
+
+        <section
+            id="project-kinematics"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+
+                <div class="project-section-number">
+                    02
+                </div>
+
+
+                <div class="project-section-line"></div>
+
+
+                <div class="project-section-title">
+                    KINEMATICS
+                </div>
+
+
+            </div>
+
+
+            <div class="project-placeholder">
+
+                KINEMATICS CONTENT
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FORCE VS SPEED
+        ================================================= -->
+
+        <section
+            id="project-force-speed"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+
+                <div class="project-section-number">
+                    03
+                </div>
+
+
+                <div class="project-section-line"></div>
+
+
+                <div class="project-section-title">
+                    FORCE VS SPEED
+                </div>
+
+
+            </div>
+
+
+            <div class="project-placeholder">
+
+                FORCE VS SPEED CONTENT
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECT 02 TAB SYSTEM
+     NO SCROLL
 ========================================================= -->
 
 <script>
 
-    function openProjectTab(event, tabId) {
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
 
-        const project =
-            event.currentTarget.closest(
-                ".project-02"
+
+            const project =
+                document.querySelector(
+                    ".project-02"
+                );
+
+
+            if (!project) return;
+
+
+            const navLinks =
+                project.querySelectorAll(
+                    ".project-nav-link"
+                );
+
+
+            const sections =
+                project.querySelectorAll(
+                    ".project-section"
+                );
+
+
+            navLinks.forEach(
+                function (link) {
+
+
+                    link.addEventListener(
+                        "click",
+                        function (event) {
+
+
+                            event.preventDefault();
+
+
+                            const targetId =
+                                this.getAttribute(
+                                    "data-target"
+                                );
+
+
+                            const target =
+                                project.querySelector(
+                                    "#" + targetId
+                                );
+
+
+                            if (!target) return;
+
+
+                            /* REMOVE ACTIVE NAV */
+
+                            navLinks.forEach(
+                                function (nav) {
+
+                                    nav.classList.remove(
+                                        "active"
+                                    );
+
+                                }
+                            );
+
+
+                            /* HIDE ALL SECTIONS */
+
+                            sections.forEach(
+                                function (section) {
+
+                                    section.classList.remove(
+                                        "active-section"
+                                    );
+
+                                }
+                            );
+
+
+                            /* ACTIVATE SELECTED TAB */
+
+                            this.classList.add(
+                                "active"
+                            );
+
+
+                            target.classList.add(
+                                "active-section"
+                            );
+
+
+                            /*
+                                IMPORTANT:
+
+                                NO scrollIntoView()
+                                NO window.scrollTo()
+
+                                The user remains
+                                exactly where they are.
+                            */
+
+                        }
+                    );
+
+                }
             );
 
-
-        const contents =
-            project.querySelectorAll(
-                ".project-tab-content"
-            );
-
-
-        const tabs =
-            project.querySelectorAll(
-                ".project-tab"
-            );
-
-
-        /* Hide all content */
-
-        contents.forEach(content => {
-
-            content.classList.remove(
-                "active"
-            );
-
-        });
-
-
-        /* Remove active state */
-
-        tabs.forEach(tab => {
-
-            tab.classList.remove(
-                "active"
-            );
-
-        });
-
-
-        /* Show selected tab */
-
-        project
-            .querySelector("#" + tabId)
-            .classList.add(
-                "active"
-            );
-
-
-        event.currentTarget.classList.add(
-            "active"
-        );
-
-
-        /*
-            IMPORTANT:
-            No scrollIntoView().
-            No window.scrollTo().
-            The user stays exactly where they are.
-        */
-
-    }
+        }
+    );
 
 </script>
