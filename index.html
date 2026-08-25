@@ -10,13 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
 
         /* =========================================================
-           RESET
+           BASE
         ========================================================= */
 
         * {
@@ -30,26 +29,203 @@
         }
 
         body {
-            background: #050505;
-            color: #f1efeb;
+            background: #030303;
+            color: #f3f0e9;
             font-family: "Inter", sans-serif;
             overflow-x: hidden;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
 
         /* =========================================================
-           COLOUR PALETTE
+           PAGE FRAME
         ========================================================= */
 
-        :root {
-            --black: #050505;
-            --off-white: #eeeae3;
-            --gold: #b9944d;
-            --gold-soft: #a8874b;
-            --red: #741019;
-            --red-bright: #9a1621;
-            --line: rgba(185, 148, 77, 0.22);
-            --red-line: rgba(116, 16, 25, 0.55);
+        .page {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            border: 1px solid rgba(180, 145, 70, 0.10);
+        }
+
+        .page::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle at 78% 45%,
+                    rgba(120, 20, 25, 0.035),
+                    transparent 38%
+                ),
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(170, 125, 40, 0.025),
+                    transparent 30%
+                );
+
+            z-index: 0;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: relative;
+            z-index: 20;
+
+            height: 105px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 58px;
+        }
+
+
+        /* =========================================================
+           AC LOGO
+           ONLY THIS PART WAS CHANGED
+        ========================================================= */
+
+        .logo {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            font-family: "Cormorant Garamond", serif;
+            font-size: 54px;
+            font-weight: 500;
+            font-style: normal;
+
+            letter-spacing: -0.07em;
+            line-height: 1;
+
+            color: #c99a3d;
+
+            width: 105px;
+            height: 60px;
+        }
+
+        .logo::before,
+        .logo::after {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            height: 1px;
+            width: 35px;
+
+            background: rgba(155, 22, 27, 0.75);
+        }
+
+        .logo::before {
+            left: -35px;
+        }
+
+        .logo::after {
+            right: -35px;
+        }
+
+        /* IMPORTANT:
+           No underline under AC.
+           The logo is intentionally simple and elegant.
+        */
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 54px;
+
+            margin-left: auto;
+            margin-right: 38px;
+        }
+
+        nav a {
+            position: relative;
+
+            font-size: 12px;
+            font-weight: 400;
+
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+
+            color: #e9e5dc;
+
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c99a3d;
+        }
+
+
+        /* =========================================================
+           EMAIL
+        ========================================================= */
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+        }
+
+        .header-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(201, 154, 61, 0.65);
+        }
+
+        .email-icon {
+            width: 22px;
+            height: 16px;
+
+            border: 1px solid #c99a3d;
+
+            position: relative;
+        }
+
+        .email-icon::before,
+        .email-icon::after {
+            content: "";
+
+            position: absolute;
+            top: 2px;
+
+            width: 12px;
+            height: 1px;
+
+            background: #c99a3d;
+        }
+
+        .email-icon::before {
+            left: 0;
+            transform: rotate(31deg);
+            transform-origin: left center;
+        }
+
+        .email-icon::after {
+            right: 0;
+            transform: rotate(-31deg);
+            transform-origin: right center;
         }
 
 
@@ -59,203 +235,51 @@
 
         .hero {
             position: relative;
-            min-height: 100vh;
-            width: 100%;
-            overflow: hidden;
+            z-index: 5;
 
-            background:
-                radial-gradient(
-                    circle at 72% 48%,
-                    rgba(80, 45, 20, 0.035),
-                    transparent 38%
-                ),
-                #050505;
-        }
-
-
-        /* =========================================================
-           THIN BORDER
-        ========================================================= */
-
-        .hero::before {
-            content: "";
-
-            position: absolute;
-            inset: 13px;
-
-            border: 1px solid rgba(150, 145, 135, 0.12);
-
-            pointer-events: none;
-            z-index: 20;
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-        ========================================================= */
-
-        .nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 115px;
+            min-height: calc(100vh - 105px);
 
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            align-items: flex-start;
 
-            padding: 0 5.2vw;
-
-            z-index: 10;
+            padding: 88px 0 0 88px;
         }
-
-
-        /* =========================================================
-           AC LOGO
-        ========================================================= */
-
-        .logo {
-            position: relative;
-
-            display: flex;
-            align-items: center;
-
-            font-family: "Ballet", cursive;
-            font-size: 48px;
-            font-weight: 400;
-
-            color: var(--gold);
-
-            letter-spacing: 0;
-            text-decoration: none;
-        }
-
-
-        /* =========================================================
-           NAV LINKS
-        ========================================================= */
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-        }
-
-        .nav-link {
-            position: relative;
-
-            color: #e7e3dd;
-            text-decoration: none;
-
-            font-family: "Inter", sans-serif;
-            font-size: 11px;
-            font-weight: 400;
-
-            letter-spacing: 3px;
-            text-transform: uppercase;
-
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--gold);
-        }
-
-
-        /* =========================================================
-           NAV DIVIDER
-        ========================================================= */
-
-        .nav-divider {
-            width: 1px;
-            height: 28px;
-
-            background: var(--gold);
-
-            opacity: 0.65;
-
-            margin-left: 2px;
-        }
-
-
-        /* =========================================================
-           MAIL ICON
-        ========================================================= */
-
-        .mail {
-            width: 22px;
-            height: 16px;
-
-            border: 1px solid var(--gold);
-
-            position: relative;
-
-            margin-left: -5px;
-        }
-
-        .mail::after {
-            content: "";
-
-            position: absolute;
-
-            width: 12px;
-            height: 12px;
-
-            border-left: 1px solid var(--gold);
-            border-bottom: 1px solid var(--gold);
-
-            transform: rotate(-45deg);
-
-            left: 4px;
-            top: -4px;
-        }
-
-
-        /* =========================================================
-           MAIN HERO CONTENT
-        ========================================================= */
 
         .hero-content {
             position: relative;
-            z-index: 5;
+            z-index: 10;
 
-            padding-left: 7.8vw;
-            padding-top: 24vh;
-
-            width: 60%;
+            width: 620px;
         }
 
 
         /* =========================================================
-           SMALL TOP LABEL
+           EYEBROW
         ========================================================= */
 
         .eyebrow {
             display: flex;
             align-items: center;
-
             gap: 15px;
 
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .eyebrow-line {
             width: 48px;
             height: 1px;
 
-            background: var(--red);
+            background: #9d151c;
         }
 
-        .eyebrow-text {
-            color: var(--gold);
-
-            font-size: 10px;
+        .eyebrow span {
+            font-size: 11px;
             font-weight: 400;
 
-            letter-spacing: 4px;
+            letter-spacing: 0.38em;
             text-transform: uppercase;
+
+            color: #c99a3d;
         }
 
 
@@ -266,58 +290,53 @@
         .name {
             font-family: "Cormorant Garamond", serif;
 
-            font-size: clamp(82px, 7.2vw, 126px);
+            font-size: clamp(82px, 7.2vw, 118px);
+            font-weight: 500;
 
-            font-weight: 400;
-            line-height: 0.78;
+            line-height: 0.82;
+            letter-spacing: -0.055em;
 
-            letter-spacing: -4px;
-
-            margin-left: -5px;
-
-            white-space: nowrap;
+            margin-left: -7px;
         }
 
-        .first-name {
+        .name .first-name {
             display: block;
-            color: var(--gold);
+            color: #d0a14b;
         }
 
-        .last-name {
+        .name .last-name {
             display: block;
-            color: var(--off-white);
-
-            margin-top: 8px;
+            color: #f2eee7;
         }
 
 
         /* =========================================================
-           SPECIALISATION LINE
+           SUBTITLE
         ========================================================= */
 
-        .specialisation {
+        .subtitle {
+            margin-top: 38px;
+
             display: flex;
             align-items: center;
+            gap: 18px;
 
-            margin-top: 42px;
-
-            color: var(--gold);
-
-            font-size: 12px;
+            font-size: 15px;
             font-weight: 400;
 
-            letter-spacing: 3px;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
 
-            white-space: nowrap;
+            color: #c99a3d;
         }
 
-        .specialisation span {
-            margin: 0 14px;
+        .subtitle .dot {
+            width: 3px;
+            height: 3px;
 
-            color: var(--red-bright);
+            border-radius: 50%;
 
-            font-size: 10px;
+            background: #9d151c;
         }
 
 
@@ -325,36 +344,34 @@
            BUTTONS
         ========================================================= */
 
-        .buttons {
+        .hero-buttons {
             display: flex;
             gap: 25px;
 
             margin-top: 42px;
         }
 
-        .button {
+        .hero-button {
             position: relative;
+
+            width: 178px;
+            height: 46px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            width: 175px;
-            height: 46px;
+            padding: 0 23px;
 
-            padding: 0 20px;
+            border: 1px solid rgba(201, 154, 61, 0.85);
 
-            text-decoration: none;
-
-            color: #e7e3dd;
-
-            border: 1px solid var(--gold-soft);
-
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 400;
 
-            letter-spacing: 2px;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
+
+            color: #eae6df;
 
             transition:
                 background 0.3s ease,
@@ -362,193 +379,178 @@
                 border-color 0.3s ease;
         }
 
-
-        /* FIRST BUTTON RED */
-
-        .button:first-child {
-            border-color: var(--red-bright);
+        .hero-button.projects {
+            border-color: #a4161d;
         }
 
-        .button:first-child .arrow {
-            color: var(--red-bright);
+        .hero-button:hover {
+            background: rgba(201, 154, 61, 0.08);
         }
 
-        .button:hover {
-            background: rgba(185, 148, 77, 0.06);
-            color: var(--gold);
-        }
-
-        .button:first-child:hover {
-            background: rgba(116, 16, 25, 0.08);
-            color: #eeeae3;
+        .hero-button.projects:hover {
+            background: rgba(164, 22, 29, 0.08);
         }
 
         .arrow {
             font-size: 20px;
             font-weight: 300;
-
             line-height: 1;
+        }
 
-            color: var(--gold);
+        .projects .arrow {
+            color: #c01821;
+        }
+
+        .about .arrow,
+        .cv .arrow {
+            color: #c99a3d;
         }
 
 
         /* =========================================================
-           RIGHT SIDE GRAPHICS
+           TECHNICAL GRAPHIC
         ========================================================= */
 
-        .graphics {
+        .technical-graphic {
             position: absolute;
 
-            width: 58vw;
-            height: 58vw;
+            right: -55px;
+            top: -5px;
 
-            max-width: 850px;
-            max-height: 850px;
-
-            right: -10vw;
-            top: 8vh;
+            width: 760px;
+            height: 760px;
 
             z-index: 1;
 
             pointer-events: none;
         }
 
-
-        /* =========================================================
-           LARGE CIRCLES
-        ========================================================= */
-
         .circle {
             position: absolute;
 
             border-radius: 50%;
 
-            border: 1px solid var(--red-line);
-
-            left: 50%;
-            top: 50%;
-
-            transform: translate(-50%, -50%);
+            border: 1px solid rgba(150, 22, 29, 0.38);
         }
 
-        .circle-1 {
-            width: 88%;
-            height: 88%;
+        .circle.one {
+            width: 650px;
+            height: 650px;
+
+            top: 0;
+            left: 45px;
         }
 
-        .circle-2 {
-            width: 67%;
-            height: 67%;
+        .circle.two {
+            width: 470px;
+            height: 470px;
 
-            border-color: rgba(116, 16, 25, 0.38);
+            top: 80px;
+            left: 135px;
+
+            border-color: rgba(150, 22, 29, 0.28);
         }
 
-        .circle-3 {
-            width: 48%;
-            height: 48%;
+        .circle.three {
+            width: 285px;
+            height: 285px;
 
-            border-color: rgba(185, 148, 77, 0.16);
+            top: 172px;
+            left: 228px;
+
+            border-color: rgba(157, 120, 42, 0.25);
         }
 
-        .circle-4 {
-            width: 29%;
-            height: 29%;
+        .circle.four {
+            width: 170px;
+            height: 170px;
 
-            border-color: rgba(116, 16, 25, 0.32);
+            top: 230px;
+            left: 285px;
+
+            border-color: rgba(150, 22, 29, 0.24);
         }
 
 
         /* =========================================================
-           ORBIT LINES
+           CURVED PERFORMANCE LINES
         ========================================================= */
 
-        .orbit {
+        .curve {
             position: absolute;
 
-            left: 50%;
-            top: 50%;
-
-            width: 77%;
-            height: 29%;
-
-            border: 1px solid rgba(185, 148, 77, 0.12);
+            width: 620px;
+            height: 160px;
 
             border-radius: 50%;
 
-            transform:
-                translate(-50%, -50%)
-                rotate(-25deg);
+            border-top: 1px solid rgba(152, 117, 44, 0.20);
+
+            transform: rotate(-20deg);
         }
 
-        .orbit-2 {
-            transform:
-                translate(-50%, -50%)
-                rotate(28deg);
-
-            width: 86%;
-            height: 25%;
-
-            border-color: rgba(116, 16, 25, 0.16);
+        .curve.one {
+            top: 225px;
+            left: 80px;
         }
 
-        .orbit-3 {
-            transform:
-                translate(-50%, -50%)
-                rotate(-8deg);
+        .curve.two {
+            top: 315px;
+            left: 20px;
 
-            width: 92%;
-            height: 20%;
+            transform: rotate(14deg);
 
-            border-color: rgba(185, 148, 77, 0.08);
+            border-top-color: rgba(155, 21, 28, 0.22);
+        }
+
+        .curve.three {
+            top: 395px;
+            left: 110px;
+
+            transform: rotate(-12deg);
+
+            border-top-color: rgba(153, 117, 45, 0.15);
         }
 
 
         /* =========================================================
-           CENTRAL CROSS
+           CENTER MARK
         ========================================================= */
 
-        .cross {
+        .center-mark {
             position: absolute;
 
-            left: 50%;
-            top: 50%;
+            top: 365px;
+            left: 365px;
 
-            width: 22px;
-            height: 22px;
-
-            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
         }
 
-        .cross::before,
-        .cross::after {
+        .center-mark::before,
+        .center-mark::after {
             content: "";
 
             position: absolute;
 
-            background: rgba(185, 148, 77, 0.55);
+            background: rgba(201, 154, 61, 0.65);
         }
 
-        .cross::before {
-            width: 22px;
+        .center-mark::before {
+            width: 1px;
+            height: 30px;
+
+            left: 9px;
+            top: -6px;
+        }
+
+        .center-mark::after {
+            width: 30px;
             height: 1px;
 
-            top: 10px;
-            left: 0;
+            left: -6px;
+            top: 9px;
         }
-
-        .cross::after {
-            width: 1px;
-            height: 22px;
-
-            left: 10px;
-            top: 0;
-        }
-
-
-        /* =========================================================
-           CENTRAL RED DOT
-        ========================================================= */
 
         .center-dot {
             position: absolute;
@@ -558,28 +560,133 @@
 
             border-radius: 50%;
 
-            background: var(--red-bright);
+            background: #a4161d;
 
-            left: calc(50% - 2px);
-            top: calc(50% - 2px);
-
-            box-shadow:
-                0 0 12px rgba(154, 22, 33, 0.45);
+            left: 7px;
+            top: 7px;
         }
 
 
         /* =========================================================
-           SMALL PLUS
+           GOLD DOT GRID
+           FADES INTO BACKGROUND
+        ========================================================= */
+
+        .dot-grid {
+            position: absolute;
+
+            display: grid;
+            grid-template-columns: repeat(7, 4px);
+            grid-auto-rows: 4px;
+
+            gap: 11px;
+
+            opacity: 0.55;
+
+            pointer-events: none;
+        }
+
+        .dot-grid span {
+            width: 2px;
+            height: 2px;
+
+            border-radius: 50%;
+
+            background: #a77b2b;
+
+            opacity: 0.35;
+
+            box-shadow:
+                0 0 7px rgba(167, 123, 43, 0.15);
+        }
+
+        .gold-grid {
+            right: 25px;
+            top: 135px;
+        }
+
+
+        /* =========================================================
+           RED DOT GRID
+           FADES INTO BACKGROUND
+        ========================================================= */
+
+        .red-grid {
+            position: absolute;
+
+            left: 158px;
+            bottom: 20px;
+
+            display: grid;
+            grid-template-columns: repeat(7, 4px);
+            grid-auto-rows: 4px;
+
+            gap: 11px;
+
+            opacity: 0.45;
+
+            pointer-events: none;
+        }
+
+        .red-grid span {
+            width: 2px;
+            height: 2px;
+
+            border-radius: 50%;
+
+            background: #94131a;
+
+            opacity: 0.32;
+
+            box-shadow:
+                0 0 7px rgba(148, 19, 26, 0.12);
+        }
+
+
+        /* =========================================================
+           CORNER CIRCLES
+        ========================================================= */
+
+        .corner-circle {
+            position: absolute;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(150, 22, 29, 0.25);
+
+            pointer-events: none;
+        }
+
+        .corner-circle.one {
+            width: 210px;
+            height: 210px;
+
+            left: -135px;
+            bottom: -115px;
+        }
+
+        .corner-circle.two {
+            width: 155px;
+            height: 155px;
+
+            left: -108px;
+            bottom: -90px;
+
+            border-color: rgba(150, 22, 29, 0.17);
+        }
+
+
+        /* =========================================================
+           PLUS MARKS
         ========================================================= */
 
         .plus {
             position: absolute;
 
-            width: 22px;
-            height: 22px;
+            width: 28px;
+            height: 28px;
 
-            right: 28%;
-            top: 29%;
+            opacity: 0.55;
         }
 
         .plus::before,
@@ -588,150 +695,28 @@
 
             position: absolute;
 
-            background: rgba(185, 148, 77, 0.38);
+            background: rgba(201, 154, 61, 0.5);
         }
 
         .plus::before {
-            width: 22px;
-            height: 1px;
+            width: 1px;
+            height: 28px;
 
-            top: 10px;
+            left: 13px;
+            top: 0;
         }
 
         .plus::after {
-            width: 1px;
-            height: 22px;
+            width: 28px;
+            height: 1px;
 
-            left: 10px;
+            left: 0;
+            top: 13px;
         }
 
-
-        /* =========================================================
-           TOP RIGHT DOT GRID
-        ========================================================= */
-
-        .dot-grid {
-            position: absolute;
-
-            display: grid;
-
-            grid-template-columns: repeat(7, 4px);
-            grid-template-rows: repeat(5, 4px);
-
-            gap: 10px;
-
-            right: 2vw;
-            top: 18vh;
-
-            /*
-               Soft fade into the background.
-               The centre remains visible while
-               the outer dots disappear gradually.
-            */
-            mask-image: radial-gradient(
-                ellipse at center,
-                black 15%,
-                rgba(0, 0, 0, 0.72) 45%,
-                transparent 88%
-            );
-
-            -webkit-mask-image: radial-gradient(
-                ellipse at center,
-                black 15%,
-                rgba(0, 0, 0, 0.72) 45%,
-                transparent 88%
-            );
-        }
-
-        .dot-grid span {
-            width: 2px;
-            height: 2px;
-
-            background: var(--gold);
-
-            opacity: 0.28;
-        }
-
-
-        /* =========================================================
-           BOTTOM LEFT DOT GRID
-        ========================================================= */
-
-        .dot-grid-bottom {
-            position: absolute;
-
-            display: grid;
-
-            grid-template-columns: repeat(7, 4px);
-            grid-template-rows: repeat(5, 4px);
-
-            gap: 10px;
-
-            left: 9vw;
-            bottom: 4vh;
-
-            /*
-               Soft fade into the background.
-            */
-            mask-image: radial-gradient(
-                ellipse at center,
-                black 10%,
-                rgba(0, 0, 0, 0.58) 45%,
-                transparent 88%
-            );
-
-            -webkit-mask-image: radial-gradient(
-                ellipse at center,
-                black 10%,
-                rgba(0, 0, 0, 0.58) 45%,
-                transparent 88%
-            );
-        }
-
-        .dot-grid-bottom span {
-            width: 2px;
-            height: 2px;
-
-            background: var(--red-bright);
-
-            opacity: 0.38;
-        }
-
-
-        /* =========================================================
-           BOTTOM LEFT CIRCLE
-        ========================================================= */
-
-        .bottom-circle {
-            position: absolute;
-
-            width: 210px;
-            height: 210px;
-
-            left: -120px;
-            bottom: -125px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(116, 16, 25, 0.35);
-
-            pointer-events: none;
-        }
-
-        .bottom-circle::after {
-            content: "";
-
-            position: absolute;
-
-            width: 150px;
-            height: 150px;
-
-            left: 30px;
-            top: 30px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(116, 16, 25, 0.18);
+        .plus.one {
+            right: 160px;
+            top: 230px;
         }
 
 
@@ -739,10 +724,10 @@
            SCROLL INDICATOR
         ========================================================= */
 
-        .scroll {
+        .scroll-indicator {
             position: absolute;
 
-            bottom: 34px;
+            bottom: 25px;
             left: 50%;
 
             transform: translateX(-50%);
@@ -751,25 +736,27 @@
             flex-direction: column;
             align-items: center;
 
-            z-index: 5;
+            gap: 10px;
+
+            z-index: 15;
         }
 
         .scroll-text {
-            color: var(--gold);
+            font-size: 10px;
 
-            font-size: 9px;
-            letter-spacing: 4px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
 
-            margin-bottom: 13px;
+            color: #c99a3d;
         }
 
         .scroll-line {
-            width: 1px;
-            height: 32px;
-
-            background: var(--gold);
-
             position: relative;
+
+            width: 1px;
+            height: 48px;
+
+            background: rgba(201, 154, 61, 0.65);
         }
 
         .scroll-line::after {
@@ -777,15 +764,15 @@
 
             position: absolute;
 
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
 
             border-radius: 50%;
 
-            background: var(--red-bright);
+            background: #a4161d;
 
-            left: -2.5px;
             bottom: -3px;
+            left: -3px;
         }
 
 
@@ -793,109 +780,120 @@
            RESPONSIVE
         ========================================================= */
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1100px) {
 
-            .nav {
-                padding: 0 7vw;
+            header {
+                padding: 0 35px;
             }
 
-            .nav-right {
-                gap: 25px;
+            nav {
+                gap: 30px;
             }
 
-            .hero-content {
-                width: 70%;
-                padding-left: 7vw;
+            .hero {
+                padding-left: 60px;
             }
 
-            .graphics {
-                right: -20vw;
-                opacity: 0.8;
-            }
-
-            .name {
-                font-size: 8vw;
+            .technical-graphic {
+                right: -220px;
+                opacity: 0.75;
             }
         }
 
 
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
 
-            .nav {
-                height: 90px;
+            header {
+                height: 85px;
+                padding: 0 25px;
             }
 
-            .nav-right {
-                gap: 15px;
-            }
-
-            .nav-link {
-                font-size: 8px;
-                letter-spacing: 1.5px;
-            }
-
-            .nav-link:nth-child(3) {
+            nav {
                 display: none;
             }
 
-            .logo {
-                font-size: 35px;
+            .header-right {
+                margin-left: auto;
+            }
+
+            .hero {
+                min-height: calc(100vh - 85px);
+                padding: 80px 30px 120px;
             }
 
             .hero-content {
                 width: 100%;
-                padding-left: 9vw;
-                padding-right: 8vw;
-                padding-top: 22vh;
             }
 
             .name {
-                font-size: 17vw;
-                line-height: 0.82;
-                letter-spacing: -2px;
-                white-space: normal;
+                font-size: clamp(65px, 15vw, 95px);
             }
 
-            .specialisation {
-                font-size: 9px;
-                letter-spacing: 1.5px;
+            .subtitle {
+                flex-wrap: wrap;
+                font-size: 11px;
+                line-height: 1.8;
+            }
+
+            .hero-buttons {
                 flex-wrap: wrap;
             }
 
-            .specialisation span {
-                margin: 0 7px;
+            .technical-graphic {
+                right: -390px;
+                top: 80px;
+                opacity: 0.35;
             }
 
-            .buttons {
-                gap: 10px;
-            }
-
-            .button {
-                width: 130px;
-                height: 42px;
-                padding: 0 12px;
-                font-size: 8px;
-                letter-spacing: 1px;
-            }
-
-            .graphics {
-                width: 110vw;
-                height: 110vw;
-                right: -45vw;
-                top: 28vh;
-                opacity: 0.45;
-            }
-
-            .dot-grid {
+            .scroll-indicator {
                 display: none;
             }
 
-            .dot-grid-bottom {
-                left: 8vw;
+            .red-grid {
+                left: 50px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 45px;
             }
 
-            .scroll {
-                display: none;
+            .logo::before,
+            .logo::after {
+                width: 20px;
+            }
+
+            .logo::before {
+                left: -22px;
+            }
+
+            .logo::after {
+                right: -22px;
+            }
+
+            .hero {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .eyebrow span {
+                font-size: 9px;
+                letter-spacing: 0.28em;
+            }
+
+            .name {
+                font-size: 62px;
+            }
+
+            .hero-buttons {
+                gap: 12px;
+            }
+
+            .hero-button {
+                width: 165px;
             }
         }
 
@@ -905,280 +903,183 @@
 
 <body>
 
+    <main class="page">
 
-    <!-- =========================================================
-         HERO SECTION
-    ========================================================== -->
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
 
-    <section class="hero" id="home">
+        <header>
 
+            <a href="#" class="logo">AC</a>
 
-        <!-- ================= NAVIGATION ================= -->
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#cv">CV</a>
+            </nav>
 
-        <nav class="nav">
+            <div class="header-right">
 
-            <a href="#home" class="logo">
-                AC
-            </a>
+                <div class="header-divider"></div>
 
-
-            <div class="nav-right">
-
-                <a href="#projects" class="nav-link">
-                    Projects
+                <a href="mailto:" aria-label="Email">
+                    <div class="email-icon"></div>
                 </a>
-
-                <a href="#about" class="nav-link">
-                    About Me
-                </a>
-
-                <a href="#experience" class="nav-link">
-                    Experience
-                </a>
-
-                <a href="#cv" class="nav-link">
-                    CV
-                </a>
-
-                <div class="nav-divider"></div>
-
-                <a href="mailto:" class="mail" aria-label="Email"></a>
 
             </div>
 
-        </nav>
+        </header>
 
 
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-        <!-- ================= MAIN CONTENT ================= -->
+        <section class="hero">
 
-        <div class="hero-content">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <div class="eyebrow-line"></div>
+                    <span>Motorsport Engineering Portfolio</span>
+                </div>
 
 
-            <!-- TOP LABEL -->
+                <h1 class="name">
+                    <span class="first-name">Aikaterini</span>
+                    <span class="last-name">Christoforaki</span>
+                </h1>
 
-            <div class="eyebrow">
 
-                <div class="eyebrow-line"></div>
+                <div class="subtitle">
 
-                <div class="eyebrow-text">
-                    Motorsport Engineering Portfolio
+                    <span>Mechanical Engineering</span>
+
+                    <span class="dot"></span>
+
+                    <span>Motorsport</span>
+
+                    <span class="dot"></span>
+
+                    <span>Performance</span>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#projects"
+                       class="hero-button projects">
+
+                        <span>View Projects</span>
+                        <span class="arrow">→</span>
+
+                    </a>
+
+
+                    <a href="#about"
+                       class="hero-button about">
+
+                        <span>About Me</span>
+                        <span class="arrow">→</span>
+
+                    </a>
+
+
+                    <a href="#cv"
+                       class="hero-button cv">
+
+                        <span>CV</span>
+                        <span class="arrow">→</span>
+
+                    </a>
+
                 </div>
 
             </div>
 
 
+            <!-- =================================================
+                 TECHNICAL GRAPHIC
+            ================================================== -->
 
-            <!-- NAME -->
+            <div class="technical-graphic">
 
-            <h1 class="name">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <div class="circle three"></div>
+                <div class="circle four"></div>
 
-                <span class="first-name">
-                    Aikaterini
-                </span>
+                <div class="curve one"></div>
+                <div class="curve two"></div>
+                <div class="curve three"></div>
 
-                <span class="last-name">
-                    Christoforaki
-                </span>
+                <div class="center-mark">
+                    <div class="center-dot"></div>
+                </div>
 
-            </h1>
-
-
-
-            <!-- SPECIALISATION -->
-
-            <div class="specialisation">
-
-                Mechanical Engineering
-
-                <span>·</span>
-
-                Motorsport
-
-                <span>·</span>
-
-                Performance
+                <div class="plus one"></div>
 
             </div>
 
 
+            <!-- =================================================
+                 GOLD DOT GRID
+            ================================================== -->
 
-            <!-- BUTTONS -->
+            <div class="dot-grid gold-grid">
 
-            <div class="buttons">
-
-
-                <a href="#projects" class="button">
-
-                    <span>
-                        View Projects
-                    </span>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-
-                <a href="#about" class="button">
-
-                    <span>
-                        About Me
-                    </span>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-
-                <a href="#cv" class="button">
-
-                    <span>
-                        CV
-                    </span>
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 
             </div>
 
-        </div>
 
+            <!-- =================================================
+                 RED DOT GRID
+            ================================================== -->
 
+            <div class="red-grid">
 
-        <!-- =====================================================
-             RIGHT GRAPHICS
-        ====================================================== -->
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 
-        <div class="graphics">
-
-            <div class="circle circle-1"></div>
-
-            <div class="circle circle-2"></div>
-
-            <div class="circle circle-3"></div>
-
-            <div class="circle circle-4"></div>
-
-
-            <div class="orbit"></div>
-
-            <div class="orbit orbit-2"></div>
-
-            <div class="orbit orbit-3"></div>
-
-
-            <div class="cross"></div>
-
-            <div class="center-dot"></div>
-
-            <div class="plus"></div>
-
-        </div>
-
-
-
-        <!-- TOP RIGHT DOTS -->
-
-        <div class="dot-grid">
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-        </div>
-
-
-
-        <!-- BOTTOM LEFT DOTS -->
-
-        <div class="dot-grid-bottom">
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span>
-
-        </div>
-
-
-
-        <!-- BOTTOM LEFT CIRCLE -->
-
-        <div class="bottom-circle"></div>
-
-
-
-        <!-- SCROLL -->
-
-        <div class="scroll">
-
-            <div class="scroll-text">
-                SCROLL
             </div>
 
-            <div class="scroll-line"></div>
 
-        </div>
+            <!-- =================================================
+                 CORNER DECORATION
+            ================================================== -->
+
+            <div class="corner-circle one"></div>
+            <div class="corner-circle two"></div>
 
 
-    </section>
+            <!-- =================================================
+                 SCROLL
+            ================================================== -->
 
+            <div class="scroll-indicator">
 
+                <span class="scroll-text">Scroll</span>
 
-    <!-- =========================================================
-         PLACEHOLDER SECTIONS
-         Θα τα φτιάξουμε μετά.
-    ========================================================== -->
+                <div class="scroll-line"></div>
 
-    <section id="projects"></section>
+            </div>
 
-    <section id="about"></section>
+        </section>
 
-    <section id="experience"></section>
-
-    <section id="cv"></section>
-
+    </main>
 
 </body>
 </html>
