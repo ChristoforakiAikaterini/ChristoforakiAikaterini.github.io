@@ -3605,6 +3605,44 @@ document.addEventListener(
     line-height: 1.7;
     letter-spacing: 0.15px;
 }
+.project-02 .technical-paper-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-02 .technical-paper-button {
+    width: 280px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    color: rgba(233, 229, 220, 0.75);
+    text-decoration: none;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.project-02 .technical-paper-button:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+    background: rgba(190, 150, 55, 0.05);
+}
+
+.project-02 .technical-paper-arrow {
+    font-size: 20px;
+    font-weight: 300;
+    color: #c39a4b;
+}
     /* =====================================================
        RESPONSIVE
     ===================================================== */
@@ -3876,7 +3914,13 @@ document.addEventListener(
             >
                 FORCE VS SPEED
             </a>
-
+<a
+    href="#"
+    class="project-nav-link"
+    data-target="project-technical-paper"
+>
+    TECHNICAL PAPER
+</a>
 
         </nav>
 
@@ -4085,7 +4129,49 @@ document.addEventListener(
 
         </section>
 
+        <!-- =================================================
+             TECHNICAL PAPER
+        ================================================= -->
 
+        <section
+            id="project-technical-paper"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    04
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    TECHNICAL PAPER
+                </div>
+
+            </div>
+
+
+            <div class="technical-paper-content">
+
+                <a
+                    href="#"
+                    class="technical-paper-button"
+                    onclick="openProject02TechnicalPaperModal(); return false;"
+                >
+                    <span>
+                        READ PAPER
+                    </span>
+
+                    <span class="technical-paper-arrow">
+                        →
+                    </span>
+                </a>
+
+            </div>
+
+        </section>
     </div>
 
 </section>
@@ -4145,6 +4231,36 @@ document.addEventListener(
             src="Στιγμιότυπο οθόνης 2026-10-04 000813.png"
             alt="Force vs Speed"
         >
+
+    </div>
+
+</div>
+<!-- =========================================================
+     PROJECT 02 TECHNICAL PAPER POPUP
+========================================================= -->
+
+<div
+    id="project-02-technical-paper-modal"
+    class="project-02-technical-paper-modal"
+    onclick="closeProject02TechnicalPaperModal()"
+>
+
+    <button
+        class="project-02-technical-paper-modal-close"
+        onclick="event.stopPropagation(); closeProject02TechnicalPaperModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-02-technical-paper-modal-content"
+        onclick="event.stopPropagation()"
+    >
+
+        <iframe
+            src="DRIVETRAIN TECHNICAL PAPER.pdf"
+            title="Drivetrain Technical Paper"
+        ></iframe>
 
     </div>
 
@@ -4303,6 +4419,34 @@ document.addEventListener(
     /* =========================================================
        PROJECT 02 DRIVELINE POPUP
     ========================================================= */
+function openProject02TechnicalPaperModal() {
+
+    const modal =
+        document.getElementById(
+            "project-02-technical-paper-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject02TechnicalPaperModal() {
+
+    const modal =
+        document.getElementById(
+            "project-02-technical-paper-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
 function openProject02ForceSpeedModal() {
 
     const modal =
@@ -4846,6 +4990,67 @@ function closeProject02KinematicsModal() {
         text-transform: uppercase;
 
     }
+/* =====================================================
+   TECHNICAL PAPER POPUP
+===================================================== */
+
+.project-02-technical-paper-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: default;
+}
+
+.project-02-technical-paper-modal.active {
+    display: flex;
+}
+
+.project-02-technical-paper-modal-content {
+    width: 90vw;
+    height: 92vh;
+    max-width: 1200px;
+    background: #050505;
+    overflow: hidden;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-02-technical-paper-modal-content iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.project-02-technical-paper-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-02-technical-paper-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
 /* =====================================================
    FORCE VS SPEED POPUP
 ===================================================== */
