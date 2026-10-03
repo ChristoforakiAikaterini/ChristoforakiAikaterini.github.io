@@ -1248,7 +1248,6 @@
     .project-01 .design-image img {
         display: block;
 
-        /* SMALLER IMAGE */
         width: 58%;
 
         max-width: 760px;
@@ -1295,6 +1294,8 @@
         padding: 50px;
 
         cursor: zoom-out;
+
+        overflow-y: auto;
     }
 
 
@@ -1303,14 +1304,32 @@
     }
 
 
-    /* POPUP IMAGE */
+    /* POPUP CONTENT */
 
-    .image-modal img {
+    .image-modal-content {
+        width: min(1000px, 90vw);
+
+        max-height: 92vh;
+
+        overflow-y: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 28px;
+
+        cursor: default;
+    }
+
+
+    /* FIRST IMAGE */
+
+    .image-modal-content > img:first-child {
         display: block;
 
         max-width: 90vw;
-
-        max-height: 90vh;
+        max-height: 72vh;
 
         width: auto;
         height: auto;
@@ -1319,7 +1338,70 @@
 
         border: 1px solid rgba(190, 150, 55, 0.25);
 
-        cursor: default;
+        box-shadow:
+            0 20px 80px rgba(0, 0, 0, 0.65);
+    }
+
+
+    /* TEXT */
+
+    .image-modal-text {
+        width: min(850px, 88vw);
+
+        text-align: left;
+
+        padding: 0 5px;
+    }
+
+
+    .image-modal-text h3 {
+        margin: 0 0 12px;
+
+        color: #c39a4b;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+    }
+
+
+    .image-modal-text p {
+        margin: 0;
+
+        color: rgba(233, 229, 220, 0.72);
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 400;
+
+        line-height: 1.7;
+
+        letter-spacing: 0.2px;
+    }
+
+
+    /* SECOND IMAGE */
+
+    .image-modal-content .second-design-image {
+        display: block;
+
+        max-width: 88vw;
+        max-height: 70vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border: 1px solid rgba(190, 150, 55, 0.25);
 
         box-shadow:
             0 20px 80px rgba(0, 0, 0, 0.65);
@@ -1443,6 +1525,11 @@
             padding: 25px;
         }
 
+
+        .image-modal-content {
+            width: 94vw;
+        }
+
     }
 
 
@@ -1489,9 +1576,37 @@
         }
 
 
-        .image-modal img {
+        .image-modal-content {
+            gap: 22px;
+        }
+
+
+        .image-modal-content > img:first-child {
             max-width: 94vw;
-            max-height: 85vh;
+            max-height: 60vh;
+        }
+
+
+        .image-modal-text {
+            width: 90vw;
+        }
+
+
+        .image-modal-text h3 {
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+
+        .image-modal-text p {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+
+        .image-modal-content .second-design-image {
+            max-width: 90vw;
+            max-height: 60vh;
         }
 
 
@@ -1757,12 +1872,44 @@
     </button>
 
 
-    <img
-        id="image-modal-content"
-        src=""
-        alt=""
+    <div
+        class="image-modal-content"
         onclick="event.stopPropagation();"
     >
+
+        <!-- FIRST IMAGE -->
+
+        <img
+            id="image-modal-content"
+            src=""
+            alt=""
+        >
+
+
+        <!-- TEXT -->
+
+        <div class="image-modal-text">
+
+            <h3>
+                INTERNAL GYROID STRUCTURE
+            </h3>
+
+            <p>
+                A gyroid-based internal structure was integrated into the engine block to reduce material usage and overall mass. The optimized design achieved an approximate <strong>6 kg weight reduction</strong> while maintaining the required structural performance.
+            </p>
+
+        </div>
+
+
+        <!-- SECOND IMAGE -->
+
+        <img
+            class="second-design-image"
+            src="Στιγμιότυπο οθόνης 2026-03-28 185430.png"
+            alt="Internal Gyroid Structure"
+        >
+
+    </div>
 
 </div>
 
