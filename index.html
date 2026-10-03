@@ -3548,6 +3548,63 @@ document.addEventListener(
     color: #c39a4b;
     border-color: #c39a4b;
 }
+/* =====================================================
+   FORCE VS SPEED
+===================================================== */
+
+.project-02 .force-speed-content {
+    width: 100%;
+}
+
+.project-02 .force-speed-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-02 .force-speed-image {
+    display: block;
+    width: 72%;
+    max-width: 900px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-02 .force-speed-image:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-02 .force-speed-description {
+    width: 72%;
+    max-width: 900px;
+    margin: 32px auto 0;
+}
+
+.project-02 .force-speed-description h3 {
+    margin: 0 0 12px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-02 .force-speed-description p {
+    margin: 0 0 14px;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
     /* =====================================================
        RESPONSIVE
     ===================================================== */
@@ -3990,11 +4047,41 @@ document.addEventListener(
             </div>
 
 
-            <div class="project-placeholder">
+      <div class="force-speed-content">
 
-                FORCE VS SPEED CONTENT
+    <div class="force-speed-image-wrapper">
 
-            </div>
+        <img
+            class="force-speed-image"
+            src="Στιγμιότυπο οθόνης 2026-10-04 000813.png"
+            alt="Force vs Speed"
+            onclick="openProject02ForceSpeedModal()"
+        >
+
+    </div>
+
+
+    <div class="force-speed-description">
+
+        <h3>
+            FORCE VS SPEED
+        </h3>
+
+        <p>
+            The force versus speed analysis shows how the available wheel force changes with vehicle speed in each gear.
+        </p>
+
+        <p>
+            The results show that the lower gears provide higher wheel force, while the higher gears allow the vehicle to reach greater speeds. In 1st gear, the maximum calculated wheel force is approximately 2,500 N at around 54 km/h.
+        </p>
+
+        <p>
+            This shows how the selected gear ratios affect the acceleration and overall longitudinal performance of the vehicle.
+        </p>
+
+    </div>
+
+</div>
 
         </section>
 
@@ -4032,7 +4119,36 @@ document.addEventListener(
 
 </div>
 
+<!-- =========================================================
+     PROJECT 02 FORCE VS SPEED POPUP
+========================================================= -->
 
+<div
+    id="project-02-force-speed-modal"
+    class="project-02-force-speed-modal"
+    onclick="closeProject02ForceSpeedModal()"
+>
+
+    <button
+        class="project-02-force-speed-modal-close"
+        onclick="event.stopPropagation(); closeProject02ForceSpeedModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-02-force-speed-modal-content"
+        onclick="event.stopPropagation()"
+    >
+
+        <img
+            src="Στιγμιότυπο οθόνης 2026-10-04 000813.png"
+            alt="Force vs Speed"
+        >
+
+    </div>
+
+</div>
 <!-- =========================================================
      PROJECT 02 DRIVELINE POPUP
 ========================================================= -->
@@ -4187,6 +4303,34 @@ document.addEventListener(
     /* =========================================================
        PROJECT 02 DRIVELINE POPUP
     ========================================================= */
+function openProject02ForceSpeedModal() {
+
+    const modal =
+        document.getElementById(
+            "project-02-force-speed-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject02ForceSpeedModal() {
+
+    const modal =
+        document.getElementById(
+            "project-02-force-speed-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
 function openProject02KinematicsModal() {
 
     const modal =
@@ -4702,7 +4846,74 @@ function closeProject02KinematicsModal() {
         text-transform: uppercase;
 
     }
+/* =====================================================
+   FORCE VS SPEED POPUP
+===================================================== */
 
+.project-02-force-speed-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: zoom-out;
+    overflow-y: auto;
+}
+
+.project-02-force-speed-modal.active {
+    display: flex;
+}
+
+.project-02-force-speed-modal-content {
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.project-02-force-speed-modal-content img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-02-force-speed-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-02-force-speed-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
 
     /* =====================================================
        RESPONSIVE
