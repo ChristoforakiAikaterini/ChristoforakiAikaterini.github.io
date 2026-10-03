@@ -2579,6 +2579,18 @@
 
     <div class="vehicle-performance-content">
 
+        <div class="vehicle-performance-image-wrapper">
+
+            <img
+                class="vehicle-performance-image"
+                src="Στιγμιότυπο οθόνης 2026-09-20 133507.png"
+                alt="Acceleration Difference Due to Mass Reduction"
+                onclick="openProject01Modal('vehicle-performance')"
+            >
+
+        </div>
+
+
         <div class="vehicle-performance-description">
 
             <h3>
@@ -2592,18 +2604,6 @@
             <p>
                 During braking, the lighter configuration reaches a maximum deceleration of −20.11 m/s², compared with −16.69 m/s² for the solid configuration, corresponding to an approximately 20.52% higher deceleration magnitude.
             </p>
-
-        </div>
-
-
-        <div class="vehicle-performance-image-wrapper">
-
-            <img
-                class="vehicle-performance-image"
-                src="Στιγμιότυπο οθόνης 2026-09-20 133507.png"
-                alt="Acceleration Difference Due to Mass Reduction"
-                onclick="openProject01Modal('vehicle-performance')"
-            >
 
         </div>
 
@@ -2690,10 +2690,39 @@
     alt="Total Displacement Comparison - Gyroid vs Solid"
 >
 
-</div>
+
+<!-- =================================================
+     VEHICLE PERFORMANCE POPUP IMAGES
+================================================= -->
+
+<img
+    class="vehicle-performance-popup-image"
+    src="Στιγμιότυπο οθόνης 2026-09-20 132729.png"
+    alt="Acceleration Comparison - Solid vs Gyroid"
+>
+
+<img
+    class="vehicle-performance-popup-image"
+    src="Στιγμιότυπο οθόνης 2026-09-20 133202.png"
+    alt="Acceleration Comparison Detail"
+>
+
+<img
+    class="vehicle-performance-popup-image"
+    src="gyroid.png"
+    alt="Gyroid Vehicle Braking Performance"
+>
+
+<img
+    class="vehicle-performance-popup-image"
+    src="nogyroid.png"
+    alt="Solid Vehicle Braking Performance"
+>
+
 
 </div>
 
+</div>
 <!-- =========================================================
      PROJECT 01 TAB SYSTEM + IMAGE POPUP
 ========================================================= -->
@@ -2816,7 +2845,10 @@ function openProject01Modal(type) {
         modal.querySelectorAll(
             ".comparison-popup-image"
         );
-
+    const vehiclePerformanceImages =
+        modal.querySelectorAll(
+            ".vehicle-performance-popup-image"
+        );
     /* HIDE EVERYTHING FIRST */
 
     designImage.style.display = "none";
@@ -2833,7 +2865,9 @@ function openProject01Modal(type) {
         image.style.display = "none";
     });
 
-
+    vehiclePerformanceImages.forEach(function (image) {
+        image.style.display = "none";
+    });
     /* DESIGN */
 
     if (type === "design") {
@@ -2867,7 +2901,15 @@ function openProject01Modal(type) {
         });
 
     }
+    /* VEHICLE PERFORMANCE */
 
+    if (type === "vehicle-performance") {
+
+        vehiclePerformanceImages.forEach(function (image) {
+            image.style.display = "block";
+        });
+
+    }
 
     modal.classList.add("active");
 
