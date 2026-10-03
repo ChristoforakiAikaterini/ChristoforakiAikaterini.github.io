@@ -3422,6 +3422,53 @@ document.addEventListener(
         text-transform: uppercase;
 
     }
+    /* =====================================================
+   KINEMATICS
+===================================================== */
+
+.project-02 .kinematics-content {
+    width: 100%;
+}
+
+.project-02 .kinematics-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-02 .kinematics-image {
+    display: block;
+    width: 72%;
+    max-width: 900px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-02 .kinematics-image:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-02 .kinematics-description {
+    width: 72%;
+    max-width: 900px;
+    margin: 32px auto 0;
+}
+
+.project-02 .kinematics-description p {
+    margin: 0 0 14px;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
 /* =====================================================
    DRIVELINE POPUP
 ===================================================== */
@@ -3701,11 +3748,37 @@ document.addEventListener(
 
             <!-- PROJECT LABEL -->
 
-            <div class="project-label">
+            <div class="kinematics-content">
 
-                PROJECT 02 / FORMULA STUDENT
+    <div class="kinematics-image-wrapper">
 
-            </div>
+        <img
+            class="kinematics-image"
+            src="Στιγμιότυπο οθόνης 2026-10-03 224159.png"
+            alt="Kinematics Analysis"
+            onclick="openProject02KinematicsModal()"
+        >
+
+    </div>
+
+
+    <div class="kinematics-description">
+
+        <p>
+            The kinematic analysis looks at how the engine speed is transferred through the drivetrain and affects the vehicle speed. The angular velocity was calculated for different engine RPM values and then used to determine the corresponding vehicle speed in each gear.
+        </p>
+
+        <p>
+            As the engine RPM increases, the vehicle speed increases accordingly. The results also show the effect of the gear ratio on vehicle speed, with higher gears reaching greater speeds at the same RPM. At 8,500 RPM, the calculated theoretical speed ranges from 76.42 km/h in 1st gear to 167.85 km/h in 4th gear.
+        </p>
+
+        <p>
+            However, this value represents the theoretical speed based on the selected gear ratios and engine operating range. The actual vehicle speed will be lower, as the Formula Student vehicle must comply with the applicable competition regulations, including the required restrictor.
+        </p>
+
+    </div>
+
+</div>
 
 
             <!-- PROJECT TITLE -->
@@ -3931,6 +4004,38 @@ document.addEventListener(
     </div>
 
 </section>
+</section>
+
+
+<!-- =========================================================
+     PROJECT 02 KINEMATICS POPUP
+========================================================= -->
+
+<div
+    id="project-02-kinematics-modal"
+    class="project-02-kinematics-modal"
+    onclick="closeProject02KinematicsModal()"
+>
+
+    <button
+        class="project-02-kinematics-modal-close"
+        onclick="event.stopPropagation(); closeProject02KinematicsModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-02-kinematics-modal-content"
+        onclick="event.stopPropagation()"
+    >
+        <img
+            src="Στιγμιότυπο οθόνης 2026-10-03 224159.png"
+            alt="Kinematics Analysis"
+        >
+    </div>
+
+</div>
+
 
 <!-- =========================================================
      PROJECT 02 DRIVELINE POPUP
@@ -4086,7 +4191,34 @@ document.addEventListener(
     /* =========================================================
        PROJECT 02 DRIVELINE POPUP
     ========================================================= */
+function openProject02KinematicsModal() {
 
+    const modal =
+        document.getElementById(
+            "project-02-kinematics-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject02KinematicsModal() {
+
+    const modal =
+        document.getElementById(
+            "project-02-kinematics-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
     function openProject02DrivelineModal() {
 
         const modal =
