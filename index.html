@@ -886,6 +886,690 @@
 
 <style>
 
+<!-- =========================================================
+     PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
+========================================================= -->
+
+<style>
+
+    .project-01 {
+        position: relative;
+        width: 100%;
+        background: #050505;
+        color: #e9e5dc;
+        font-family: "Inter", Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .project-01::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+
+        background:
+            radial-gradient(
+                circle at 78% 20%,
+                rgba(150, 115, 35, 0.035),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at 20% 70%,
+                rgba(150, 15, 25, 0.025),
+                transparent 30%
+            );
+    }
+
+
+    /* =========================================================
+       PROJECT HERO
+    ========================================================= */
+
+    .project-hero {
+        position: relative;
+        min-height: 58vh;
+
+        display: flex;
+        align-items: center;
+
+        padding: 100px 7vw 70px;
+
+        border-top: 1px solid rgba(190, 150, 55, 0.12);
+        border-bottom: 1px solid rgba(190, 150, 55, 0.12);
+    }
+
+
+    .project-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+    }
+
+
+    /* =========================================================
+       PROJECT LABEL
+    ========================================================= */
+
+    .project-label {
+        display: flex;
+        align-items: center;
+
+        gap: 18px;
+        margin-bottom: 28px;
+
+        color: #b58a32;
+
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+
+    .project-label::before {
+        content: "";
+
+        width: 70px;
+        height: 1px;
+
+        background: #9d1622;
+    }
+
+
+    /* =========================================================
+       PROJECT TITLE
+    ========================================================= */
+
+    .project-hero h1 {
+        margin: 0;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: clamp(32px, 4vw, 58px);
+
+        line-height: 1.08;
+
+        font-weight: 700;
+
+        letter-spacing: -1.8px;
+
+        color: rgba(239, 235, 225, 0.82);
+    }
+
+
+    .project-hero h1 span {
+        display: block;
+    }
+
+
+    .project-hero h1 .gold,
+    .project-hero h1 .light {
+        color: rgba(239, 235, 225, 0.82);
+    }
+
+
+    /* =========================================================
+       PROJECT DESCRIPTION
+    ========================================================= */
+
+    .project-description-placeholder {
+        margin-top: 36px;
+
+        width: min(620px, 100%);
+        height: 18px;
+
+        border-left: 2px solid #8e1721;
+
+        opacity: 0.35;
+    }
+
+
+    /* =========================================================
+       PROJECT NAVIGATION
+    ========================================================= */
+
+    .project-navigation-wrapper {
+        position: sticky;
+        top: 0;
+
+        z-index: 50;
+
+        background: rgba(5, 5, 5, 0.94);
+
+        backdrop-filter: blur(12px);
+
+        border-top: 1px solid rgba(190, 150, 55, 0.08);
+        border-bottom: 1px solid rgba(190, 150, 55, 0.14);
+    }
+
+
+    .project-navigation {
+        width: min(1250px, 86vw);
+
+        min-height: 78px;
+
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: clamp(35px, 6vw, 95px);
+    }
+
+
+    .project-navigation a {
+        position: relative;
+
+        padding: 27px 0 24px;
+
+        color: #aaa69d;
+
+        text-decoration: none;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 11px;
+        font-weight: 500;
+
+        letter-spacing: 3.5px;
+
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        transition:
+            color 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    .project-navigation a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 16px;
+
+        width: 0;
+        height: 1px;
+
+        background: #b58a32;
+
+        transition: width 0.3s ease;
+    }
+
+
+    .project-navigation a:hover {
+        color: #ded8ca;
+    }
+
+
+    .project-navigation a:hover::after {
+        width: 100%;
+    }
+
+
+    .project-navigation a.active {
+        color: #c29a48;
+    }
+
+
+    .project-navigation a.active::after {
+        width: 100%;
+    }
+
+
+    /* =========================================================
+       PROJECT CONTENT
+    ========================================================= */
+
+    .project-content {
+        position: relative;
+        width: 100%;
+    }
+
+
+    /* =========================================================
+       PROJECT SECTIONS
+    ========================================================= */
+
+    .project-section {
+        position: relative;
+
+        width: min(1350px, 86vw);
+
+        min-height: 65vh;
+
+        margin: 0 auto;
+
+        padding: 100px 0 120px;
+
+        border-bottom: 1px solid rgba(190, 150, 55, 0.10);
+
+        display: none;
+    }
+
+
+    .project-section.active-section {
+        display: block;
+    }
+
+
+    /* =========================================================
+       SECTION HEADER
+    ========================================================= */
+
+    .project-section-header {
+        display: flex;
+        align-items: center;
+
+        gap: 22px;
+
+        margin-bottom: 60px;
+    }
+
+
+    .project-section-number {
+        color: #b58a32;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        letter-spacing: 3px;
+
+        line-height: 1;
+    }
+
+
+    .project-section-line {
+        width: 55px;
+        height: 1px;
+
+        background: #8f1721;
+    }
+
+
+    .project-section-title {
+        color: #c39a4b;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 13px;
+        font-weight: 500;
+
+        letter-spacing: 5px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       PLACEHOLDER
+    ========================================================= */
+
+    .project-placeholder {
+        min-height: 420px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(190, 150, 55, 0.08);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(190, 150, 55, 0.015),
+                transparent 50%
+            );
+
+        color: rgba(190, 185, 175, 0.18);
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       DESIGN IMAGE
+    ========================================================= */
+
+    .project-01 .design-image {
+        width: 100%;
+
+        margin-top: 10px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .project-01 .design-image img {
+        display: block;
+
+        width: 58%;
+
+        max-width: 760px;
+
+        height: auto;
+
+        margin: 0 auto;
+
+        border: 1px solid rgba(190, 150, 55, 0.12);
+
+        cursor: zoom-in;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    .project-01 .design-image img:hover {
+        opacity: 0.88;
+
+        transform: scale(1.01);
+    }
+
+
+    /* =========================================================
+       DESIGN DESCRIPTION
+    ========================================================= */
+
+    .project-01 .design-description {
+        width: 58%;
+
+        max-width: 760px;
+
+        margin: 28px auto 0;
+    }
+
+
+    .project-01 .design-description h3 {
+        margin: 0 0 12px;
+
+        color: #c39a4b;
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+    }
+
+
+    .project-01 .design-description p {
+        margin: 0;
+
+        color: rgba(233, 229, 220, 0.68);
+
+        font-family: "Inter", Arial, sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 400;
+
+        line-height: 1.7;
+
+        letter-spacing: 0.15px;
+    }
+
+
+    .project-01 .design-description strong {
+        color: rgba(233, 229, 220, 0.88);
+
+        font-weight: 600;
+    }
+
+
+    /* =========================================================
+       IMAGE POPUP
+    ========================================================= */
+
+    .image-modal {
+        display: none;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 99999;
+
+        background: rgba(0, 0, 0, 0.94);
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 50px;
+
+        cursor: zoom-out;
+
+        overflow-y: auto;
+    }
+
+
+    .image-modal.active {
+        display: flex;
+    }
+
+
+    /* =========================================================
+       POPUP CONTENT
+    ========================================================= */
+
+    .image-modal-content {
+        width: min(1000px, 90vw);
+
+        max-height: 92vh;
+
+        overflow-y: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 28px;
+
+        cursor: default;
+    }
+
+
+    /* =========================================================
+       FIRST IMAGE IN POPUP
+    ========================================================= */
+
+    .image-modal-content > img:first-child {
+        display: block;
+
+        max-width: 90vw;
+
+        max-height: 72vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border: 1px solid rgba(190, 150, 55, 0.25);
+
+        box-shadow:
+            0 20px 80px rgba(0, 0, 0, 0.65);
+    }
+
+
+    /* =========================================================
+       SECOND IMAGE IN POPUP
+    ========================================================= */
+
+    .image-modal-content .second-design-image {
+        display: block;
+
+        max-width: 88vw;
+
+        max-height: 70vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border: 1px solid rgba(190, 150, 55, 0.25);
+
+        box-shadow:
+            0 20px 80px rgba(0, 0, 0, 0.65);
+    }
+
+
+    /* =========================================================
+       CLOSE BUTTON
+    ========================================================= */
+
+    .image-modal-close {
+        position: fixed;
+
+        top: 25px;
+        right: 30px;
+
+        width: 48px;
+        height: 48px;
+
+        border: 1px solid rgba(190, 150, 55, 0.45);
+
+        background: rgba(5, 5, 5, 0.90);
+
+        color: #e9e6df;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 30px;
+
+        font-weight: 300;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 100000;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition:
+            background 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+
+    .image-modal-close:hover {
+        background: rgba(185, 143, 54, 0.12);
+
+        border-color: rgba(190, 150, 55, 0.8);
+
+        color: #ffffff;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+        .project-hero {
+            min-height: 55vh;
+
+            padding: 90px 8vw 65px;
+        }
+
+
+        .project-hero h1 {
+            font-size: clamp(28px, 7vw, 46px);
+
+            letter-spacing: -1px;
+        }
+
+
+        .project-navigation {
+            width: 92vw;
+
+            gap: 25px;
+
+            justify-content: flex-start;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .project-navigation::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .project-navigation a {
+            white-space: nowrap;
+
+            font-size: 9px;
+
+            letter-spacing: 2.5px;
+        }
+
+
+        .project-section {
+            width: 84vw;
+
+            padding: 80px 0 90px;
+        }
+
+
+        .project-placeholder {
+            min-height: 300px;
+        }
+
+
+        .project-01 .design-image img {
+            width: 72%;
+        }
+
+
+        .project-01 .design-description {
+            width: 72%;
+        }
+
+
+        .image-modal {
+            padding: 25px;
+        }
+
+
+        .image-modal-content {
+            width: 94vw;
+        }
+
+    }
+
+</style>
+
+<style>
+
 /* =========================================================
    PROJECT 01
    F1 V6 ENGINE - GYROID ENGINE BLOCK DESIGN
@@ -909,7 +1593,7 @@
 
 .project-01 .project-hero-content {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .project-01 .project-label {
@@ -1302,7 +1986,6 @@
     max-width: 760px;
     height: auto;
     max-height: none;
-    object-fit: contain;
 }
 
 
@@ -1611,7 +2294,7 @@
                 </h3>
 
                 <p>
-                    The engine block was thermally analysed with an ambient temperature of 20°C, an internal wall temperature of 220°C, and a convection coefficient of 100 W/m²·°C. The resulting temperature distribution, heat flux and total displacement were evaluated.
+                    The engine block was thermally analysed with an ambient temperature of <strong>20°C</strong>, an internal wall temperature of <strong>220°C</strong>, and a convection coefficient of <strong>100 W/m²·°C</strong>. The resulting temperature distribution, heat flux and total displacement were evaluated.
                 </p>
 
             </div>
