@@ -5674,6 +5674,18 @@ function closeProject02KinematicsModal() {
 
     <h3>7 - DOF MODEL</h3>
 
+    <p>
+        The 7-DOF vehicle dynamics model was developed in Simulink to represent the longitudinal, lateral and vertical motion of the vehicle, together with its roll, pitch and yaw dynamics.
+    </p>
+
+    <p>
+        The model uses the vehicle parameters obtained from the provided Formula Student data and combines the equations of motion of the vehicle to evaluate its dynamic response under different operating conditions.
+    </p>
+
+    <p>
+        The 7-DOF model provides the basis for the vehicle dynamics simulations and the evaluation of the vehicle response presented in the results section.
+    </p>
+
 </div>
         </section>
 
@@ -5891,6 +5903,39 @@ function closeProject03DataModal() {
 }
 
 </script>
+<script>
+
+function openProject03SimulinkModal() {
+
+    const modal =
+        document.getElementById(
+            "project-03-simulink-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject03SimulinkModal() {
+
+    const modal =
+        document.getElementById(
+            "project-03-simulink-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+</script>
+
 <!-- =========================================================
      PROJECT 04 — F1 MONZA 2024 QUALIFYING DATA ANALYSIS
 ========================================================= -->
