@@ -2567,7 +2567,7 @@
         >
 
 
-       <!-- =================================================
+<!-- =================================================
      ANALYSIS POPUP
 ================================================= -->
 
@@ -2576,10 +2576,32 @@
     src="Project_01_Analysis_Combined.png"
     alt="Thermal Analysis Results"
 >
-    </div>
+
+<!-- =================================================
+     COMPARISON POPUP IMAGES
+================================================= -->
+
+<img
+    class="comparison-popup-image"
+    src="Project_01_Comparison_Temperature_Gyroid_Solid.png"
+    alt="Temperature Difference Comparison - Gyroid vs Solid"
+>
+
+<img
+    class="comparison-popup-image"
+    src="Project_01_Comparison_HeatFlux_Gyroid_Solid.png"
+    alt="Heat Flux Comparison - Gyroid vs Solid"
+>
+
+<img
+    class="comparison-popup-image"
+    src="Project_01_Comparison_Displacement_Gyroid_Solid.png"
+    alt="Total Displacement Comparison - Gyroid vs Solid"
+>
 
 </div>
 
+</div>
 
 <!-- =========================================================
      PROJECT 01 TAB SYSTEM + IMAGE POPUP
@@ -2682,27 +2704,45 @@ function openProject01Modal(type) {
             "project-01-image-modal"
         );
 
-
     if (!modal) return;
-
 
     const designImage =
         document.getElementById(
             "project-01-design-popup-image"
         );
 
-
     const secondDesignImage =
         modal.querySelector(
             ".second-design-image"
         );
-
 
     const analysisImages =
         modal.querySelectorAll(
             "#analysis-combined-image"
         );
 
+    const comparisonImages =
+        modal.querySelectorAll(
+            ".comparison-popup-image"
+        );
+
+    /* HIDE EVERYTHING FIRST */
+
+    designImage.style.display = "none";
+
+    if (secondDesignImage) {
+        secondDesignImage.style.display = "none";
+    }
+
+    analysisImages.forEach(function (image) {
+        image.style.display = "none";
+    });
+
+    comparisonImages.forEach(function (image) {
+        image.style.display = "none";
+    });
+
+    /* DESIGN */
 
     if (type === "design") {
 
@@ -2712,20 +2752,11 @@ function openProject01Modal(type) {
             secondDesignImage.style.display = "block";
         }
 
-        analysisImages.forEach(function (image) {
-            image.style.display = "none";
-        });
-
     }
 
+    /* ANALYSIS */
 
     if (type === "analysis") {
-
-        designImage.style.display = "none";
-
-        if (secondDesignImage) {
-            secondDesignImage.style.display = "none";
-        }
 
         analysisImages.forEach(function (image) {
             image.style.display = "block";
@@ -2733,7 +2764,23 @@ function openProject01Modal(type) {
 
     }
 
+    /* COMPARISON */
 
+    if (type === "comparison") {
+
+        comparisonImages.forEach(function (image) {
+            image.style.display = "block";
+        });
+
+    }
+
+    modal.classList.add("active");
+
+    /* Prevent background scrolling */
+
+    document.body.style.overflow = "hidden";
+
+}
     modal.classList.add("active");
 
 
