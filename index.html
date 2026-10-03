@@ -1563,100 +1563,531 @@
         }
 
     }
+<style>
+
+/* =========================================================
+   PROJECT 01
+   F1 V6 ENGINE - GYROID ENGINE BLOCK DESIGN
+========================================================= */
+
+.project-01 {
+    width: 100%;
+    background: #030303;
+    color: rgba(233, 229, 220, 0.82);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
 
 
-    @media (max-width: 600px) {
+/* =========================================================
+   PROJECT HERO
+========================================================= */
 
-        .project-hero {
-            padding: 80px 8vw 55px;
-        }
+.project-01 .project-hero {
+    padding: 115px 8vw 70px;
+}
 
+.project-01 .project-hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-        .project-hero h1 {
-            font-size: 27px;
+.project-01 .project-label {
+    margin-bottom: 24px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
 
-            line-height: 1.12;
+.project-01 .project-hero h1 {
+    margin: 0;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: clamp(30px, 2.7vw, 50px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
 
-            letter-spacing: -0.7px;
-        }
+.project-01 .project-hero h1 .gold {
+    color: #c39a4b;
+}
 
+.project-01 .project-hero h1 .light {
+    color: rgba(233, 229, 220, 0.82);
+}
 
-        .project-navigation {
-            gap: 22px;
-        }
-
-
-        .project-section-header {
-            margin-bottom: 45px;
-        }
-
-
-        .project-section-title {
-            font-size: 10px;
-
-            letter-spacing: 3px;
-        }
-
-
-        .project-01 .design-image img {
-            width: 90%;
-        }
-
-
-        .project-01 .design-description {
-            width: 90%;
-        }
-
-
-        .project-01 .design-description h3 {
-            font-size: 10px;
-
-            letter-spacing: 3px;
-        }
+.project-01 .project-description-placeholder {
+    display: none;
+}
 
 
-        .project-01 .design-description p {
-            font-size: 13px;
+/* =========================================================
+   PROJECT NAVIGATION
+========================================================= */
 
-            line-height: 1.6;
-        }
+.project-01 .project-navigation-wrapper {
+    width: 100%;
+    border-top: 1px solid rgba(190, 150, 55, 0.22);
+    border-bottom: 1px solid rgba(190, 150, 55, 0.22);
+}
+
+.project-01 .project-navigation {
+    width: min(1400px, 84vw);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    min-height: 62px;
+}
+
+.project-01 .project-nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 62px;
+    color: rgba(233, 229, 220, 0.55);
+    text-decoration: none;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+}
+
+.project-01 .project-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: transparent;
+    transition: background 0.25s ease;
+}
+
+.project-01 .project-nav-link:hover {
+    color: rgba(233, 229, 220, 0.88);
+}
+
+.project-01 .project-nav-link.active {
+    color: #c39a4b;
+}
+
+.project-01 .project-nav-link.active::after {
+    background: #c39a4b;
+}
 
 
-        .image-modal {
-            padding: 20px;
-        }
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+.project-01 .project-content {
+    width: min(1400px, 84vw);
+    margin: 0 auto;
+}
+
+.project-01 .project-section {
+    display: none;
+    padding: 85px 0 120px;
+}
+
+.project-01 .project-section.active-section {
+    display: block;
+}
 
 
-        .image-modal-content {
-            gap: 22px;
-        }
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.project-01 .project-section-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 65px;
+}
+
+.project-01 .project-section-number {
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.project-01 .project-section-line {
+    width: 42px;
+    height: 1px;
+    background: #8d1018;
+}
+
+.project-01 .project-section-title {
+    color: rgba(233, 229, 220, 0.72);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
 
 
-        .image-modal-content > img:first-child {
-            max-width: 94vw;
+/* =========================================================
+   DESIGN
+========================================================= */
 
-            max-height: 60vh;
-        }
+.project-01 .design-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-01 .design-image img {
+    display: block;
+    width: 58%;
+    max-width: 760px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-01 .design-image img:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-01 .design-description {
+    width: 58%;
+    max-width: 760px;
+    margin: 28px auto 0;
+}
+
+.project-01 .design-description h3 {
+    margin: 0 0 12px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-01 .design-description p {
+    margin: 0;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.project-01 .design-description strong {
+    color: rgba(233, 229, 220, 0.88);
+    font-weight: 600;
+}
 
 
-        .image-modal-content .second-design-image {
-            max-width: 90vw;
+/* =========================================================
+   ANALYSIS
+========================================================= */
 
-            max-height: 60vh;
-        }
+.project-01 .analysis-intro {
+    width: 58%;
+    max-width: 760px;
+    margin: 0 auto 34px;
+}
+
+.project-01 .analysis-intro h3 {
+    margin: 0 0 12px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-01 .analysis-intro p {
+    margin: 0;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.project-01 .analysis-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-01 .analysis-image img {
+    display: block;
+    width: 58%;
+    max-width: 760px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-01 .analysis-image img:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-01 .analysis-description {
+    width: 58%;
+    max-width: 760px;
+    margin: 28px auto 0;
+}
+
+.project-01 .analysis-description h3 {
+    margin: 0 0 12px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-01 .analysis-description p {
+    margin: 0;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+.project-01 .analysis-description strong {
+    color: rgba(233, 229, 220, 0.88);
+    font-weight: 600;
+}
 
 
-        .image-modal-close {
-            top: 18px;
-            right: 18px;
+/* =========================================================
+   PLACEHOLDERS
+========================================================= */
 
-            width: 42px;
-            height: 42px;
+.project-01 .project-placeholder {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.12);
+    color: rgba(233, 229, 220, 0.25);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-            font-size: 26px;
-        }
 
+/* =========================================================
+   IMAGE POPUP
+========================================================= */
+
+.project-01 .image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: zoom-out;
+    overflow-y: auto;
+}
+
+.project-01 .image-modal.active {
+    display: flex;
+}
+
+.project-01 .image-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-01 .image-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
+
+.project-01 .image-modal-content {
+    width: min(1000px, 90vw);
+    max-height: 92vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    cursor: default;
+    padding: 10px 0;
+}
+
+.project-01 .image-modal-content > img {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-01 .image-modal-content > img:first-child {
+    max-width: 90vw;
+    max-height: 72vh;
+}
+
+.project-01 .image-modal-content .second-design-image,
+.project-01 .image-modal-content .analysis-popup-image {
+    max-width: 88vw;
+    max-height: 70vh;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .project-01 .project-navigation {
+        width: 90vw;
+        gap: 25px;
+        overflow-x: auto;
+        scrollbar-width: none;
     }
+
+    .project-01 .project-navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-01 .project-content {
+        width: 90vw;
+    }
+
+    .project-01 .design-image img,
+    .project-01 .analysis-image img {
+        width: 72%;
+    }
+
+    .project-01 .design-description,
+    .project-01 .analysis-intro,
+    .project-01 .analysis-description {
+        width: 72%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .project-01 .project-hero {
+        padding: 80px 8vw 55px;
+    }
+
+    .project-01 .project-hero h1 {
+        font-size: 27px;
+        line-height: 1.12;
+        letter-spacing: -0.7px;
+    }
+
+    .project-01 .project-navigation {
+        gap: 22px;
+    }
+
+    .project-01 .project-section-header {
+        margin-bottom: 45px;
+    }
+
+    .project-01 .project-section-title {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .project-01 .design-image img,
+    .project-01 .analysis-image img {
+        width: 90%;
+    }
+
+    .project-01 .design-description,
+    .project-01 .analysis-intro,
+    .project-01 .analysis-description {
+        width: 90%;
+    }
+
+    .project-01 .design-description h3,
+    .project-01 .analysis-intro h3,
+    .project-01 .analysis-description h3 {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .project-01 .design-description p,
+    .project-01 .analysis-intro p,
+    .project-01 .analysis-description p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .project-01 .image-modal {
+        padding: 20px;
+    }
+
+    .project-01 .image-modal-content {
+        gap: 22px;
+    }
+
+    .project-01 .image-modal-content > img:first-child {
+        max-width: 94vw;
+        max-height: 60vh;
+    }
+
+    .project-01 .image-modal-content .second-design-image,
+    .project-01 .image-modal-content .analysis-popup-image {
+        max-width: 90vw;
+        max-height: 60vh;
+    }
+
+    .project-01 .image-modal-close {
+        top: 18px;
+        right: 18px;
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+}
 
 </style>
 
@@ -1785,7 +2216,7 @@
                 <img
                     src="Screenshot 2026-04-30 163046.png"
                     alt="F1 V6 Engine Gyroid Design"
-                    onclick="openImageModal(this)"
+                    onclick="openProject01Modal('design')"
                 >
 
             </div>
@@ -1834,351 +2265,52 @@
             </div>
 
 
-            <div class="project-placeholder">
-                ANALYSIS CONTENT
-            </div>
+            <!-- =================================================
+                 ANALYSIS INTRODUCTION
+            ================================================= -->
 
-        </section>
+            <div class="analysis-intro">
 
+                <h3>
+                    THERMAL ANALYSIS
+                </h3>
 
-        <!-- =====================================================
-             COMPARISON
-        ===================================================== -->
-
-        <section
-            id="project-comparison"
-            class="project-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    03
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
-                    COMPARISON
-                </div>
+                <p>
+                    The engine block was thermally analysed with an ambient temperature of <strong>20°C</strong>, an internal wall temperature of <strong>220°C</strong>, and a convection coefficient of <strong>100 W/m²·°C</strong>. The resulting temperature distribution, heat flux and total displacement were evaluated.
+                </p>
 
             </div>
 
 
-            <div class="project-placeholder">
-                COMPARISON CONTENT
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             VEHICLE PERFORMANCE
-        ===================================================== -->
-
-        <section
-            id="project-performance"
-            class="project-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    04
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
-                    VEHICLE PERFORMANCE
-                </div>
-
-            </div>
-
-
-            <div class="project-placeholder">
-                VEHICLE PERFORMANCE CONTENT
-            </div>
-
-        </section>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     IMAGE POPUP
-========================================================= -->
-
-<div
-    id="image-modal"
-    class="image-modal"
-    onclick="closeImageModal()"
->
-
-    <button
-        class="image-modal-close"
-        onclick="event.stopPropagation(); closeImageModal();"
-        aria-label="Close image"
-    >
-        ×
-    </button>
-
-
-    <div
-        class="image-modal-content"
-        onclick="event.stopPropagation();"
-    >
-
-        <!-- FIRST IMAGE -->
-
-        <img
-            id="image-modal-content"
-            src=""
-            alt=""
-        >
-
-
-        <!-- SECOND IMAGE -->
-
-        <img
-            class="second-design-image"
-            src="Στιγμιότυπο οθόνης 2026-03-28 185430.png"
-            alt="Internal Gyroid Structure"
-        >
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PROJECT 01 TAB SYSTEM + IMAGE POPUP
-========================================================= -->
-
-<script>
-
-    /* =========================================================
-       PROJECT 01 TAB SYSTEM
-       NO SCROLL
-    ========================================================= */
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const navLinks =
-            document.querySelectorAll(
-                ".project-01 .project-nav-link"
-            );
-
-
-        const sections =
-            document.querySelectorAll(
-                ".project-01 .project-section"
-            );
-
-
-        navLinks.forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-
-                    const targetId =
-                        this.getAttribute(
-                            "data-target"
-                        );
-
-
-                    const target =
-                        document.getElementById(
-                            targetId
-                        );
-
-
-                    if (!target) return;
-
-
-                    navLinks.forEach(function (nav) {
-
-                        nav.classList.remove(
-                            "active"
-                        );
-
-                    });
-
-
-                    sections.forEach(function (section) {
-
-                        section.classList.remove(
-                            "active-section"
-                        );
-
-                    });
-
-
-                    this.classList.add(
-                        "active"
-                    );
-
-
-                    target.classList.add(
-                        "active-section"
-                    );
-
-                }
-            );
-
-        });
-
-    });
-
-
-    /* =========================================================
-       IMAGE POPUP
-    ========================================================= */
-
-    function openImageModal(image) {
-
-        const modal =
-            document.getElementById(
-                "image-modal"
-            );
-
-
-        const modalImage =
-            document.getElementById(
-                "image-modal-content"
-            );
-
-
-        if (!modal || !modalImage) return;
-
-
-        modalImage.src = image.src;
-
-        modalImage.alt = image.alt;
-
-        modal.classList.add("active");
-
-
-        /* Prevent background scrolling */
-
-        document.body.style.overflow = "hidden";
-
-    }
-
-
-    function closeImageModal() {
-
-        const modal =
-            document.getElementById(
-                "image-modal"
-            );
-
-
-        if (!modal) return;
-
-
-        modal.classList.remove("active");
-
-
-        /* Restore scrolling */
-
-        document.body.style.overflow = "";
-
-    }
-
-
-    /* =========================================================
-       CLOSE WITH ESC
-    ========================================================= */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Escape") {
-
-                closeImageModal();
-
-            }
-
-        }
-    );
-
-</script>
-
-
-        <!-- =====================================================
-             DESIGN
-        ===================================================== -->
-
-        <section
-            id="project-design"
-            class="project-section active-section"
-        >
-
-            <div class="project-section-header">
-
-                <div class="project-section-number">
-                    01
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
-                    DESIGN
-                </div>
-
-            </div>
-
-
-            <!-- DESIGN IMAGE -->
-
-            <div class="design-image">
+            <!-- =================================================
+                 ΔT IMAGE
+            ================================================= -->
+
+            <div class="analysis-image">
 
                 <img
-                    src="Screenshot 2026-04-30 163046.png"
-                    alt="F1 V6 Engine Gyroid Design"
-                    onclick="openImageModal(this)"
+                    src="Screenshot 2026-08-24 150053.png"
+                    alt="Temperature Difference - ΔT"
+                    onclick="openProject01Modal('analysis')"
                 >
 
             </div>
 
-        </section>
 
+            <!-- =================================================
+                 ΔT DESCRIPTION
+            ================================================= -->
 
-        <!-- =====================================================
-             ANALYSIS
-        ===================================================== -->
+            <div class="analysis-description">
 
-        <section
-            id="project-analysis"
-            class="project-section"
-        >
+                <h3>
+                    TEMPERATURE DIFFERENCE
+                </h3>
 
-            <div class="project-section-header">
+                <p>
+                    The thermal analysis shows the resulting temperature difference across the engine block under the defined thermal boundary conditions.
+                </p>
 
-                <div class="project-section-number">
-                    02
-                </div>
-
-                <div class="project-section-line"></div>
-
-                <div class="project-section-title">
-                    ANALYSIS
-                </div>
-
-            </div>
-
-
-            <div class="project-placeholder">
-                ANALYSIS CONTENT
             </div>
 
         </section>
@@ -2256,14 +2388,14 @@
 ========================================================= -->
 
 <div
-    id="image-modal"
+    id="project-01-image-modal"
     class="image-modal"
-    onclick="closeImageModal()"
+    onclick="closeProject01Modal()"
 >
 
     <button
         class="image-modal-close"
-        onclick="event.stopPropagation(); closeImageModal();"
+        onclick="event.stopPropagation(); closeProject01Modal();"
         aria-label="Close image"
     >
         ×
@@ -2275,36 +2407,58 @@
         onclick="event.stopPropagation();"
     >
 
-        <!-- FIRST IMAGE -->
+        <!-- =================================================
+             DESIGN POPUP IMAGE
+        ================================================= -->
 
         <img
-            id="image-modal-content"
-            src=""
-            alt=""
+            id="project-01-design-popup-image"
+            src="Screenshot 2026-04-30 163046.png"
+            alt="F1 V6 Engine Gyroid Design"
         >
 
 
-        <!-- TEXT -->
-
-        <div class="image-modal-text">
-
-            <h3>
-                INTERNAL GYROID STRUCTURE
-            </h3>
-
-            <p>
-                A gyroid-based internal structure was integrated into the engine block to reduce material usage and overall mass. The optimized design achieved an approximate <strong>6 kg weight reduction</strong> while maintaining the required structural performance.
-            </p>
-
-        </div>
-
-
-        <!-- SECOND IMAGE -->
+        <!-- =================================================
+             DESIGN POPUP SECOND IMAGE
+        ================================================= -->
 
         <img
             class="second-design-image"
             src="Στιγμιότυπο οθόνης 2026-03-28 185430.png"
             alt="Internal Gyroid Structure"
+        >
+
+
+        <!-- =================================================
+             ANALYSIS POPUP - ΔT
+        ================================================= -->
+
+        <img
+            class="analysis-popup-image"
+            src="Screenshot 2026-08-24 150053.png"
+            alt="Temperature Difference - ΔT"
+        >
+
+
+        <!-- =================================================
+             ANALYSIS POPUP - HEAT FLUX
+        ================================================= -->
+
+        <img
+            class="analysis-popup-image"
+            src="Screenshot 2026-08-24 150118.png"
+            alt="Heat Flux"
+        >
+
+
+        <!-- =================================================
+             ANALYSIS POPUP - DISPLACEMENT
+        ================================================= -->
+
+        <img
+            class="analysis-popup-image"
+            src="Στιγμιότυπο οθόνης 2026-09-23 222057.png"
+            alt="Total Displacement"
         >
 
     </div>
@@ -2318,159 +2472,206 @@
 
 <script>
 
-    /* =========================================================
-       PROJECT 01 TAB SYSTEM
-       NO SCROLL
-    ========================================================= */
+/* =========================================================
+   PROJECT 01 TAB SYSTEM
+   NO SCROLL
+========================================================= */
 
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-        const navLinks =
-            document.querySelectorAll(
-                ".project-01 .project-nav-link"
-            );
+    const project01 =
+        document.querySelector(".project-01");
 
-
-        const sections =
-            document.querySelectorAll(
-                ".project-01 .project-section"
-            );
+    if (!project01) return;
 
 
-        navLinks.forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
+    const navLinks =
+        project01.querySelectorAll(
+            ".project-nav-link"
+        );
 
 
-                    const targetId =
-                        this.getAttribute(
-                            "data-target"
-                        );
+    const sections =
+        project01.querySelectorAll(
+            ".project-section"
+        );
 
 
-                    const target =
-                        document.getElementById(
-                            targetId
-                        );
+    navLinks.forEach(function (link) {
+
+        link.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
 
 
-                    if (!target) return;
+                const targetId =
+                    this.getAttribute(
+                        "data-target"
+                    );
 
 
-                    navLinks.forEach(function (nav) {
-
-                        nav.classList.remove(
-                            "active"
-                        );
-
-                    });
+                const target =
+                    project01.querySelector(
+                        "#" + targetId
+                    );
 
 
-                    sections.forEach(function (section) {
-
-                        section.classList.remove(
-                            "active-section"
-                        );
-
-                    });
+                if (!target) return;
 
 
-                    this.classList.add(
+                navLinks.forEach(function (nav) {
+
+                    nav.classList.remove(
                         "active"
                     );
 
+                });
 
-                    target.classList.add(
+
+                sections.forEach(function (section) {
+
+                    section.classList.remove(
                         "active-section"
                     );
 
-                }
-            );
+                });
 
-        });
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                target.classList.add(
+                    "active-section"
+                );
+
+            }
+        );
 
     });
 
-
-    /* =========================================================
-       IMAGE POPUP
-    ========================================================= */
-
-    function openImageModal(image) {
-
-        const modal =
-            document.getElementById(
-                "image-modal"
-            );
+});
 
 
-        const modalImage =
-            document.getElementById(
-                "image-modal-content"
-            );
+/* =========================================================
+   PROJECT 01 IMAGE POPUP
+========================================================= */
+
+function openProject01Modal(type) {
+
+    const modal =
+        document.getElementById(
+            "project-01-image-modal"
+        );
 
 
-        if (!modal || !modalImage) return;
+    if (!modal) return;
 
 
-        modalImage.src = image.src;
-
-        modalImage.alt = image.alt;
-
-        modal.classList.add("active");
-
-
-        /* Prevent background scrolling */
-
-        document.body.style.overflow = "hidden";
-
-    }
+    const designImage =
+        document.getElementById(
+            "project-01-design-popup-image"
+        );
 
 
-    function closeImageModal() {
-
-        const modal =
-            document.getElementById(
-                "image-modal"
-            );
+    const secondDesignImage =
+        modal.querySelector(
+            ".second-design-image"
+        );
 
 
-        if (!modal) return;
+    const analysisImages =
+        modal.querySelectorAll(
+            ".analysis-popup-image"
+        );
 
 
-        modal.classList.remove("active");
+    if (type === "design") {
 
+        designImage.style.display = "block";
 
-        /* Restore scrolling */
+        if (secondDesignImage) {
+            secondDesignImage.style.display = "block";
+        }
 
-        document.body.style.overflow = "";
+        analysisImages.forEach(function (image) {
+            image.style.display = "none";
+        });
 
     }
 
 
-    /* =========================================================
-       CLOSE WITH ESC
-    ========================================================= */
+    if (type === "analysis") {
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+        designImage.style.display = "none";
 
-            if (event.key === "Escape") {
+        if (secondDesignImage) {
+            secondDesignImage.style.display = "none";
+        }
 
-                closeImageModal();
+        analysisImages.forEach(function (image) {
+            image.style.display = "block";
+        });
 
-            }
+    }
+
+
+    modal.classList.add("active");
+
+
+    /* Prevent background scrolling */
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   CLOSE IMAGE POPUP
+========================================================= */
+
+function closeProject01Modal() {
+
+    const modal =
+        document.getElementById(
+            "project-01-image-modal"
+        );
+
+
+    if (!modal) return;
+
+
+    modal.classList.remove("active");
+
+
+    /* Restore scrolling */
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================================================
+   CLOSE WITH ESC
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key === "Escape") {
+
+            closeProject01Modal();
 
         }
-    );
+
+    }
+);
 
 </script>
-
 
 <!-- =========================================================
      PROJECT 02 — MINAUTOR FORMULA STUDENT TEAM
