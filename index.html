@@ -5035,7 +5035,109 @@ function closeProject02KinematicsModal() {
     letter-spacing: 4px;
     text-transform: uppercase;
 }
-  
+/* =====================================================
+   PROJECT 03 SIMULINK MODEL IMAGE
+===================================================== */
+
+.project-03 .simulink-model-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-03 .simulink-model-image {
+    display: block;
+    width: 72%;
+    max-width: 900px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-03 .simulink-model-image:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}  
+/* =====================================================
+   PROJECT 03 SIMULINK IMAGE POPUP
+===================================================== */
+
+.project-03-simulink-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: zoom-out;
+}
+
+.project-03-simulink-modal.active {
+    display: flex;
+}
+
+.project-03-simulink-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-03-simulink-modal-content img {
+    display: block;
+    max-width: 90vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-03-simulink-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-03-simulink-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
+    .project-03 .simulink-model-description {
+    width: 72%;
+    max-width: 900px;
+    margin: 32px auto 0;
+}
+
+.project-03 .simulink-model-description h3 {
+    margin: 0 0 14px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
 /* =====================================================
    PROJECT 03 DATA IMAGE POPUP
 ===================================================== */
@@ -5558,15 +5660,49 @@ function closeProject02KinematicsModal() {
             </div>
 
 
-            <div class="project-placeholder">
+           <div class="simulink-model-image-wrapper">
 
-                SIMULINK MODEL CONTENT
+    <img
+        class="simulink-model-image"
+        src="Στιγμιότυπο οθόνης 2026-10-04 015616.png"
+        alt="Simulink Vehicle Dynamics Model"
+        onclick="openProject03SimulinkModal()"
+    >
 
-            </div>
+</div>
+<div class="simulink-model-description">
 
+    <h3>7 - DOF MODEL</h3>
+
+</div>
         </section>
 
+<!-- =========================================================
+     PROJECT 03 SIMULINK IMAGE POPUP
+========================================================= -->
 
+<div
+    id="project-03-simulink-modal"
+    class="project-03-simulink-modal"
+    onclick="closeProject03SimulinkModal()"
+>
+    <button
+        class="project-03-simulink-modal-close"
+        onclick="event.stopPropagation(); closeProject03SimulinkModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-03-simulink-modal-content"
+        onclick="event.stopPropagation()"
+    >
+        <img
+            src="Στιγμιότυπο οθόνης 2026-10-04 015616.png"
+            alt="Simulink Vehicle Dynamics Model"
+        >
+    </div>
+</div>
 
         <!-- =================================================
              RESULTS
