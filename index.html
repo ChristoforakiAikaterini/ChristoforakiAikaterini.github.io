@@ -3025,103 +3025,46 @@ document.addEventListener(
        PROJECT HERO
     ===================================================== */
 
-    .project-02 .project-hero {
+   .project-02 .project-hero {
+    position: relative;
+    min-height: 58vh;
+    display: flex;
+    align-items: center;
+    padding: 115px 8vw 70px;
+    border-top: 1px solid rgba(190, 150, 55, 0.12);
+    border-bottom: 1px solid rgba(190, 150, 55, 0.12);
+}
 
-        position: relative;
+.project-02 .project-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0;
+}
 
-        min-height: 58vh;
+.project-02 .project-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
 
-        display: flex;
-
-        align-items: center;
-
-        padding: 100px 7vw 70px;
-
-        border-top: 1px solid rgba(190, 150, 55, 0.12);
-
-        border-bottom: 1px solid rgba(190, 150, 55, 0.12);
-
-    }
-
-
-    .project-02 .project-hero-content {
-
-        position: relative;
-
-        z-index: 2;
-
-        max-width: 1000px;
-
-    }
-
-
-    /* =====================================================
-       PROJECT LABEL
-    ===================================================== */
-
-    .project-02 .project-label {
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 18px;
-
-        margin-bottom: 28px;
-
-        color: #b58a32;
-
-        font-family: "Inter", Arial, sans-serif;
-
-        font-size: 12px;
-
-        font-weight: 400;
-
-        letter-spacing: 5px;
-
-        text-transform: uppercase;
-
-    }
-
-
-    .project-02 .project-label::before {
-
-        content: "";
-
-        width: 70px;
-
-        height: 1px;
-
-        background: #9d1622;
-
-        flex-shrink: 0;
-
-    }
-
-
-    /* =====================================================
-       MAIN PROJECT TITLE
-       SLIGHTLY SMALLER THAN PROJECT 01
-    ===================================================== */
-
-    .project-02 .project-hero h1 {
-
-        margin: 0;
-
-        font-family: "Inter", Arial, sans-serif;
-
-        font-size: clamp(29px, 3.5vw, 52px);
-
-        line-height: 1.08;
-
-        font-weight: 700;
-
-        letter-spacing: -1.5px;
-
-        color: rgba(239, 235, 225, 0.82);
-
-    }
-
+.project-02 .project-hero h1 {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: clamp(30px, 2.7vw, 50px);
+    line-height: 1.08;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: rgba(239, 235, 225, 0.82);
+    text-transform: uppercase;
+}
 
     .project-02 .project-hero h1 span {
 
