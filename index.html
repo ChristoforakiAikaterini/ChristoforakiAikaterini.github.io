@@ -884,7 +884,7 @@
 
 
 
-   <!-- =========================================================
+<!-- =========================================================
      PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
 ========================================================= -->
 
@@ -898,7 +898,6 @@
         font-family: "Inter", Arial, sans-serif;
         overflow: hidden;
     }
-
 
     .project-01::before {
         content: "";
@@ -920,7 +919,9 @@
     }
 
 
-    /* PROJECT HERO */
+    /* =========================================================
+       PROJECT HERO
+    ========================================================= */
 
     .project-hero {
         position: relative;
@@ -1017,7 +1018,9 @@
     }
 
 
-    /* PROJECT NAVIGATION */
+    /* =========================================================
+       PROJECT NAVIGATION
+    ========================================================= */
 
     .project-navigation-wrapper {
         position: sticky;
@@ -1112,7 +1115,9 @@
     }
 
 
-    /* PROJECT CONTENT */
+    /* =========================================================
+       PROJECT CONTENT
+    ========================================================= */
 
     .project-content {
         position: relative;
@@ -1144,7 +1149,9 @@
     }
 
 
-    /* SECTION HEADER */
+    /* =========================================================
+       SECTION HEADER
+    ========================================================= */
 
     .project-section-header {
         display: flex;
@@ -1192,7 +1199,9 @@
     }
 
 
-    /* PLACEHOLDER */
+    /* =========================================================
+       PLACEHOLDER
+    ========================================================= */
 
     .project-placeholder {
         min-height: 420px;
@@ -1228,6 +1237,7 @@
 
     .project-01 .design-image {
         width: 100%;
+
         margin-top: 10px;
 
         display: flex;
@@ -1238,8 +1248,10 @@
     .project-01 .design-image img {
         display: block;
 
-        width: 72%;
-        max-width: 900px;
+        /* SMALLER IMAGE */
+        width: 58%;
+
+        max-width: 760px;
 
         height: auto;
 
@@ -1249,137 +1261,119 @@
 
         cursor: zoom-in;
 
-        transition: opacity 0.3s ease;
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
     }
 
 
     .project-01 .design-image img:hover {
         opacity: 0.88;
+
+        transform: scale(1.01);
     }
 
 
-   /* =========================================================
-   IMAGE POPUP
-========================================================= */
-
-.image-modal {
-    display: none;
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 99999;
-
-    background: rgba(0, 0, 0, 0.94);
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 50px;
-
-    cursor: zoom-out;
-}
-
-
-.image-modal.active {
-    display: flex;
-}
-
-
-/* POPUP IMAGE */
-
-.image-modal img {
-    display: block;
-
-    max-width: 90vw;
-    max-height: 90vh;
-
-    width: auto;
-    height: auto;
-
-    object-fit: contain;
-
-    border: 1px solid rgba(190, 150, 55, 0.25);
-
-    cursor: default;
-
-    box-shadow:
-        0 20px 80px rgba(0, 0, 0, 0.65);
-}
-
-
-/* CLOSE BUTTON */
-
-.image-modal-close {
-    position: fixed;
-
-    top: 25px;
-    right: 30px;
-
-    width: 48px;
-    height: 48px;
-
-    border: 1px solid rgba(190, 150, 55, 0.45);
-
-    background: rgba(5, 5, 5, 0.90);
-
-    color: #e9e6df;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 30px;
-    font-weight: 300;
-
-    line-height: 1;
-
-    cursor: pointer;
-
-    z-index: 100000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        color 0.3s ease;
-}
-
-
-.image-modal-close:hover {
-    background: rgba(185, 143, 54, 0.12);
-
-    border-color: rgba(190, 150, 55, 0.8);
-
-    color: #ffffff;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
+    /* =========================================================
+       IMAGE POPUP
+    ========================================================= */
 
     .image-modal {
-        padding: 20px;
+        display: none;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 99999;
+
+        background: rgba(0, 0, 0, 0.94);
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 50px;
+
+        cursor: zoom-out;
     }
+
+
+    .image-modal.active {
+        display: flex;
+    }
+
+
+    /* POPUP IMAGE */
 
     .image-modal img {
-        max-width: 94vw;
-        max-height: 85vh;
+        display: block;
+
+        max-width: 90vw;
+
+        max-height: 90vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border: 1px solid rgba(190, 150, 55, 0.25);
+
+        cursor: default;
+
+        box-shadow:
+            0 20px 80px rgba(0, 0, 0, 0.65);
     }
+
+
+    /* CLOSE BUTTON */
 
     .image-modal-close {
-        top: 18px;
-        right: 18px;
+        position: fixed;
 
-        width: 42px;
-        height: 42px;
+        top: 25px;
+        right: 30px;
 
-        font-size: 26px;
+        width: 48px;
+        height: 48px;
+
+        border: 1px solid rgba(190, 150, 55, 0.45);
+
+        background: rgba(5, 5, 5, 0.90);
+
+        color: #e9e6df;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 30px;
+
+        font-weight: 300;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 100000;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition:
+            background 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease;
     }
 
-}
+
+    .image-modal-close:hover {
+        background: rgba(185, 143, 54, 0.12);
+
+        border-color: rgba(190, 150, 55, 0.8);
+
+        color: #ffffff;
+    }
+
 
     /* =========================================================
        RESPONSIVE
@@ -1389,18 +1383,21 @@
 
         .project-hero {
             min-height: 55vh;
+
             padding: 90px 8vw 65px;
         }
 
 
         .project-hero h1 {
             font-size: clamp(28px, 7vw, 46px);
+
             letter-spacing: -1px;
         }
 
 
         .project-navigation {
             width: 92vw;
+
             gap: 25px;
 
             justify-content: flex-start;
@@ -1438,7 +1435,7 @@
 
 
         .project-01 .design-image img {
-            width: 88%;
+            width: 72%;
         }
 
 
@@ -1483,7 +1480,18 @@
 
 
         .project-01 .design-image img {
-            width: 94%;
+            width: 90%;
+        }
+
+
+        .image-modal {
+            padding: 20px;
+        }
+
+
+        .image-modal img {
+            max-width: 94vw;
+            max-height: 85vh;
         }
 
 
@@ -1500,296 +1508,423 @@
     }
 
 </style>
-    <section class="project-01" id="project-01">
 
 
-        <!-- PROJECT HERO -->
-
-        <div class="project-hero">
-
-            <div class="project-hero-content">
-
-                <div class="project-label">
-                    PROJECT 01 / DIPLOMA THESIS
-                </div>
-
-
-                <h1>
-
-                    <span class="gold">
-                        F1 V6 ENGINE
-                    </span>
-
-                    <span class="light">
-                        - GYROID ENGINE BLOCK DESIGN
-                    </span>
-
-                </h1>
-
-
-                <div class="project-description-placeholder"></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROJECT NAVIGATION -->
-
-        <div class="project-navigation-wrapper">
-
-            <nav class="project-navigation">
-
-                <a
-                    href="#"
-                    class="project-nav-link active"
-                    data-target="project-design"
-                >
-                    DESIGN
-                </a>
-
-
-                <a
-                    href="#"
-                    class="project-nav-link"
-                    data-target="project-analysis"
-                >
-                    ANALYSIS
-                </a>
-
-
-                <a
-                    href="#"
-                    class="project-nav-link"
-                    data-target="project-comparison"
-                >
-                    COMPARISON
-                </a>
-
-
-                <a
-                    href="#"
-                    class="project-nav-link"
-                    data-target="project-performance"
-                >
-                    VEHICLE PERFORMANCE
-                </a>
-
-            </nav>
-
-        </div>
-
-
-        <!-- PROJECT CONTENT -->
-
-        <div class="project-content">
-
-
-            <!-- DESIGN -->
-
-            <section
-                id="project-design"
-                class="project-section active-section"
-            >
-
-                <div class="project-section-header">
-
-                    <div class="project-section-number">
-                        01
-                    </div>
-
-                    <div class="project-section-line"></div>
-
-                    <div class="project-section-title">
-                        DESIGN
-                    </div>
-
-                </div>
-
-
-                <div class="design-image">
-
-    <img
-        src="Screenshot 2026-04-30 163046.png"
-        alt="F1 V6 Engine Gyroid Design"
-    >
-
-</div>
-            </section>
-
-
-            <!-- ANALYSIS -->
-
-            <section
-                id="project-analysis"
-                class="project-section"
-            >
-
-                <div class="project-section-header">
-
-                    <div class="project-section-number">
-                        02
-                    </div>
-
-                    <div class="project-section-line"></div>
-
-                    <div class="project-section-title">
-                        ANALYSIS
-                    </div>
-
-                </div>
-
-
-                <div class="project-placeholder">
-                    ANALYSIS CONTENT
-                </div>
-
-            </section>
-
-
-            <!-- COMPARISON -->
-
-            <section
-                id="project-comparison"
-                class="project-section"
-            >
-
-                <div class="project-section-header">
-
-                    <div class="project-section-number">
-                        03
-                    </div>
-
-                    <div class="project-section-line"></div>
-
-                    <div class="project-section-title">
-                        COMPARISON
-                    </div>
-
-                </div>
-
-
-                <div class="project-placeholder">
-                    COMPARISON CONTENT
-                </div>
-
-            </section>
-
-
-            <!-- VEHICLE PERFORMANCE -->
-
-            <section
-                id="project-performance"
-                class="project-section"
-            >
-
-                <div class="project-section-header">
-
-                    <div class="project-section-number">
-                        04
-                    </div>
-
-                    <div class="project-section-line"></div>
-
-                    <div class="project-section-title">
-                        VEHICLE PERFORMANCE
-                    </div>
-
-                </div>
-
-
-                <div class="project-placeholder">
-                    VEHICLE PERFORMANCE CONTENT
-                </div>
-
-            </section>
-
-        </div>
-
-    </section>
-
+<section class="project-01" id="project-01">
 
 
     <!-- =========================================================
-         PROJECT 01 TAB SYSTEM
-         NO SCROLL
+         PROJECT HERO
     ========================================================= -->
 
-    <script>
+    <div class="project-hero">
 
-        document.addEventListener("DOMContentLoaded", function () {
+        <div class="project-hero-content">
 
-            const navLinks =
-                document.querySelectorAll(
-                    ".project-01 .project-nav-link"
-                );
-
-
-            const sections =
-                document.querySelectorAll(
-                    ".project-01 .project-section"
-                );
+            <div class="project-label">
+                PROJECT 01 / DIPLOMA THESIS
+            </div>
 
 
-            navLinks.forEach(function (link) {
+            <h1>
 
-                link.addEventListener(
-                    "click",
-                    function (event) {
+                <span class="gold">
+                    F1 V6 ENGINE
+                </span>
 
-                        event.preventDefault();
+                <span class="light">
+                    - GYROID ENGINE BLOCK DESIGN
+                </span>
 
-
-                        const targetId =
-                            this.getAttribute(
-                                "data-target"
-                            );
+            </h1>
 
 
-                        const target =
-                            document.getElementById(
-                                targetId
-                            );
+            <div class="project-description-placeholder"></div>
+
+        </div>
+
+    </div>
 
 
-                        if (!target) return;
+    <!-- =========================================================
+         PROJECT NAVIGATION
+    ========================================================= -->
+
+    <div class="project-navigation-wrapper">
+
+        <nav class="project-navigation">
+
+            <a
+                href="#"
+                class="project-nav-link active"
+                data-target="project-design"
+            >
+                DESIGN
+            </a>
 
 
-                        navLinks.forEach(function (nav) {
-
-                            nav.classList.remove(
-                                "active"
-                            );
-
-                        });
-
-
-                        sections.forEach(function (section) {
-
-                            section.classList.remove(
-                                "active-section"
-                            );
-
-                        });
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-analysis"
+            >
+                ANALYSIS
+            </a>
 
 
-                        this.classList.add(
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-comparison"
+            >
+                COMPARISON
+            </a>
+
+
+            <a
+                href="#"
+                class="project-nav-link"
+                data-target="project-performance"
+            >
+                VEHICLE PERFORMANCE
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================================
+         PROJECT CONTENT
+    ========================================================= -->
+
+    <div class="project-content">
+
+
+        <!-- =====================================================
+             DESIGN
+        ===================================================== -->
+
+        <section
+            id="project-design"
+            class="project-section active-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    01
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    DESIGN
+                </div>
+
+            </div>
+
+
+            <!-- DESIGN IMAGE -->
+
+            <div class="design-image">
+
+                <img
+                    src="Screenshot 2026-04-30 163046.png"
+                    alt="F1 V6 Engine Gyroid Design"
+                    onclick="openImageModal(this)"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ANALYSIS
+        ===================================================== -->
+
+        <section
+            id="project-analysis"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    02
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    ANALYSIS
+                </div>
+
+            </div>
+
+
+            <div class="project-placeholder">
+                ANALYSIS CONTENT
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COMPARISON
+        ===================================================== -->
+
+        <section
+            id="project-comparison"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    03
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    COMPARISON
+                </div>
+
+            </div>
+
+
+            <div class="project-placeholder">
+                COMPARISON CONTENT
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VEHICLE PERFORMANCE
+        ===================================================== -->
+
+        <section
+            id="project-performance"
+            class="project-section"
+        >
+
+            <div class="project-section-header">
+
+                <div class="project-section-number">
+                    04
+                </div>
+
+                <div class="project-section-line"></div>
+
+                <div class="project-section-title">
+                    VEHICLE PERFORMANCE
+                </div>
+
+            </div>
+
+
+            <div class="project-placeholder">
+                VEHICLE PERFORMANCE CONTENT
+            </div>
+
+        </section>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     IMAGE POPUP
+========================================================= -->
+
+<div
+    id="image-modal"
+    class="image-modal"
+    onclick="closeImageModal()"
+>
+
+    <button
+        class="image-modal-close"
+        onclick="event.stopPropagation(); closeImageModal();"
+        aria-label="Close image"
+    >
+        ×
+    </button>
+
+
+    <img
+        id="image-modal-content"
+        src=""
+        alt=""
+        onclick="event.stopPropagation();"
+    >
+
+</div>
+
+
+<!-- =========================================================
+     PROJECT 01 TAB SYSTEM + IMAGE POPUP
+========================================================= -->
+
+<script>
+
+    /* =========================================================
+       PROJECT 01 TAB SYSTEM
+       NO SCROLL
+    ========================================================= */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const navLinks =
+            document.querySelectorAll(
+                ".project-01 .project-nav-link"
+            );
+
+
+        const sections =
+            document.querySelectorAll(
+                ".project-01 .project-section"
+            );
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const targetId =
+                        this.getAttribute(
+                            "data-target"
+                        );
+
+
+                    const target =
+                        document.getElementById(
+                            targetId
+                        );
+
+
+                    if (!target) return;
+
+
+                    navLinks.forEach(function (nav) {
+
+                        nav.classList.remove(
                             "active"
                         );
 
+                    });
 
-                        target.classList.add(
+
+                    sections.forEach(function (section) {
+
+                        section.classList.remove(
                             "active-section"
                         );
 
-                    }
-                );
+                    });
 
-            });
+
+                    this.classList.add(
+                        "active"
+                    );
+
+
+                    target.classList.add(
+                        "active-section"
+                    );
+
+                }
+            );
 
         });
 
-    </script>
+    });
+
+
+    /* =========================================================
+       IMAGE POPUP
+    ========================================================= */
+
+    function openImageModal(image) {
+
+        const modal =
+            document.getElementById(
+                "image-modal"
+            );
+
+
+        const modalImage =
+            document.getElementById(
+                "image-modal-content"
+            );
+
+
+        if (!modal || !modalImage) return;
+
+
+        modalImage.src = image.src;
+
+        modalImage.alt = image.alt;
+
+        modal.classList.add("active");
+
+
+        /* Prevent background scrolling */
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeImageModal() {
+
+        const modal =
+            document.getElementById(
+                "image-modal"
+            );
+
+
+        if (!modal) return;
+
+
+        modal.classList.remove("active");
+
+
+        /* Restore scrolling */
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* =========================================================
+       CLOSE WITH ESC
+    ========================================================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                closeImageModal();
+
+            }
+
+        }
+    );
+
+</script>
 
 
 <!-- =========================================================
