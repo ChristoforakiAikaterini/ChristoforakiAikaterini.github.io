@@ -3484,7 +3484,74 @@ document.addEventListener(
     color: #c39a4b;
     border-color: #c39a4b;
 }
+/* =====================================================
+   KINEMATICS POPUP
+===================================================== */
 
+.project-02-kinematics-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: zoom-out;
+    overflow-y: auto;
+}
+
+.project-02-kinematics-modal.active {
+    display: flex;
+}
+
+.project-02-kinematics-modal-content {
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.project-02-kinematics-modal-content img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-02-kinematics-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-02-kinematics-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
     /* =====================================================
        RESPONSIVE
     ===================================================== */
