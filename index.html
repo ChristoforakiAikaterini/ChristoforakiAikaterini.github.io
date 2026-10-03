@@ -5061,6 +5061,126 @@ function closeProject02KinematicsModal() {
     border-color: rgba(190, 150, 55, 0.38);
 }  
 /* =====================================================
+   PROJECT 03 RESULTS IMAGE
+===================================================== */
+
+.project-03 .project-03-results-content {
+    width: 100%;
+}
+
+.project-03 .project-03-results-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-03 .project-03-results-image {
+    display: block;
+    width: 72%;
+    max-width: 900px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-03 .project-03-results-image:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-03 .project-03-results-description {
+    width: 72%;
+    max-width: 900px;
+    margin: 32px auto 0;
+}
+
+.project-03 .project-03-results-description h3 {
+    margin: 0 0 14px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.project-03 .project-03-results-description p {
+    margin: 0;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+/* =====================================================
+   PROJECT 03 RESULTS IMAGE POPUP
+===================================================== */
+
+.project-03 .project-03-results-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    cursor: zoom-out;
+}
+
+.project-03 .project-03-results-modal.active {
+    display: flex;
+}
+
+.project-03 .project-03-results-modal-content {
+    width: 94vw;
+    max-width: 1400px;
+    max-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-03 .project-03-results-modal-content img {
+    display: block;
+    max-width: 94vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-03 .project-03-results-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-03 .project-03-results-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
+/* =====================================================
    PROJECT 03 SIMULINK IMAGE POPUP
 ===================================================== */
 
@@ -5744,15 +5864,59 @@ function closeProject02KinematicsModal() {
             </div>
 
 
-            <div class="project-placeholder">
+           <div class="project-03-results-content">
 
-                RESULTS CONTENT
+    <div class="project-03-results-image-wrapper">
 
-            </div>
+        <img
+            class="project-03-results-image"
+            src="Στιγμιότυπο οθόνης 2026-10-04 023418.png"
+            alt="Vehicle Dynamics Simulation Results"
+            onclick="openProject03ResultsModal()"
+        >
+
+    </div>
+
+    <div class="project-03-results-description">
+
+        <h3>RESULTS</h3>
+
+        <p>
+            The simulation results show the dynamic response of the vehicle throughout the 10-second simulation period. The unsprung masses exhibit an initial transient response that quickly settles, while the sprung-mass and rotational responses remain close to zero during the initial part of the simulation. Towards the end of the simulation, a rapid divergence is observed in the vertical, pitch and roll responses, indicating numerical instability in the model.
+        </p>
+
+    </div>
+
+</div>
 
         </section>
 
+<!-- =========================================================
+     PROJECT 03 RESULTS IMAGE POPUP
+========================================================= -->
 
+<div
+    id="project-03-results-modal"
+    class="project-03-results-modal"
+    onclick="closeProject03ResultsModal()"
+>
+    <button
+        class="project-03-results-modal-close"
+        onclick="event.stopPropagation(); closeProject03ResultsModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-03-results-modal-content"
+        onclick="event.stopPropagation()"
+    >
+        <img
+            src="Project03_RESULTS_combined_ALL.png"
+            alt="Vehicle Dynamics Simulation Results"
+        >
+    </div>
+</div>
 <!-- =========================================================
      PROJECT 03 TAB SYSTEM
      NO SCROLL
@@ -5935,7 +6099,38 @@ function closeProject03SimulinkModal() {
 }
 
 </script>
+<script>
 
+function openProject03ResultsModal() {
+
+    const modal =
+        document.getElementById(
+            "project-03-results-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject03ResultsModal() {
+
+    const modal =
+        document.getElementById(
+            "project-03-results-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+</script>
 <!-- =========================================================
      PROJECT 04 — F1 MONZA 2024 QUALIFYING DATA ANALYSIS
 ========================================================= -->
