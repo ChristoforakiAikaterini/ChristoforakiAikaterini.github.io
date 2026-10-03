@@ -888,7 +888,31 @@
          PROJECT 01 — F1 V6 ENGINE / GYROID ENGINE BLOCK DESIGN
     ========================================================= -->
 
-    <style>
+    <style
+        <!-- IMAGE POPUP -->
+
+<div
+    id="image-modal"
+    class="image-modal"
+    onclick="closeImageModal()"
+>
+
+    <button
+        class="image-modal-close"
+        onclick="event.stopPropagation(); closeImageModal();"
+        aria-label="Close image"
+    >
+        ×
+    </button>
+
+    <img
+        id="image-modal-content"
+        src=""
+        alt=""
+        onclick="event.stopPropagation();"
+    >
+
+</div>>
 
         .project-01 {
             position: relative;
@@ -1221,8 +1245,7 @@
             text-transform: uppercase;
         }
 .project-placeholder {
-/* DESIGN IMAGE */
-
+    
 /* DESIGN IMAGE */
 
 .project-01 .design-image {
