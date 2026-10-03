@@ -1223,18 +1223,28 @@
 .project-placeholder {
 /* DESIGN IMAGE */
 
+/* DESIGN IMAGE */
+
 .project-01 .design-image {
     width: 100%;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .project-01 .design-image img {
     display: block;
-    width: 100%;
-    max-width: 1100px;
+    width: 72%;
+    max-width: 900px;
     height: auto;
     margin: 0 auto;
     border: 1px solid rgba(190, 150, 55, 0.12);
+    cursor: zoom-in;
+    transition: opacity 0.3s ease;
+}
+
+.project-01 .design-image img:hover {
+    opacity: 0.88;
 }
         /* RESPONSIVE */
 
