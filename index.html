@@ -755,7 +755,7 @@
                 </a>
 
                
-                <a href="#cv">
+                <a href="#" onclick="openCVModal(); return false;">
                     CV
                 </a>
 
@@ -849,7 +849,7 @@
                 </a>
 
 
-                <a href="#cv" class="button">
+               <a href="#" class="button" onclick="openCVModal(); return false;">
 
                     <span>
                         CV
@@ -4244,6 +4244,33 @@ document.addEventListener(
 
 </div>
 <!-- =========================================================
+     CV POPUP
+========================================================= -->
+
+<div
+    id="cv-modal"
+    class="cv-modal"
+    onclick="closeCVModal()"
+>
+    <button
+        class="cv-modal-close"
+        onclick="event.stopPropagation(); closeCVModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="cv-modal-content"
+        onclick="event.stopPropagation()"
+    >
+        <iframe
+            src="AIKATERINI CHRISTOFORAKI_CV.pdf"
+            title="Aikaterini Christoforaki CV"
+        ></iframe>
+    </div>
+</div>
+
+<!-- =========================================================
      PROJECT 02 TECHNICAL PAPER POPUP
 ========================================================= -->
 
@@ -4427,6 +4454,34 @@ document.addEventListener(
     /* =========================================================
        PROJECT 02 DRIVELINE POPUP
     ========================================================= */
+function openCVModal() {
+
+    const modal =
+        document.getElementById(
+            "cv-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeCVModal() {
+
+    const modal =
+        document.getElementById(
+            "cv-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
 function openProject02TechnicalPaperModal() {
 
     const modal =
@@ -5334,7 +5389,50 @@ function closeProject02KinematicsModal() {
 /* =====================================================
    TECHNICAL PAPER POPUP
 ===================================================== */
+.cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    cursor: default;
+}
 
+.cv-modal.active {
+    display: flex;
+}
+
+.cv-modal-content {
+    width: 90vw;
+    height: 92vh;
+    max-width: 1200px;
+    background: #050505;
+    overflow: hidden;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.cv-modal-content iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.cv-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer;
+}
 .project-02-technical-paper-modal {
     display: none;
     position: fixed;
