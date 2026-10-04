@@ -6783,7 +6783,140 @@ function closeProject03ResultsModal() {
         }
 
     }
+/* =========================================================
+   PROJECT 04 TELEMETRY IMAGE POPUP
+========================================================= */
 
+.project-04-telemetry-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    cursor: zoom-out;
+}
+
+.project-04-telemetry-modal.active {
+    display: flex;
+}
+
+.project-04-telemetry-modal-content {
+    width: 94vw;
+    max-width: 1400px;
+    max-height: 88vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-04-telemetry-modal-content img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-04-telemetry-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-04-telemetry-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
+
+
+/* =========================================================
+   PROJECT 04 — TRACK SPEED & BRAKING ZONES POPUP
+========================================================= */
+
+.project-04-speed-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    cursor: zoom-out;
+}
+
+.project-04-speed-modal.active {
+    display: flex;
+}
+
+.project-04-speed-modal-content {
+    width: 94vw;
+    max-width: 1400px;
+    max-height: 88vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-04-speed-modal-content img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-04-speed-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-04-speed-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
 </style>
 
 
@@ -7136,142 +7269,7 @@ function closeProject03ResultsModal() {
     </div>
 
 </div>
-<style>
-/* =========================================================
-   PROJECT 04 TELEMETRY IMAGE POPUP
-========================================================= */
 
-.project-04-telemetry-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    background: rgba(0, 0, 0, 0.94);
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    cursor: zoom-out;
-}
-
-.project-04-telemetry-modal.active {
-    display: flex;
-}
-
-.project-04-telemetry-modal-content {
-    width: 94vw;
-    max-width: 1400px;
-    max-height: 88vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    cursor: default;
-}
-
-.project-04-telemetry-modal-content img {
-    display: block;
-    width: 100%;
-    max-width: 1400px;
-    height: auto;
-    object-fit: contain;
-    border: 1px solid rgba(190, 150, 55, 0.25);
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
-}
-
-.project-04-telemetry-modal-close {
-    position: fixed;
-    top: 25px;
-    right: 28px;
-    z-index: 100000;
-    width: 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(190, 150, 55, 0.35);
-    background: rgba(3, 3, 3, 0.80);
-    color: rgba(233, 229, 220, 0.85);
-    font-family: Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.project-04-telemetry-modal-close:hover {
-    color: #c39a4b;
-    border-color: #c39a4b;
-}
-
-
-/* =========================================================
-   PROJECT 04 — TRACK SPEED & BRAKING ZONES POPUP
-========================================================= */
-
-.project-04-speed-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    background: rgba(0, 0, 0, 0.94);
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    cursor: zoom-out;
-}
-
-.project-04-speed-modal.active {
-    display: flex;
-}
-
-.project-04-speed-modal-content {
-    width: 94vw;
-    max-width: 1400px;
-    max-height: 88vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    cursor: default;
-}
-
-.project-04-speed-modal-content img {
-    display: block;
-    width: 100%;
-    max-width: 1400px;
-    height: auto;
-    object-fit: contain;
-    border: 1px solid rgba(190, 150, 55, 0.25);
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
-}
-
-.project-04-speed-modal-close {
-    position: fixed;
-    top: 25px;
-    right: 28px;
-    z-index: 100000;
-    width: 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(190, 150, 55, 0.35);
-    background: rgba(3, 3, 3, 0.80);
-    color: rgba(233, 229, 220, 0.85);
-    font-family: Arial, sans-serif;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.project-04-speed-modal-close:hover {
-    color: #c39a4b;
-    border-color: #c39a4b;
-}
-</style>
 <!-- =========================================================
      PROJECT 04 TAB SYSTEM
      NO SCROLL
