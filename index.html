@@ -6610,6 +6610,61 @@ function closeProject03ResultsModal() {
     line-height: 1.7;
     letter-spacing: 0.15px;
 }
+/* =========================================================
+   PROJECT 04 — TRACK SPEED & BRAKING ZONES
+========================================================= */
+
+.project-04 .project-04-speed-content {
+    width: 100%;
+}
+
+.project-04 .project-04-speed-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-04 .project-04-speed-image {
+    display: block;
+    width: 72%;
+    max-width: 900px;
+    height: auto;
+    cursor: zoom-in;
+    border: 1px solid rgba(190, 150, 55, 0.20);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-04 .project-04-speed-image:hover {
+    transform: scale(1.008);
+    border-color: rgba(190, 150, 55, 0.38);
+}
+
+.project-04 .project-04-speed-description {
+    width: 72%;
+    max-width: 900px;
+    margin: 32px auto 0;
+}
+
+.project-04 .project-04-speed-description h3 {
+    margin: 0 0 14px;
+    color: #c39a4b;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-04 .project-04-speed-description p {
+    margin: 0 0 14px;
+    color: rgba(233, 229, 220, 0.68);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
     /* =====================================================
        RESPONSIVE
     ===================================================== */
@@ -6922,12 +6977,34 @@ function closeProject03ResultsModal() {
             </div>
 
 
-            <div class="project-placeholder">
+           <div class="project-04-speed-content">
 
-                TRACK SPEED &amp; BRAKING ZONES
+    <div class="project-04-speed-image-wrapper">
 
-            </div>
+        <img
+            class="project-04-speed-image"
+            src="TRACK SPEED & BRAKING ZONES.png"
+            alt="Track Speed and Braking Zones"
+            onclick="openProject04SpeedModal()"
+        >
 
+    </div>
+
+    <div class="project-04-speed-description">
+
+        <h3>TRACK SPEED &amp; BRAKING ZONES</h3>
+
+        <p>
+            The track analysis identifies the main braking zones around the Monza circuit based on the telemetry data of Charles Leclerc and Max Verstappen. The braking zones are marked as T1 to T7, corresponding to the main points where braking occurs throughout the lap.
+        </p>
+
+        <p>
+            The track is colour-coded according to speed, calculated as the average speed of the two drivers at each point of the circuit. This provides a visual representation of how speed varies around the track and highlights the relationship between braking zones and vehicle speed.
+        </p>
+
+    </div>
+
+</div>
         </section>
 
 
@@ -7033,7 +7110,33 @@ function closeProject03ResultsModal() {
 
 
 <style>
+<!-- =========================================================
+     PROJECT 04 — TRACK SPEED & BRAKING ZONES POPUP
+========================================================= -->
 
+<div
+    id="project-04-speed-modal"
+    class="project-04-speed-modal"
+    onclick="closeProject04SpeedModal()"
+>
+    <button
+        class="project-04-speed-modal-close"
+        onclick="event.stopPropagation(); closeProject04SpeedModal()"
+    >
+        ×
+    </button>
+
+    <div
+        class="project-04-speed-modal-content"
+        onclick="event.stopPropagation()"
+    >
+        <img
+            src="TRACK SPEED & BRAKING ZONES.png"
+            alt="Track Speed and Braking Zones"
+        >
+    </div>
+
+</div>
 /* =========================================================
    PROJECT 04 TELEMETRY IMAGE POPUP
 ========================================================= */
@@ -7101,6 +7204,73 @@ function closeProject03ResultsModal() {
     border-color: #c39a4b;
 }
 
+
+/* =========================================================
+   PROJECT 04 — TRACK SPEED & BRAKING ZONES POPUP
+========================================================= */
+
+.project-04-speed-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    cursor: zoom-out;
+}
+
+.project-04-speed-modal.active {
+    display: flex;
+}
+
+.project-04-speed-modal-content {
+    width: 94vw;
+    max-width: 1400px;
+    max-height: 88vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-04-speed-modal-content img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid rgba(190, 150, 55, 0.25);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.65);
+}
+
+.project-04-speed-modal-close {
+    position: fixed;
+    top: 25px;
+    right: 28px;
+    z-index: 100000;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(190, 150, 55, 0.35);
+    background: rgba(3, 3, 3, 0.80);
+    color: rgba(233, 229, 220, 0.85);
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-04-speed-modal-close:hover {
+    color: #c39a4b;
+    border-color: #c39a4b;
+}
 </style>
 <!-- =========================================================
      PROJECT 04 TAB SYSTEM
@@ -7127,6 +7297,34 @@ function closeProject04TelemetryModal() {
     const modal =
         document.getElementById(
             "project-04-telemetry-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+    function openProject04SpeedModal() {
+
+    const modal =
+        document.getElementById(
+            "project-04-speed-modal"
+        );
+
+    if (!modal) return;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProject04SpeedModal() {
+
+    const modal =
+        document.getElementById(
+            "project-04-speed-modal"
         );
 
     if (!modal) return;
